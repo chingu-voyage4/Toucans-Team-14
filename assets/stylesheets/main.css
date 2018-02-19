@@ -1,1 +1,44 @@
 /*stylesheet for index.html*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#section1 {
+    background-image: url('../images/annie-spratt-42459.jpg');
+}
+
+#section2 {
+    background-image: url('../images/elena-prokofyeva-17909.jpg');
+}
+
+#section3 {
+    background-image: url('../images/philippe-toupet-320689.jpg')
+}
+
+#section4 {
+    background-image: url('../images/riccardo-chiarini-247364.jpg')
+}
+
+#section5 {
+    background-image: url('../images/annie-spratt-42459.jpg');
+}
+
+#section6 {
+    background-image: url('../images/elena-prokofyeva-17909.jpg');
+}
+
+#section7 {
+    background-image: url('../images/philippe-toupet-320689.jpg')
+}
+
+#section8 {
+    background-image: url('../images/elena-prokofyeva-17909.jpg');
+}
