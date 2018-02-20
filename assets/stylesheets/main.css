@@ -1,5 +1,43 @@
 /*stylesheet for index.html*/
 
+
+/*
+    =================================================
+
+    Custom Styles
+
+    =================================================
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+/* paragraph style for detailed info text */
+
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -38,12 +76,25 @@ body, html {
     background-size: cover;
 }
 
+/*
+    =================================================
+
+    Section 5
+
+    =================================================
+*/
+
 #section5 {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
     background-size: cover;
 }
+
+#section5 img {
+    max-width: 10%;
+}
+
 
 #section6 {
     background:
@@ -65,3 +116,32 @@ body, html {
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
 }
+
+/*
+    =================================================
+
+    container positioning
+
+    =================================================
+*/
+
+.centerBox {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 50%;
+}
+
+/*
+    =================================================
+
+    image positioning
+
+    =================================================
+*/
+
+.centerImage {
+    display: block;
+    margin: auto;
+}
+
