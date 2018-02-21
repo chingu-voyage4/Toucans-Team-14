@@ -142,6 +142,9 @@ body, html {
     =================================================
 */
 
+/*  Stu: there must be some way to avoid repeating the transparent gradient overlay text, 
+    with different background images  */
+
 #section5a {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
@@ -177,13 +180,13 @@ body, html {
     background-size: cover;
 }
 
-
 #section5a img,
 #section5b img, 
-#section5c img {
+#section5c img,
+#section5d img,
+#section5e img {
     max-width: 20%;
 }
-
 
 #section6 {
     background:
