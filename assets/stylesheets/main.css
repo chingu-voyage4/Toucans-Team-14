@@ -142,14 +142,45 @@ body, html {
     =================================================
 */
 
-#section5 {
+#section5a {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/choleraBacteria.jpg');
     background-size: cover;
 }
 
-#section5 img {
+#section5b {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/annie-spratt-42459.jpg');
+    background-size: cover;
+}
+
+#section5c {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/annie-spratt-42459.jpg');
+    background-size: cover;
+}
+
+#section5d {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/annie-spratt-42459.jpg');
+    background-size: cover;
+}
+
+#section5e {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/annie-spratt-42459.jpg');
+    background-size: cover;
+}
+
+
+#section5a img,
+#section5b img, 
+#section5c img {
     max-width: 10%;
 }
 
