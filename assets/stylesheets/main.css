@@ -148,7 +148,7 @@ body, html {
 #section5a {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/choleraBacteria.jpg');
+        url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
 }
 
