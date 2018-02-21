@@ -162,7 +162,7 @@ body, html {
 #section5c {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/mosquitoBckgd.jpg');
+        url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
