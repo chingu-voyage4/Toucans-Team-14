@@ -8,7 +8,7 @@
     =================================================
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -22,8 +22,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -34,7 +34,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -68,22 +68,27 @@ body, html {
     background-position: center;
 }
 
+#layout {
+  display: flex;
+  flex-direction: column;
+}
+
 #section1 {
-    background:
+      background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
-    background-size: cover;
+      background-size: cover;
 }
 
 #section2 {
-    background:
+     background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/elena-prokofyeva-17909.jpg');
     background-size: cover;
 }
 
 #section3 {
-    background:
+      background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
@@ -122,4 +127,45 @@ body, html {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+}
+
+.menu {
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+position:fixed;
+background-color: white;
+}
+
+.section-container {
+  display: flex;
+}
+
+.logos {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+#join {
+	background-color: tomato;
+  color: white;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  font-size: 24px;
+  box-shadow: inherit;
+
+}
+
+#login {
+	color: tomato;
+  text-decoration: underline coral;
 }
