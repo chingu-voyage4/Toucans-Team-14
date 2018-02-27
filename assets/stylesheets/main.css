@@ -63,6 +63,14 @@ body, html {
     margin: 0;
 }
 
+
+
+
+
+a {
+  text-decoration: none;
+}
+
 .bg {
     height: 100%;
     background-position: center;
@@ -165,7 +173,6 @@ background-color: white;
   padding: 5px 10px 5px 10px;
   font-size: 24px;
   box-shadow: inherit;
-
 }
 
 #login {
