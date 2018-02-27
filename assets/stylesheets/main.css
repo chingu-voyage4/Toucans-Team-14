@@ -171,6 +171,17 @@ background-color: white;
   text-decoration: underline coral;
 }
 
+#WCG {
+  height: 36px;
+}
+
 #IBM {
   height: 25px;
+}
+
+#logoSeparator {
+  border-right: 1px solid #D3D3D3;
+  height: 36px;
+  padding-left: 10px;
+  margin-right: 10px;
 }
