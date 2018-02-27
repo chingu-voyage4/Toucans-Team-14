@@ -57,10 +57,16 @@ table {
     border-spacing: 0;
 }
 
+/* End of CSS reset */
+
 
 body, html {
     height: 100%;
     margin: 0;
+}
+
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
 }
 
 .bg {
@@ -145,6 +151,7 @@ background-color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 1.5%;
 }
 
 .links {
@@ -154,6 +161,7 @@ background-color: white;
   margin: 10px;
   font-family: Arial, sans-serif;
   font-size: 24px;
+  padding-right: 1.5%;
 }
 
 #join {
@@ -163,14 +171,36 @@ background-color: white;
   padding: 5px 10px 5px 10px;
   font-size: 24px;
   box-shadow: inherit;
-
 }
+
+a:hover#join {
+  background-color: white;
+  color: tomato;
+}
+
 
 #login {
 	color: tomato;
   text-decoration: underline coral;
+  white-space: nowrap;
+}
+
+#WCG {
+  height: 36px;
 }
 
 #IBM {
   height: 25px;
+}
+
+#logoSeparator {
+  border-right: 1px solid #E8E8E8;
+  height: 36px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+#cancel {
+  height: 15px;
+  padding-left: 10px;
 }
