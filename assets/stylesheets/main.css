@@ -182,8 +182,13 @@ background-color: white;
 }
 
 #logoSeparator {
-  border-right: 1px solid #D3D3D3;
+  border-right: 1px solid #E8E8E8;
   height: 36px;
   padding-left: 10px;
   margin-right: 10px;
+}
+
+#cancel {
+  height: 15px;
+  padding-left: 10px;
 }
