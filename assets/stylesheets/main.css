@@ -144,6 +144,7 @@ background-color: white;
 .logos {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .links {
@@ -168,4 +169,8 @@ background-color: white;
 #login {
 	color: tomato;
   text-decoration: underline coral;
+}
+
+#IBM {
+  height: 25px;
 }
