@@ -8,7 +8,8 @@
     =================================================
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -22,8 +23,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -34,7 +35,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -58,6 +59,43 @@ table {
 }
 
 
+/*
+    =================================================
+
+    Custom Styles
+
+    =================================================
+
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+/* paragraph style for detailed info text */
+
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -66,6 +104,10 @@ body, html {
 .bg {
     height: 100%;
     background-position: center;
+}
+
+section {
+  height: 100vh;
 }
 
 #section1 {
@@ -96,11 +138,58 @@ body, html {
     background-size: cover;
 }
 
-#section5 {
+/*
+    =================================================
+
+    Section 5
+
+    =================================================
+*/
+
+/*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
+    with different background images  */
+
+#section5a {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/annie-spratt-42459.jpg');
+        url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+}
+
+#section5b {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/drugs_bw.jpg');
+    background-size: cover;
+}
+
+#section5c {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/mosquitoBckgd_bw.jpg');
+    background-size: cover;
+}
+
+#section5d {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/oxygen_bw.jpg');
+    background-size: cover;
+}
+
+#section5e {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/ribbonBackground_bw-2.jpg');
+    background-size: cover;
+}
+
+#section5a img,
+#section5b img,
+#section5c img,
+#section5d img,
+#section5e img {
+    max-width: 20%;
 }
 
 #section6 {
@@ -122,4 +211,32 @@ body, html {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+}
+
+/*
+    =================================================
+
+    container positioning
+
+    =================================================
+*/
+
+.centerBox {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 50%;
+}
+
+/*
+    =================================================
+
+    image positioning
+
+    =================================================
+*/
+
+.centerImage {
+    display: block;
+    margin: auto;
 }
