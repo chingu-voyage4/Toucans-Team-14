@@ -145,11 +145,16 @@ body, html {
 /*  Stu: there must be some way to avoid repeating the transparent gradient overlay text, 
     with different background images  */
 
+#section5 {
+    height: 100%;
+}
+
 #section5a {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+    height: 100%;
 }
 
 #section5b {
