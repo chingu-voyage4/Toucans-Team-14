@@ -236,3 +236,46 @@ body, html {
     display: block;
     margin: auto;
 }
+
+/*
+    =================================================
+
+    navigation bars
+
+    =================================================
+*/
+
+#sec5navbar {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: sticky;  /*doesn't work for some reason */
+    
+}
+
+#sec5navbar ul {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+    background-color: #2e75cf;
+
+}
+
+#sec5navbar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    color: white;
+    height: 100%;
+    border-right: 0.2px solid white;    
+}
+
+#sec5navbar img {
+    height: 25px;
+    padding-right: 10px;
+}
+
+
