@@ -64,7 +64,7 @@ body, html {
 }
 
 .bg {
-    height: 100%;
+    height: 100vh;
     background-position: center;
 }
 
@@ -108,34 +108,56 @@ body, html {
     Section 6
     =================================================
 */
-#section6-nav {
-    /* border: 5px solid black; */
+
+#section6-nav ul {
+    width: 100vw;
+    display: inline-block;
+    background-color: white;
 }
 
-#section6-nav li{
+#section6-nav li {
     float: left;
-    margin: 0;
-    padding: 2%;
-    width: 23%;
-    border: 1px solid black;
+    padding: 1% 0 1% 0;
+    width: 24.5%;
+    background-color: white;
+    text-align: center;
+    border-right: 1px solid gold;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+li#no-separator {
+    border: none;
 }
 
 .section6 {
-    height: 100%;
+    height: 100vh;
+    background-position: center;
     background-color: gold;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     text-align: center;
 }
 
 .section6-title {
     font-size: 1.5em;
     padding: 3%;
+    top: 10%;
 }
 
 .section6-bold {
     font-weight: bold;
     padding: 1%;
 }
+
+#section6-image img {
+    height: 200px;
+    width: 200px;
+    margin: 7%;
+}
+
+
+
+
 
 #section7 {
     background:
