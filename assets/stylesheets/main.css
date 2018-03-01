@@ -147,35 +147,35 @@ body, html {
 
 #section5a {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
 }
 
 #section5b {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
 #section5c {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
 #section5d {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
 #section5e {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
     background-size: cover;
 }
