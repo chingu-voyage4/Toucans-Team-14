@@ -109,35 +109,22 @@ body, html {
     =================================================
 */
 
-/* #section6-nav ul {
-    width: 100vw;
-    display: inline-block;
-    background-color: white;
+#section6-nav-container {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    width: 100%;
 }
-
-#section6-nav li {
-    float: left;
-    padding: 1% 0 1% 0;
-    width: 24.5%;
-    background-color: white;
-    text-align: center;
-    border-right: 1px solid gold;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-li#no-separator {
-    border: none;
-} */
 
 .section6-nav {
     background-color: white;
     display: flex;
     justify-content: space-around;
+    height: 50px;
+    align-items: center;
 }
 
 .nav6-items {
-    padding: 1.5%;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -151,7 +138,6 @@ img.section6-icons {
 .section6-nav a {
     text-decoration: none;
     color: inherit;
-
 }
 
 .section6 {
