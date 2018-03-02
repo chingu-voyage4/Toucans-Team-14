@@ -109,7 +109,7 @@ body, html {
     =================================================
 */
 
-#section6-nav ul {
+/* #section6-nav ul {
     width: 100vw;
     display: inline-block;
     background-color: white;
@@ -128,6 +128,30 @@ body, html {
 
 li#no-separator {
     border: none;
+} */
+
+.section6-nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav6-items {
+    padding: 1.5%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+img.section6-icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.section6-nav a {
+    text-decoration: none;
+    color: inherit;
+
 }
 
 .section6 {
