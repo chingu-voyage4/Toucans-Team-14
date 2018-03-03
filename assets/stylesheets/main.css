@@ -268,8 +268,8 @@ body, html {
     width: 100%;
 }
 
-/*#sec5navbar li:last-child {
-    border-right: none;
+/* #sec5navbar ul:last-child {
+    border-right: 0;
 }  ----DOESN'T WORK*/
 
 #sec5navbar a {
