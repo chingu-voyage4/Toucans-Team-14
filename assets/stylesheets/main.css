@@ -109,18 +109,15 @@ body, html {
     =================================================
 */
 
-#section6-nav-container {
-    position: fixed;
-    top: 0;
-    margin: auto;
-    width: 100%;
-}
-
+/* ---------- Nav bar ---------- */
 .section6-nav {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
     background-color: white;
     display: flex;
     justify-content: space-around;
-    height: 50px;
+    height: 6vh;
     align-items: center;
 }
 
@@ -140,11 +137,12 @@ img.section6-icons {
     color: inherit;
 }
 
-.section6 {
-    height: 100vh;
-    background-position: center;
+/* ---------- Content ---------- */
+.section6-content-container {
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
     background-color: gold;
-    border-bottom: 1px solid black;
     text-align: center;
 }
 
@@ -152,6 +150,7 @@ img.section6-icons {
     font-size: 1.5em;
     padding: 3%;
     top: 10%;
+    font-weight: bold;
 }
 
 .section6-bold {
@@ -164,7 +163,6 @@ img.section6-icons {
     width: 200px;
     margin: 7%;
 }
-
 
 
 
