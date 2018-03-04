@@ -166,13 +166,6 @@ subsection {
   background-color: dodgerblue;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100vw;
-}
-
 #arrow {
   justify-content: center;
 }
