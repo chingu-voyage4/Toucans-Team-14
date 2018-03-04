@@ -3,22 +3,33 @@
 <head>
 	<title>IBM World Community Grid</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </head>
 <body>
 
 	<!-- Section 1 - Blue -->
 	<section class="bg" id="section1">
+			<div class="arrow-container">
+				<a href="#section2">
+				<img src="assets/images/down-arrow.png" height=48px width=48px
+				id="arrow1"></a>
+			</div>
+		  </div>
+	  </section>
     </section>
 
 	<!-- Section 2 - Yellow -->
 	<section class="bg" id="section2">
-		<div class="button-container">
-		<button id='scrollButtonToChallenge'>Scroll to Challenge</button>
-	  </div>
+		<div class="arrow-container">
+			<a href="#section3a">
+			<img src="assets/images/down-arrow.png" height=48px width=48px
+			id="arrow1"></a>
+		</div>
   </section>
 
 	<!-- Section 3 - Blue -->
-	<section class="bg, flex-container">
+	<section class="bg, flex-container" id="container">
         <!-- Section 3a - Blue - Challenge -->
         <subsection id="section3a">
 						<div class="subheader" id="header-challenge">
@@ -41,7 +52,9 @@
           	</div>
 					</div>
 					<div class="arrow-container">
-						<img src="assets/images/down-arrow.png" height=48px width=48px>
+						<a href="#section3b">
+						<img src="assets/images/down-arrow.png" height=48px width=48px
+						id="arrow3"></a>
 					</div>
 					</div>
         </subsection>
@@ -65,7 +78,10 @@
           	</div>
 					</div>
 					<div class="arrow-container">
-						<img src="assets/images/down-arrow.png" height=48px width=48px>
+						<a href="#section3c">
+						<img src="assets/images/down-arrow.png" height=48px width=48px
+						id="arrow4">
+					  </a>
 					</div>
 					</div>
         </subsection>
@@ -91,7 +107,8 @@
           	</div>
 					</div>
 					<div class="arrow-container">
-						<img src="assets/images/down-arrow.png" height=48px width=48px>
+						<img src="assets/images/down-arrow.png" height=48px width=48px
+						id="arrow5">
 					</div>
 					</div>
 				  </div>
@@ -171,5 +188,6 @@
 <div>Background image of DNA
 	<a href="https://www.freepik.com/free-photo/dna-helix_932015.htm">Designed by
 		Freepik</a>
+		<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
