@@ -263,34 +263,35 @@ body, html {
 .sec5navbar li {
     display: flex;
     justify-content: center;
-    align-items: center;
     border-right: 1px solid white;
     width: 100%;
+    height: 100%;
+    background-color: #2e75cf;  
 }
 
-/* #sec5navbar ul:last-child {
+.sec5navbar li:last-child {
     border-right: 0;
-}  ----DOESN'T WORK*/
+}   
 
 .sec5navbar a {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
     font-weight: 700;
     text-align: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background-color: #2e75cf;    
+   
 }
-
 
 .sec5navbar img {
     height: 30px;
     padding-right: 10px;
 }
 
-.sec5navbar a.clearLink {
+.sec5navbar li.clearLink {
     background-color: transparent;
 }
 
