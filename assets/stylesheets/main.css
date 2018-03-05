@@ -89,6 +89,10 @@ body {
     font-style: normal;
 }
 
+.mainContent {
+    text-align: center;
+}
+
 .maintext {
     font-size: 36px;
     line-height: 40px;
@@ -185,7 +189,7 @@ body, html {
 #section5c img,
 #section5d img,
 #section5e img {
-    max-width: 20%;
+    max-width: 10%;
 }
 
 #section6 {
@@ -218,10 +222,10 @@ body, html {
 */
 
 .centerBox {
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 100px;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
 }
 
 /*
@@ -244,13 +248,6 @@ body, html {
 
     =================================================
 */
-
-.sec5navbar {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: sticky;  /*doesn't work for some reason */
-    
-}
 
 .sec5navbar ul {
     display: flex;
