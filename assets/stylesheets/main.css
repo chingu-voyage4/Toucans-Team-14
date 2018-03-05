@@ -245,14 +245,14 @@ body, html {
     =================================================
 */
 
-#sec5navbar {
+.sec5navbar {
     position: -webkit-sticky;
     position: -moz-sticky;
     position: sticky;  /*doesn't work for some reason */
     
 }
 
-#sec5navbar ul {
+.sec5navbar ul {
     display: flex;
     justify-content: space-between;
     height: 45px;
@@ -260,7 +260,7 @@ body, html {
 
 }
 
-#sec5navbar li {
+.sec5navbar li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,7 +272,7 @@ body, html {
     border-right: 0;
 }  ----DOESN'T WORK*/
 
-#sec5navbar a {
+.sec5navbar a {
     display: flex;
     justify-content: center;
     color: white;
@@ -284,14 +284,14 @@ body, html {
     background-color: #2e75cf;    
 }
 
-/*#sec5navbar a:focus {
-    background-color: none;
-} doesn't quite work */
 
-#sec5navbar img {
+.sec5navbar img {
     height: 30px;
     padding-right: 10px;
 }
 
+.sec5navbar a.clearLink {
+    background-color: transparent;
+}
 
 
