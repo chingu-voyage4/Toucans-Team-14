@@ -109,16 +109,36 @@ body, html {
     =================================================
 */
 
+#section6,
+#section6-nav,
+.section6-content-container {
+    display: flex;
+}
+
+#section6 {
+    flex-direction: column;
+}
+
+#battery,
+#security,
+#data {
+    display: none;
+}
+
+#display {
+    display: flex;
+}
+
 /* ---------- Nav bar ---------- */
-.section6-nav {
-    /* position: fixed; */
+#section6-nav {
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
-    display: flex;
     justify-content: space-around;
     height: 6vh;
     align-items: bottom;
+    border: 2px solid red;
 }
 
 .nav6-items {
@@ -130,7 +150,7 @@ body, html {
     border-right: 1px solid gold;
 }
 
-#nav6-gold-background {
+#performance-nav {
     background-color: gold;
 }
 
@@ -140,18 +160,19 @@ img.section6-icons {
     margin-right: 10px;
 }
 
-.section6-nav a {
+#section6-nav a {
     text-decoration: none;
     color: inherit;
 }
 
 /* ---------- Content ---------- */
 .section6-content-container {
-    display: flex;
     flex-direction: column;
-    height: 94vh;
+    padding-top: 6%;
+
     background-color: gold;
     text-align: center;
+    border: 1px solid blue;
 }
 
 .section6-title {
@@ -171,7 +192,6 @@ img.section6-icons {
     width: 200px;
     margin: 7%;
 }
-
 
 
 
