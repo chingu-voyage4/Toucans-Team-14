@@ -64,20 +64,20 @@ body, html {
 }
 
 .bg {
-    height: 100vh;
+    height: 100%;
     background-position: center;
 }
 
 .subheader {
   display: flex;
   justify-content: center;
-  align-items:center;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
   height: 8vh;
   background-color: royalblue;
   color: white;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 1.3em;
   border-bottom: 1px solid aliceblue;
 }
 
@@ -160,78 +160,116 @@ body, html {
 
 subsection {
   display:flex;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   justify-content:center;
   flex-wrap: wrap;
   background-color: dodgerblue;
 }
 
-#arrow {
-  justify-content: center;
-}
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
-}
-
-#hr {
-  display:flex;
-  justify-content: center;
-  align-content: space-between;
-  flex-wrap:wrap;
-  width: 50vw;
-}
-
-.image {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-}
-
-#image2 {
-  margin-top: 4vh;
-  margin-bottom: 10vh;
-}
-
-#image3 {
-  margin-top: 4vh;
-  margin-bottom: 10vh;
+  width: 100%;
+  flex-direction:column;
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 1%;
 }
 
 h3 {
   color: white;
   font-family: sans-serif;
-  font-size: 32px;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
 p {
   color: white;
   font-family: sans-serif;
-  font-size: 16px;
-  margin-bottom: 8vh;
-  text-align: center;
+  font-size: 1em;
 }
 
 strong {
   color: white;
   font-family: sans-serif;
-  font-size: 16px;
-  margin-bottom: 8vh;
-  text-align: center;
+  font-size: 1em;
   font-weight: bold;
 }
 
-.arrow-container {
+.wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+  }
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  width: 100vw;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+}
+
+@media only screen and (min-width:100px) and (max-width:480px) and (orientation:portrait)
+{
+p,strong {
+font-size:1em;
+}
+
+#compass {
+  width:120px;
+  height:120px;
+}
+#binocular-man {
+  width: 180px;
+  height: 120px;
+}
+#calendar {
+  width: 120px;
+  height: 100px;
+}
+}
+
+@media only screen and (orientation:landscape) and (max-width:760px)  {
+.wrapper {
+  width:100%;
+}
+#compass {
+  display:none;
+}
+#binocular-man {
+  display:none;
+}
+#calendar {
+  display:none;
+}
+}
+@media only screen and (min-width:641px)  {
+
+}
+@media only screen and (min-width:961px)  {
+.wrapper {
+  width:50%;
+}
+
+  }
+@media only screen and (min-width:1025px) {
+
+
+ }
+}
+@media only screen and (min-width:1281px) {
+
+
+ }
 }
