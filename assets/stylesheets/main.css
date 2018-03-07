@@ -213,6 +213,21 @@ body, html {
     background-size: cover;
 }
 
+.joinNow {
+    font: 24px Arial, sans-serif;
+    background-color: tomato;
+    color: white;
+    box-shadow: inherit;
+    text-decoration: none;
+    padding: 5px 8px;
+    margin-top: 20px; 
+}
+
+a.joinNow:hover {
+    background-color: white;
+    color: tomato;
+}
+
 /*
     =================================================
 
