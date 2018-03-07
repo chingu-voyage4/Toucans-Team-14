@@ -70,7 +70,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 }
 
 .bg {
-    height: 100%;
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
 }
 
@@ -84,6 +84,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
       background-size: cover;
+      height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
 #section2 {
