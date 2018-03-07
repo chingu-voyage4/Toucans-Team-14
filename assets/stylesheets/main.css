@@ -8,7 +8,8 @@
     =================================================
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -22,8 +23,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -34,7 +35,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -58,13 +59,54 @@ table {
 }
 
 
+/*
+    =================================================
+
+    Custom Styles
+
+    =================================================
+
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+/* paragraph style for detailed info text */
+
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.mainContent {
+    text-align: center;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
 body, html {
     height: 100%;
     margin: 0;
 }
 
 .bg {
-    height: 100%;
+    height: 100vh;
     background-position: center;
 }
 
@@ -96,11 +138,58 @@ body, html {
     background-size: cover;
 }
 
-#section5 {
+/*
+    =================================================
+
+    Section 5
+
+    =================================================
+*/
+
+/*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
+    with different background images  */
+
+#section5a {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/annie-spratt-42459.jpg');
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+}
+
+#section5b {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/drugs_bw.jpg');
+    background-size: cover;
+}
+
+#section5c {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/mosquitoBckgd_bw.jpg');
+    background-size: cover;
+}
+
+#section5d {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/oxygen_bw.jpg');
+    background-size: cover;
+}
+
+#section5e {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/ribbonBackground_bw-2.jpg');
+    background-size: cover;
+}
+
+#section5a img,
+#section5b img,
+#section5c img,
+#section5d img,
+#section5e img {
+    max-width: 10%;
 }
 
 #section6 {
@@ -123,3 +212,99 @@ body, html {
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
 }
+
+.joinNow {
+    font: 24px Arial, sans-serif;
+    background-color: tomato;
+    color: white;
+    box-shadow: inherit;
+    text-decoration: none;
+    padding: 5px 8px;
+    margin-top: 20px; 
+}
+
+a.joinNow:hover {
+    background-color: white;
+    color: tomato;
+}
+
+/*
+    =================================================
+
+    container positioning
+
+    =================================================
+*/
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+/*
+    =================================================
+
+    image positioning
+
+    =================================================
+*/
+
+.centerImage {
+    display: block;
+    margin: auto;
+}
+
+/*
+    =================================================
+
+    navigation bars
+
+    =================================================
+*/
+
+.sec5navbar ul {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+
+}
+
+.sec5navbar li {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid white;
+    width: 100%;
+    height: 100%;
+    background-color: #2e75cf;  
+}
+
+.sec5navbar li:last-child {
+    border-right: 0;
+}   
+
+.sec5navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+   
+}
+
+.sec5navbar img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sec5navbar li.clearLink {
+    background-color: transparent;
+}
+
+
