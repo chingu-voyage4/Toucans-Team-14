@@ -203,90 +203,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
     max-width: 10%;
 }
 
-/*
-    =================================================
-    Section 6
-    =================================================
-*/
-
-/* ---------- Nav bar ---------- */
-.section6-nav {
-    /* position: fixed; */
-    top: 0;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    height: 6vh;
-    align-items: bottom;
-}
-
-.nav6-items {
-    font-size: 1.5em;
-    font-weight: bold;
-    flex-grow: 1;
-    text-align: center;
-    height: 100%;
-    border-right: 1px solid gold;
-}
-
-#nav6-gold-background {
-    background-color: gold;
-}
-
-img.section6-icons {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.section6-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-/* ---------- Content ---------- */
-.section6-content-container {
-    display: flex;
-    flex-direction: column;
-    height: 94vh;
-    background-color: gold;
-    text-align: center;
-    color: black;
-}
-
-.section6-title {
-    font-size: 1.5em;
-    padding: 3%;
-    top: 10%;
-    font-weight: bold;
-}
-
-.section6-bold {
-    font-weight: bold;
-    padding: 1%;
-}
-
-#section6-image img {
-    height: 200px;
-    width: 200px;
-    margin: 7%;
-}
-
-#section7 {
-    background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/philippe-toupet-320689.jpg');
-    background-size: cover;
-}
-
-#section8 {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
-    background-size: cover;
-}
-
 .menu {
  width: 100%;
   display: flex;
@@ -449,4 +365,91 @@ a.joinNow:hover {
 
 .sec5navbar li.clearLink {
     background-color: transparent;
+}
+
+
+/*
+    =================================================
+
+    Section 6
+
+    =================================================
+*/
+
+/* ---------- Nav bar ---------- */
+.section6-nav {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 6vh;
+    align-items: bottom;
+}
+
+.nav6-items {
+    font-size: 1.5em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    height: 100%;
+    border-right: 1px solid gold;
+}
+
+#nav6-gold-background {
+    background-color: gold;
+}
+
+img.section6-icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.section6-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ---------- Content ---------- */
+.section6-content-container {
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    background-color: gold;
+    text-align: center;
+    color: black;
+}
+
+.section6-title {
+    font-size: 1.5em;
+    padding: 3%;
+    top: 10%;
+    font-weight: bold;
+}
+
+.section6-bold {
+    font-weight: bold;
+    padding: 1%;
+}
+
+#section6-image img {
+    height: 200px;
+    width: 200px;
+    margin: 7%;
+}
+
+#section7 {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/philippe-toupet-320689.jpg');
+    background-size: cover;
+}
+
+#section8 {
+    background:
+        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
+        url('../images/riccardo-chiarini-247364.jpg');
+    background-size: cover;
 }
