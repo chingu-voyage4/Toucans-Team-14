@@ -57,6 +57,8 @@ table {
     border-spacing: 0;
 }
 
+/* End of CSS reset */
+
 
 /*
     =================================================
@@ -104,27 +106,37 @@ body, html {
     margin: 0;
 }
 
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
+}
+
 .bg {
-    height: 100vh;
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
 }
 
+#layout {
+  display: flex;
+  flex-direction: column;
+}
+
 #section1 {
-    background:
+      background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
-    background-size: cover;
+      background-size: cover;
+      height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
 #section2 {
-    background:
+     background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/elena-prokofyeva-17909.jpg');
     background-size: cover;
 }
 
 #section3 {
-    background:
+      background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
@@ -261,9 +273,6 @@ img.section6-icons {
     margin: 7%;
 }
 
-
-
-
 #section7 {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
@@ -276,6 +285,76 @@ img.section6-icons {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+}
+
+.menu {
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+position:fixed;
+background-color: white;
+}
+
+.section-container {
+  display: flex;
+}
+
+.logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.5%;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  padding-right: 1.5%;
+}
+
+#join {
+	background-color: tomato;
+  color: white;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  font-size: 24px;
+  box-shadow: inherit;
+}
+
+a:hover#join {
+  background-color: white;
+  color: tomato;
+}
+
+
+#login {
+	color: tomato;
+  text-decoration: underline coral;
+  white-space: nowrap;
+}
+
+#WCG {
+  height: 36px;
+}
+
+#IBM {
+  height: 25px;
+}
+
+#logoSeparator {
+  border-right: 1px solid #E8E8E8;
+  height: 36px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+#cancel {
+  height: 15px;
+  padding-left: 10px;
 }
 
 .joinNow {
