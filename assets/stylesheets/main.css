@@ -76,8 +76,23 @@ body {
     color: #ffffff;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
+}
+
+.bg {
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    background-position: center;
+}
+
 /* paragraph style for detailed info text */
 
+/********************* POSSIBLE REUSABLE CODE ************************/
 .infotext,
 .maintext {
     padding-bottom: 24px;
@@ -101,24 +116,18 @@ body {
     padding-top: 20px;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-a {                       /* Removes default styling of links (i.e. underline) */
-  text-decoration: none;
-}
-
-.bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
-    background-position: center;
-}
-
 #layout {
   display: flex;
   flex-direction: column;
 }
+
+/*
+    =================================================
+
+    Section 1
+
+    =================================================
+*/
 
 #section1 {
       background:
@@ -128,6 +137,15 @@ a {                       /* Removes default styling of links (i.e. underline) *
       height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
+
+/*
+    =================================================
+
+    Section 2
+
+    =================================================
+*/
+
 #section2 {
      background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
@@ -135,12 +153,30 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-size: cover;
 }
 
+
+/*
+    =================================================
+
+    Section 3
+
+    =================================================
+*/
+
 #section3 {
       background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
 }
+
+
+/*
+    =================================================
+
+    Section 4
+
+    =================================================
+*/
 
 #section4 {
     background:
@@ -440,12 +476,30 @@ img.section6-icons {
     margin: 7%;
 }
 
+
+/*
+    =================================================
+
+    Section 7
+
+    =================================================
+*/
+
 #section7 {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
 }
+
+
+/*
+    =================================================
+
+    Section 8
+
+    =================================================
+*/
 
 #section8 {
     background:
