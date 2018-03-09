@@ -456,11 +456,20 @@ a.joinNow:hover {
 
 #carousel {
     position: fixed;
-    margin: 33vh 0 0 2vw;
+    margin: 33vh 0 0 1vw; 
 }
 
 .carouselItem {
-    margin-top: 10px;
+    margin-top: 45px;
+    border: 2px solid white;
+    height: 8px;
+    width: 8px;
+    border-radius: 100px;
+    background-color: none; 
+}
+
+.carouselItem a li:first-child {
+    margin-top: 0;
 }
 
 .carouselItem a {
