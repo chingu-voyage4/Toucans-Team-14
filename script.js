@@ -13,27 +13,36 @@
 //     document.getElementById(section).style.display = 'flex';
 // }
 
+const section6Nav = document.getElementById('section6-nav');
+function setEventListeners() {
+    section6Nav.addEventListener('click', function(event) {changeBackground(event)};
+}
+
 function changeBackground(event) {
-    var section6Nav = document.getElementById('section6-nav');
     var lis = section6Nav.getElementsByTagName('li');
     for (var i = 0; i < lis.length; i++) {
         lis[i].style.backgroundColor = 'white';
     }
-    event.style.backgroundColor = 'gold';
-    displayContent(event);
+    var target = event.target;
+    var parentTarget = target.parentElement;
+    parentTarget.style.backgroundColor = 'gold';
+    displayContent(parentTarget);
 }
 
 function displayContent(event) {
     var section6 = document.getElementById('section6');
     var subSections = section6.getElementsByTagName('section');
     for (var i = 0; i < subSections.length; i++) {
-        if (subSections[i].id != event.id) {
-            subSections[i].setAttribute('id', 'display');
+        var sectionId = subSections[i].id;
+        if (target.id == sectionId + '-nav') {
+            document.getElementById(sectionId).style.display = 'flex';
         }
         else {
-            subSections[i].removeAttribute('id');
+            document.getElementById(sectionId).style.display = 'none';
         }
     }
+
+    setEventListeners();
     // if (event.id == "battery-nav") {
     //     document.getElementById('battery').setAttribute('id', 'display');
     // }

@@ -111,6 +111,7 @@ body, html {
 
 #section6,
 #section6-nav,
+#section6-nav-container,
 .section6-content-container {
     display: flex;
 }
@@ -125,9 +126,6 @@ body, html {
     display: none;
 }
 
-#display {
-    display: flex;
-}
 
 /* ---------- Nav bar ---------- */
 #section6-nav {
