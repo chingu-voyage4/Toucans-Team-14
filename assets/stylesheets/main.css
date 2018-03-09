@@ -449,3 +449,18 @@ a.joinNow:hover {
 .sec5navbar li.clearLink {
     background-color: transparent;
 }
+
+/*  =================================================
+    Carousel
+    ================================================= */
+
+#carousel {
+    color: white;
+    position: fixed;
+    margin: 33vh 0 0 2vw;
+}
+
+.carouselItem {
+    margin-top: 10px;
+}
+
