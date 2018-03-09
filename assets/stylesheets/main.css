@@ -455,12 +455,16 @@ a.joinNow:hover {
     ================================================= */
 
 #carousel {
-    color: white;
     position: fixed;
     margin: 33vh 0 0 2vw;
 }
 
 .carouselItem {
     margin-top: 10px;
+}
+
+.carouselItem a {
+    text-decoration: none;
+    color: white;
 }
 
