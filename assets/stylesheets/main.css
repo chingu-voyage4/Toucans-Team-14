@@ -454,25 +454,20 @@ a.joinNow:hover {
     Carousel
     ================================================= */
 
-#carousel {
+.carousel {
     position: fixed;
-    margin: 33vh 0 0 1vw; 
+    margin: 35vh 0 0 1vw; 
 }
 
-.carouselItem {
+.carousel li div {
+    margin-top: 37px;
     border: 2px solid white;
     height: 8px;
     width: 8px;
     border-radius: 100px;
-    background-color: none; 
-    margin-top: 45px;
+    background-color: none;
 }
 
-
-
-.carouselItem a {
-    text-decoration: none;
-    color: white;
-    
+.carousel li:first-child div {
+    margin-top: 0;
 }
-
