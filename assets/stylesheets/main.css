@@ -460,20 +460,19 @@ a.joinNow:hover {
 }
 
 .carouselItem {
-    margin-top: 45px;
     border: 2px solid white;
     height: 8px;
     width: 8px;
     border-radius: 100px;
     background-color: none; 
+    margin-top: 45px;
 }
 
-.carouselItem a li:first-child {
-    margin-top: 0;
-}
+
 
 .carouselItem a {
     text-decoration: none;
     color: white;
+    
 }
 
