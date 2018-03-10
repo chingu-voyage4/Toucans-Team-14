@@ -283,6 +283,7 @@ a:hover#join {
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+    padding-top: 8vh;
 }
 
 #section5b {
