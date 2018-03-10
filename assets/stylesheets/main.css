@@ -115,9 +115,17 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-position: center;
 }
 
-#layout {
+.subheader {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  background-color: royalblue;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  border-bottom: 1px solid aliceblue;
 }
 
 #section1 {
@@ -140,6 +148,27 @@ a {                       /* Removes default styling of links (i.e. underline) *
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+}
+
+#section3a {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3b {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3c {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
 }
 
 #section4 {
@@ -286,6 +315,121 @@ img.section6-icons {
     background-size: cover;
 }
 
+.flex-container subsection {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content:center;
+  flex-wrap: wrap;
+  background-color: dodgerblue;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction:column;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.flex-container h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.flex-container p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.flex-container strong {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+  }
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+}
+
+@media only screen and (min-width:100px) and (max-width:480px) and (orientation:portrait)
+{
+p,strong {
+font-size:1em;
+}
+
+#compass {
+  width:120px;
+  height:120px;
+}
+#binocular-man {
+  width: 180px;
+  height: 120px;
+}
+#calendar {
+  width: 120px;
+  height: 100px;
+}
+}
+
+@media only screen and (orientation:landscape) and (max-width:760px)  {
+.wrapper {
+  width:100%;
+}
+#compass {
+  display:none;
+}
+#binocular-man {
+  display:none;
+}
+#calendar {
+  display:none;
+}
+}
+@media only screen and (min-width:641px)  {
+
+}
+@media only screen and (min-width:961px)  {
+.wrapper {
+  width:50%;
+}
+
+  }
+@media only screen and (min-width:1025px) {
+
+
+ }
+}
+@media only screen and (min-width:1281px) {
+
+
+ }
+
 .menu {
  width: 100%;
   display: flex;
@@ -328,7 +472,6 @@ a:hover#join {
   background-color: white;
   color: tomato;
 }
-
 
 #login {
 	color: tomato;
