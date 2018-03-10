@@ -57,23 +57,197 @@ table {
     border-spacing: 0;
 }
 
+/* End of CSS reset */
+
+
+/*
+    =================================================
+
+    Custom Styles
+
+    =================================================
+
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+}
 
 body, html {
     height: 100%;
     margin: 0;
 }
 
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
+}
+
 .bg {
-    height: 100vh;
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
 }
 
+/* paragraph style for detailed info text */
+
+
+/*
+    =================================================
+
+    Top Navigation/Menu Bar
+
+    =================================================
+*/
+
+.menu {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    background-color: white;
+}
+
+/**************** Couldn't find this class in index.html
+.section-container {
+    display: flex;
+} */
+
+.logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5%;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding-right: 1.5%;
+}
+
+#join {
+    background-color: tomato;
+    color: white;
+    margin-left: 20px;
+    padding: 5px 10px 5px 10px;
+    font-size: 24px;
+    box-shadow: inherit;
+}
+
+a:hover#join {
+    background-color: white;
+    color: tomato;
+}
+
+
+#login {
+    color: tomato;
+    text-decoration: underline coral;
+    white-space: nowrap;
+}
+
+#WCG {
+    height: 36px;
+}
+
+#IBM {
+    height: 25px;
+}
+
+#logoSeparator {
+    border-right: 1px solid #E8E8E8;
+    height: 36px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#cancel {
+    height: 15px;
+    padding-left: 10px;
+}
+
+/********************* POSSIBLE REUSABLE CODE ************************/
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.mainContent {
+    text-align: center;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
+}
+
+.bg {
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    background-position: center;
+}
+
+.subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  background-color: royalblue;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  border-bottom: 1px solid aliceblue;
+}
+
+/*
+    =================================================
+
+    Section 1
+
+    =================================================
+*/
+
 #section1 {
-    background:
+      background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
-    background-size: cover;
+      background-size: cover;
+      height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
+
+
+/*
+    =================================================
+
+    Section 2
+
+    =================================================
+*/
 
 #section2 {
     background:
@@ -82,12 +256,116 @@ body, html {
     background-size: cover;
 }
 
+
+/*
+    =================================================
+
+    Section 3
+
+    =================================================
+*/
+
 #section3 {
     background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
 }
+
+#section3a {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3b {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3c {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+
+
+.flex-container subsection {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content:center;
+  flex-wrap: wrap;
+  background-color: dodgerblue;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction:column;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.flex-container h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.flex-container p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.flex-container strong {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+  }
+
+/* Attribution section here only temporarily */
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+}
+
+/*
+    =================================================
+
+    Section 4
+
+    =================================================
+*/
 
 #section4 {
     background:
@@ -96,16 +374,160 @@ body, html {
     background-size: cover;
 }
 
-#section5 {
+/*
+    =================================================
+
+    Section 5
+
+    =================================================
+*/
+
+/*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
+    with different background images  */
+
+#section5a {
     background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/annie-spratt-42459.jpg');
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+    padding-top: 8vh;
+}
+
+#section5b {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/drugs_bw.jpg');
+    background-size: cover;
+}
+
+#section5c {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/mosquitoBckgd_bw.jpg');
+    background-size: cover;
+}
+
+#section5d {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/oxygen_bw.jpg');
+    background-size: cover;
+}
+
+#section5e {
+    background:
+        linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
+        url('../images/ribbonBackground_bw-2.jpg');
+    background-size: cover;
+}
+
+#section5a img,
+#section5b img,
+#section5c img,
+#section5d img,
+#section5e img {
+    max-width: 10%;
+}
+
+.joinNow {
+    font: 24px Arial, sans-serif;
+    background-color: tomato;
+    color: white;
+    box-shadow: inherit;
+    text-decoration: none;
+    padding: 5px 8px;
+    margin-top: 20px;
+}
+
+a.joinNow:hover {
+    background-color: white;
+    color: tomato;
 }
 
 /*
     =================================================
+
+    container positioning
+
+    =================================================
+*/
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+/*
+    =================================================
+
+    image positioning
+
+    =================================================
+*/
+
+.centerImage {
+    display: block;
+    margin: auto;
+}
+
+/*
+    =================================================
+
+    navigation bars
+
+    =================================================
+*/
+
+.sec5navbar ul {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+}
+
+.sec5navbar li {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid white;
+    width: 100%;
+    height: 100%;
+    background-color: #2e75cf;
+}
+
+.sec5navbar li:last-child {
+    border-right: 0;
+}
+
+.sec5navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.sec5navbar img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sec5navbar li.clearLink {
+    background-color: transparent;
+}
+
+
+/*
+    =================================================
+
     Section 6
+
     =================================================
 */
 
@@ -156,10 +578,10 @@ img.section6-icons {
 
 #section6-nav a {
     text-decoration: none;
-    color: inherit;
     display: block;
     width: 100%;
     height: 100%;
+    color: black;
 }
 
 /* ---------- Content ---------- */
@@ -167,6 +589,7 @@ img.section6-icons {
     height: 94vh;
     background-color: gold;
     text-align: center;
+    color: black;
 }
 
 .section6-title {
@@ -188,6 +611,13 @@ img.section6-icons {
 }
 
 
+/*
+    =================================================
+
+    Section 7
+
+    =================================================
+*/
 
 #section7 {
     background:
@@ -196,9 +626,79 @@ img.section6-icons {
     background-size: cover;
 }
 
+
+/*
+    =================================================
+
+    Section 8
+
+    =================================================
+*/
+
 #section8 {
     background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
 }
+
+/*
+    =================================================
+
+    Media Queries
+
+    =================================================
+*/
+
+@media only screen and (min-width:100px) and (max-width:480px) and (orientation:portrait)
+{
+p,strong {
+font-size:1em;
+}
+
+#compass {
+  width:120px;
+  height:120px;
+}
+#binocular-man {
+  width: 180px;
+  height: 120px;
+}
+#calendar {
+  width: 120px;
+  height: 100px;
+}
+}
+
+@media only screen and (orientation:landscape) and (max-width:760px)  {
+.wrapper {
+  width:100%;
+}
+#compass {
+  display:none;
+}
+#binocular-man {
+  display:none;
+}
+#calendar {
+  display:none;
+}
+}
+@media only screen and (min-width:641px)  {
+
+}
+@media only screen and (min-width:961px)  {
+.wrapper {
+  width:50%;
+}
+
+  }
+@media only screen and (min-width:1025px) {
+
+
+ }
+}
+@media only screen and (min-width:1281px) {
+
+
+ }
