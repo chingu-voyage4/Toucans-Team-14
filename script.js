@@ -6,6 +6,8 @@ Section 1 rotating text
 ==================================================
 */
 
+// TRYING TO FIGURE OUT THE setTimeout FUNCTION (Why doesn't the for/while loop wait until timeout is done before continuing???)
+
 rotatingDisplay();
 
 function rotatingDisplay() {
