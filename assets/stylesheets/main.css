@@ -110,11 +110,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-color: white;
 }
 
-/**************** Couldn't find this class in index.html
-.section-container {
-    display: flex;
-} */
-
 .logos {
     display: flex;
     justify-content: flex-start;
@@ -173,29 +168,22 @@ a:hover#join {
     padding-left: 10px;
 }
 
-/********************* POSSIBLE REUSABLE CODE ************************/
-.infotext,
-.maintext {
-    padding-bottom: 24px;
-}
+/*
+    =================================================
 
-.infotext {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 400px;
-    font-style: normal;
-}
+    Content container to be used in each section
+
+    =================================================
+*/
 
 .mainContent {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
 }
 
-.maintext {
-    font-size: 36px;
-    line-height: 40px;
-    font-style: normal;
-    padding-top: 20px;
-}
 
 body, html {
     height: 100%;
@@ -452,11 +440,23 @@ a.joinNow:hover {
     =================================================
 */
 
-.centerBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
 }
 
 /*
