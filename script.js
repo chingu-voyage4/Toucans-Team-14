@@ -1,6 +1,48 @@
 /*
 ==================================================
 
+Section 1 rotating text
+
+==================================================
+*/
+
+rotatingDisplay();
+
+function rotatingDisplay() {
+    var i = 1;
+    while (i <= 1) {
+        /* display: block - current icon/text pair */
+        setDisplay(i);
+        /* wait 3 seconds */
+        /* display: none - current icon/text pair */
+        // setTimeout(function() {
+        //     document.getElementById("section1").style.display="none";
+        //     }, 3000);
+        i++;
+    }
+}
+
+function setDisplay(i) {
+        var icon = document.getElementById("icon" + i);
+        icon.style.display = "block";
+        var text = document.getElementById("text" + i);
+        text.style.display = "block";
+}
+
+function removeDisplay(i) {
+    document.getElementById("section1").style.display="none";
+
+    // var icon = document.getElementById("icon" + i);
+    // icon.style.display = "none";
+    // var text = document.getElementById("text" + i);
+    // text.style.display = "none";
+}
+
+
+
+/*
+==================================================
+
 Section 6 (and 5) Navbar
 
 ==================================================

@@ -233,11 +233,14 @@ a {                       /* Removes default styling of links (i.e. underline) *
     display: none;
 }
 
-#message,
-#play,
-#message2 {
+.rotating-text,
+.icon-in-laptop {
     display: none;
 }
+
+/* #icon1 {
+    display: block;
+} */
 
 .laptop-container {
     position: relative;
