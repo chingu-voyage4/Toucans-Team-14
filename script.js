@@ -44,7 +44,7 @@ Section 5 Navbar
 ==================================================
 */
 
-const section5Nav =document.getElementById('section5-nav');
+const section5Nav = document.getElementById('section5-nav');
 
 function setSec5EventListeners() {
   section5Nav.addEventListener('click', function(event) {changeSec5Background(event);});
@@ -53,10 +53,10 @@ function setSec5EventListeners() {
 function changeSec5Background(event) {
   var nav5Buttons = section5Nav.getElementsByTagName('li');
   for (let i = 0; i < nav5Buttons.length; i++) {
-    nav5Buttons[i].style.backgroundColor = 'transparent';
+    nav5Buttons[i].style.backgroundColor = '#2e75cf';
   }
   var parentTarget = event.target.parentElement;
-  parentTarget.style.backgroundColor = '#2e75cf';
+  parentTarget.style.backgroundColor = 'black';
   displaySec5Content(parentTarget);
 }
 

@@ -391,12 +391,20 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-color: rgba(46,117,207,0.45);
     text-align: center;
     color: white;
+    /*margin-top: -45px;*/ /* how to overlap background with navbar? */
 }
 
 #section5,
 .section5ContentContainer {
   display: flex;
   flex-direction: column;
+}
+
+#cancer,
+#zika,
+#tuberculosis,
+#aids {
+  display: none;
 }
 
 #microbiome {
@@ -519,12 +527,9 @@ a.joinNow:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    font-weight: 700;
-    text-align: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
-
 }
 
 .sec5navbar img {
@@ -532,10 +537,19 @@ a.joinNow:hover {
     padding-right: 10px;
 }
 
-.sec5navbar li.clearLink {
-    background-color: transparent;
+.nav5-items {
+    color: inherit;
+    font-size: 1.3em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
 }
 
+/* Shoud be transparent with section background image behind it*/
+#microbiome-nav {
+  background-color: black;
+}
 
 /*
     =================================================
