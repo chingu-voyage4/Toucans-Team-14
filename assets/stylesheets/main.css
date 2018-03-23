@@ -402,7 +402,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 #cancer,
 #zika,
-#tuberculosis,
+#tb,
 #aids {
   display: none;
 }
@@ -429,7 +429,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-size: cover;
 }
 
-#tuberculosis {
+#tb {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
@@ -446,7 +446,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 #microbiome img,
 #cancer img,
 #zika img,
-#tuberculosis img,
+#tb img,
 #aids img {
     max-width: 10%;
 }
