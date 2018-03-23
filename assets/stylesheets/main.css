@@ -385,7 +385,21 @@ a {                       /* Removes default styling of links (i.e. underline) *
 /*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
     with different background images  */
 
-#section5a {
+/* similar to .section6ContentContainer */
+.section5ContentContainer {
+    height: 94vh;
+    background-color: rgba(46,117,207,0.45);
+    text-align: center;
+    color: white;
+}
+
+#section5,
+.section5ContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#microbiome {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
@@ -393,39 +407,39 @@ a {                       /* Removes default styling of links (i.e. underline) *
     padding-top: 8vh;
 }
 
-#section5b {
+#cancer {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
-#section5c {
+#zika {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
-#section5d {
+#tuberculosis {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
-#section5e {
+#aids {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
     background-size: cover;
 }
 
-#section5a img,
-#section5b img,
-#section5c img,
-#section5d img,
-#section5e img {
+#microbiome img,
+#cancer img,
+#zika img,
+#tuberculosis img,
+#aids img {
     max-width: 10%;
 }
 
@@ -546,7 +560,7 @@ a.joinNow:hover {
 #battery,
 #security,
 #data {
-    display: none;
+    display: none;  
 }
 
 
