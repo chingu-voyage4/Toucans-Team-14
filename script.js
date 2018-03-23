@@ -39,6 +39,47 @@ setEventListeners();
 /*
 ==================================================
 
+Section 5 Navbar
+
+==================================================
+*/
+
+const section5Nav =document.getElementById('section5-nav');
+
+function setSec5EventListeners() {
+  section5Nav.addEventListener('click', function(event) {changeSec5Background(event);});
+}
+
+function changeSec5Background(event) {
+  var nav5Buttons = section5Nav.getElementsByTagName('li');
+  for (let i = 0; i < nav5Buttons.length; i++) {
+    nav5Buttons[i].style.backgroundColor = 'transparent';
+  }
+  var parentTarget = event.target.parentElement;
+  parentTarget.style.backgroundColor = '#2e75cf';
+  displaySec5Content(parentTarget);
+}
+
+function displaySec5Content(event) {
+  var section5 = document.getElementById('section5');
+  var subSections = section5.getElementsByTagName('section');
+  for (let i = 0; i < subSections.length; i++) {
+    var sectionId = subSections[i].id;
+    if (event.id == sectionId + '-nav') {
+      document.getElementById(sectionId).style.display = 'flex';
+    }
+    else {
+      document.getElementById(sectionId).style.display = 'none';
+    }
+  }
+}
+
+setSec5EventListeners();
+
+
+/*
+==================================================
+
 Scrolling
 
 ==================================================
