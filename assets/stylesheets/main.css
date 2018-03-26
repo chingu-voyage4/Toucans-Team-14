@@ -400,10 +400,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
   flex-direction: column;
 }
 
-#cancer,
-#zika,
-#tb,
-#aids {
+.sec5Hidden {
   display: none;
 }
 
