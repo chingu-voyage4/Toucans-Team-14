@@ -66,10 +66,10 @@ function displaySec5Content(event) {
   for (var i = 0; i < subSections.length; i++) {
     var sectionId = subSections[i].id;
     if (event.id == sectionId + '-nav') {
-      document.getElementById(sectionId).style.display = 'flex';
+      document.getElementById(sectionId).className = 'section5ContentContainer';
     }
     else {
-      document.getElementById(sectionId).style.display = 'none';
+      document.getElementById(sectionId).className = 'sec5Hidden';
     }
   }
 }
