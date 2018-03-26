@@ -534,7 +534,8 @@ a.joinNow:hover {
     padding-right: 10px;
 }
 
-.nav5-items {
+.nav5-itemsClear,
+.nav5-itemsBlue {
     color: inherit;
     font-size: 1.3em;
     font-weight: bold;
@@ -544,9 +545,15 @@ a.joinNow:hover {
 }
 
 /* Shoud be transparent with section background image behind it*/
-#microbiome-nav {
+.nav5-itemsClear {
   background-color: black;
 }
+
+.nav5-itemsBlue {
+  background-color: #2e75cf;
+}
+
+
 
 /*
     =================================================

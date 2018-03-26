@@ -51,6 +51,18 @@ function setSec5EventListeners() {
 }
 
 function changeSec5Background(event) {
+  var allTabs = section5Nav.getElementsByTagName('li');
+  for (let i = 1; i < allTabs.length; i++) {
+    if (event.id = allTabs[i].id - '-nav') {
+      allTabs[i].className = 'nav5-itemsClear';
+    } else {
+      allTabs[i].className = 'nav5-itemsBlue'
+    }
+  /*  var parentTarget = event.target.parentElement;*/
+    displaySec5Content(parentTarget);
+  }
+
+/*
   var nav5Buttons = section5Nav.getElementsByTagName('li');
   for (var i = 0; i < nav5Buttons.length; i++) {
     nav5Buttons[i].style.backgroundColor = '#2e75cf';
@@ -58,7 +70,7 @@ function changeSec5Background(event) {
   var parentTarget = event.target.parentElement;
   parentTarget.style.backgroundColor = 'black';
   displaySec5Content(parentTarget);
-}
+} */
 
 function displaySec5Content(event) {
   var section5 = document.getElementById('section5');
