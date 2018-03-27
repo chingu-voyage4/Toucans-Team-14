@@ -52,16 +52,18 @@ function setSec5EventListeners() {
 
 function changeSec5Background(event) {
   var allTabs = section5Nav.getElementsByTagName('li');
-  for (let i = 1; i < allTabs.length; i++) {
-    if (event.id = allTabs[i].id - '-nav') {
+  for (var i = 1; i < allTabs.length; i++) {
+    var tabId = allTabs[i].id;
+    if ((event.id + '-nav') == tabId.id) {
       allTabs[i].className = 'nav5-itemsClear';
     } else {
       allTabs[i].className = 'nav5-itemsBlue'
+      
     }
+  }
   /*  var parentTarget = event.target.parentElement;*/
     displaySec5Content(parentTarget);
-  }
-
+}
 /*
   var nav5Buttons = section5Nav.getElementsByTagName('li');
   for (var i = 0; i < nav5Buttons.length; i++) {
