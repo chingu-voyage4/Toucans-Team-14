@@ -404,36 +404,36 @@ a {                       /* Removes default styling of links (i.e. underline) *
   display: none;
 }
 
-#microbiome {
+.microbiomeBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
-    padding-top: 8vh;
+    /*padding-top: 8vh;*/
 }
 
-#cancer {
+.cancerBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
-#zika {
+.zikaBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
-#tb {
+.tbBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
-#aids {
+.aidsBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
@@ -546,7 +546,7 @@ a.joinNow:hover {
 
 /* Shoud be transparent with section background image behind it*/
 .nav5-itemsClear {
-  background-color: black;
+    background-color: rgba(46,117,207,0.45);
 }
 
 .nav5-itemsBlue {
