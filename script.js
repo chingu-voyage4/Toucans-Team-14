@@ -45,17 +45,17 @@ Section 5 Navbar
 */
 
 const sec5Nav = document.getElementById('section5-nav');
-var sec5NavTabs = sec5Nav.getElementsByTagName('li');           //creates NodeList - GLOBAL?var sec5SubSections = sec5Nav.getElementsByTagName('section');  //creates NodeList - GLOBAL?
+var sec5NavTabs = sec5Nav.getElementsByTagName('li');           //creates NodeList
 const sec5 = document.getElementById('section5');
 var sec5SubSections = sec5.getElementsByTagName('section');
 
 function changeSec5Background() {
   for (let i = 0; i < sec5NavTabs.length; i++) {
-    if (this.id == sec5NavTabs[i].id) {   //ISSUE WITH EVENT ID...
+    if (this.id == sec5NavTabs[i].id) {   
       sec5NavTabs[i].style.backgroundColor = 'black';
       sec5SubSections[i].className = 'section5ContentContainer'
     } else {
-      sec5NavTabs[i].style.backgroundColor = 'blue';
+      sec5NavTabs[i].style.backgroundColor = '#2e75cf';
       sec5SubSections[i].className = 'sec5Hidden';
     }
   } 
