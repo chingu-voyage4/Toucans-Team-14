@@ -707,6 +707,10 @@ font-size:1em;
     Carousel
     ================================================= */
 
+    #section1Car div {
+        background-color: white;
+    }
+
     .carouselWhite,
     .carouselBlack {
         position: fixed;
@@ -722,11 +726,12 @@ font-size:1em;
         border-radius: 100px;
         background-color: none;
     }
-
+ 
+     /* NOT CURRENTLY USED
     .carouselFillWhite li div {
         background-color: white;
     }
-
+   
     .carouselFillBlack li div {
         background-color: black;
     }
@@ -734,6 +739,8 @@ font-size:1em;
     .carouselFillNone li div {
         background-color: none;
     }
+
+    */
 
     .carouselWhite li div {
         border: 2px solid white;

@@ -81,36 +81,45 @@ Carousel Styling
 
 const carousel = document.getElementById('carousel');
 var carButtons = carousel.getElementsByTagName('li'); // NodeList for carousel buttons
+var buttonDivs = carousel.querySelectorAll('div');
 
  function changeCarouselColors() {
         var buttonId = this.id;                     // get id of clicked button
-//        var buttonDivs = carousel.getElementsByTagName('div');
+        
         for (let i = 0; i < carButtons.length; i++) {
- //           buttonDivs[i].style.backgroundColor = 'none';
             switch (buttonId) {
                 case 'section1Car':
                 case 'section3Car':
                 case 'section4Car': 
                 case 'current-projectsCar':
                     carousel.className = 'carouselWhite';
-                    buttonDivs[i].className = 'carouselFillWhite';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'white';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
                     break;
                 case 'section2Car':
                 case 'performanceCar':
                 case 'section7Car':
                 case 'section8Car':
                     carousel.className = 'carouselBlack';
- //                   buttonDivs[i].className = 'carouselFillBlack';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'black';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
                     break;
                 default:
                     carousel.className = 'carouselWhite';
- //                   buttonDivs[i].style.className = 'carouselFillNone';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'white';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
                     break; 
             }
         }
-
-
-        
 }
 
 (function () {
