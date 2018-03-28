@@ -385,47 +385,66 @@ a {                       /* Removes default styling of links (i.e. underline) *
 /*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
     with different background images  */
 
-#section5a {
+/* similar to .section6ContentContainer */
+.section5ContentContainer {
+    height: 94vh;
+    background-color: rgba(46,117,207,0.45);
+    text-align: center;
+    color: white;
+    /*margin-top: -45px;*/ /* how to overlap background with navbar? */
+}
+
+#section5,
+.section5ContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec5Hidden {
+  display: none;
+}
+
+.microbiomeBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
-    padding-top: 8vh;
+    /*padding-top: 8vh;*/
 }
 
-#section5b {
+.cancerBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
-#section5c {
+.zikaBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
-#section5d {
+.tbBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
-#section5e {
+.aidsBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
     background-size: cover;
 }
 
-#section5a img,
-#section5b img,
-#section5c img,
-#section5d img,
-#section5e img {
+#microbiome img,
+#cancer img,
+#zika img,
+#tb img,
+#aids img {
     max-width: 10%;
 }
 
@@ -493,7 +512,7 @@ a.joinNow:hover {
     border-right: 1px solid white;
     width: 100%;
     height: 100%;
-    background-color: #2e75cf;
+    /*background-color: #2e75cf; */
 }
 
 .sec5navbar li:last-child {
@@ -505,12 +524,9 @@ a.joinNow:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    font-weight: 700;
-    text-align: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
-
 }
 
 .sec5navbar img {
@@ -518,9 +534,25 @@ a.joinNow:hover {
     padding-right: 10px;
 }
 
-.sec5navbar li.clearLink {
-    background-color: transparent;
+.nav5-itemsClear,
+.nav5-itemsBlue {
+    color: inherit;
+    font-size: 1.3em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
 }
+
+/* Shoud be transparent with section background image behind it*/
+.nav5-itemsClear {
+    background-color: rgba(46,117,207,0.45);
+}
+
+.nav5-itemsBlue {
+  background-color: #2e75cf;
+}
+
 
 
 /*
@@ -546,7 +578,7 @@ a.joinNow:hover {
 #battery,
 #security,
 #data {
-    display: none;
+    display: none;  
 }
 
 
@@ -697,7 +729,6 @@ font-size:1em;
 
 
  }
-}
 @media only screen and (min-width:1281px) {
 
 
