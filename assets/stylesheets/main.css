@@ -697,8 +697,60 @@ font-size:1em;
 
 
  }
-}
+
 @media only screen and (min-width:1281px) {
 
 
  }
+
+/*  =================================================
+    Carousel
+    ================================================= */
+
+    #section1Car div {
+        background-color: white;
+    }
+
+    .carouselWhite,
+    .carouselBlack {
+        position: fixed;
+        margin: 35vh 0 0 1vw; 
+    }
+    
+    .carouselWhite li div,
+    .carouselBlack li div,
+    .carousel li div {
+        margin-top: 37px;
+        height: 8px;
+        width: 8px;
+        border-radius: 100px;
+        background-color: none;
+    }
+ 
+     /* NOT CURRENTLY USED
+    .carouselFillWhite li div {
+        background-color: white;
+    }
+   
+    .carouselFillBlack li div {
+        background-color: black;
+    }
+
+    .carouselFillNone li div {
+        background-color: none;
+    }
+
+    */
+
+    .carouselWhite li div {
+        border: 2px solid white;
+    }
+
+    .carouselBlack li div {
+        border: 2px solid black;
+    }
+
+    
+    .carousel li:first-child div {
+        margin-top: 0;
+    }

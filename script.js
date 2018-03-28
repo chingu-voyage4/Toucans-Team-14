@@ -69,3 +69,60 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+
+/*
+==================================================
+
+Carousel Styling
+
+==================================================
+*/
+
+const carousel = document.getElementById('carousel');   
+var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
+var buttonDivs = carousel.querySelectorAll('div');      //reference to inner div
+
+ function changeCarouselColors() {
+        var buttonId = this.id;                         // get ID of clicked button
+        for (let i = 0; i < carButtons.length; i++) {
+            switch (buttonId) {                         //assign white color if button selected
+                case 'section1Car':
+                case 'section3Car':
+                case 'section4Car': 
+                case 'current-projectsCar':
+                    carousel.className = 'carouselWhite';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'white';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
+                    break;
+                case 'section2Car':                     //assign black color if button selected 
+                case 'performanceCar':
+                case 'section7Car':
+                case 'section8Car':
+                    carousel.className = 'carouselBlack';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'black';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
+                    break;
+                default:
+                    carousel.className = 'carouselWhite';
+                    if (carButtons[i].id == buttonId) {
+                        buttonDivs[i].style.backgroundColor = 'white';
+                    } else {
+                        buttonDivs[i].style.backgroundColor = 'transparent';
+                    }
+                    break; 
+            }
+        }
+}
+
+(function () {
+    for (let i = 0; i < carButtons.length; i++) {
+      carButtons[i].addEventListener('click', changeCarouselColors);
+    }
+  })();
