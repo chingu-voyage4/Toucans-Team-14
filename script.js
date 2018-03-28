@@ -1,7 +1,7 @@
 /*
 ==================================================
 
-Section 6 (and 5) Navbar
+Section 6 Navbar
 
 ==================================================
 */
@@ -44,26 +44,28 @@ Section 5 Navbar
 ==================================================
 */
 
-const sec5Nav = document.getElementById('section5-nav');
-var sec5NavTabs = sec5Nav.getElementsByTagName('li');           //creates NodeList
-const sec5 = document.getElementById('section5');
-var sec5SubSections = sec5.getElementsByTagName('section');
+const sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
+var sec5NavTabs = sec5Nav.getElementsByTagName('li');           // NodeList for section 5 navbar tabs
+const sec5 = document.getElementById('section5');               // reference to section 5 element node
+var sec5SubSections = sec5.getElementsByTagName('section');     // NodeList for section 5 subsections
 
 function changeSec5Background() {
   for (let i = 0; i < sec5NavTabs.length; i++) {
-    if (this.id == sec5NavTabs[i].id) {   
-      sec5NavTabs[i].className = 'nav5-itemsClear';
-      sec5SubSections[i].className = 'section5ContentContainer'
+    if (this.id == sec5NavTabs[i].id) {                         // "this" references element that triggered event
+      sec5NavTabs[i].className = 'nav5-itemsClear';             // change background color of subsection's tab
+      sec5SubSections[i].className = 'section5ContentContainer' // render active subsection's html content visible
+      sec5.className = sec5SubSections[i].id + 'Bckgd';         // modify's class to change to active subsection's background image
     } else {
-      sec5NavTabs[i].className = 'nav5-itemsBlue';
-      sec5SubSections[i].className = 'sec5Hidden';
+      sec5NavTabs[i].className = 'nav5-itemsBlue';              // apply default color to inactive navbar tabs
+      sec5SubSections[i].className = 'sec5Hidden';              // render inactive subsections' HTML hidden
     }
   } 
 }
 
+// IIFE automatically assigns a separate listening event to each tab in navbar
 (function () {
   for (let i = 0; i < sec5NavTabs.length; i++) {
-    sec5NavTabs[i].addEventListener('click', changeSec5Background, false);
+    sec5NavTabs[i].addEventListener('click', changeSec5Background);
   }
 })();
 
