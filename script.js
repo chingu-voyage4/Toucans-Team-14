@@ -44,51 +44,28 @@ Section 5 Navbar
 ==================================================
 */
 
-const section5Nav = document.getElementById('section5-nav');
+const sec5Nav = document.getElementById('section5-nav');
+var sec5NavTabs = sec5Nav.getElementsByTagName('li');           //creates NodeList - GLOBAL?var sec5SubSections = sec5Nav.getElementsByTagName('section');  //creates NodeList - GLOBAL?
+const sec5 = document.getElementById('section5');
+var sec5SubSections = sec5.getElementsByTagName('section');
 
-function setSec5EventListeners() {
-  section5Nav.addEventListener('click', function(event) {changeSec5Background(event);});
-}
-
-function changeSec5Background(event) {
-  var allTabs = section5Nav.getElementsByTagName('li');
-  for (var i = 1; i < allTabs.length; i++) {
-    var tabId = allTabs[i].id;
-    if ((event.id + '-nav') == tabId.id) {
-      allTabs[i].className = 'nav5-itemsClear';
+function changeSec5Background() {
+  for (let i = 0; i < sec5NavTabs.length; i++) {
+    if (this.id == sec5NavTabs[i].id) {   //ISSUE WITH EVENT ID...
+      sec5NavTabs[i].style.backgroundColor = 'black';
+      sec5SubSections[i].className = 'section5ContentContainer'
     } else {
-      allTabs[i].className = 'nav5-itemsBlue'
-      
+      sec5NavTabs[i].style.backgroundColor = 'blue';
+      sec5SubSections[i].className = 'sec5Hidden';
     }
-  }
-  /*  var parentTarget = event.target.parentElement;*/
-    displaySec5Content(parentTarget);
-}
-/*
-  var nav5Buttons = section5Nav.getElementsByTagName('li');
-  for (var i = 0; i < nav5Buttons.length; i++) {
-    nav5Buttons[i].style.backgroundColor = '#2e75cf';
-  }
-  var parentTarget = event.target.parentElement;
-  parentTarget.style.backgroundColor = 'black';
-  displaySec5Content(parentTarget);
-} */
-
-function displaySec5Content(event) {
-  var section5 = document.getElementById('section5');
-  var subSections = section5.getElementsByTagName('section');
-  for (var i = 0; i < subSections.length; i++) {
-    var sectionId = subSections[i].id;
-    if (event.id == sectionId + '-nav') {
-      document.getElementById(sectionId).className = 'section5ContentContainer';
-    }
-    else {
-      document.getElementById(sectionId).className = 'sec5Hidden';
-    }
-  }
+  } 
 }
 
-setSec5EventListeners();
+(function () {
+  for (let i = 0; i < sec5NavTabs.length; i++) {
+    sec5NavTabs[i].addEventListener('click', changeSec5Background, false);
+  }
+})();
 
 
 /*
