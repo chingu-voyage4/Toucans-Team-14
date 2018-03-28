@@ -76,8 +76,104 @@ body {
     color: #ffffff;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+a {                       /* Removes default styling of links (i.e. underline) */
+  text-decoration: none;
+}
+
+.bg {
+    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    background-position: center;
+}
+
 /* paragraph style for detailed info text */
 
+
+/*
+    =================================================
+
+    Top Navigation/Menu Bar
+
+    =================================================
+*/
+
+.menu {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    background-color: white;
+}
+
+/**************** Couldn't find this class in index.html
+.section-container {
+    display: flex;
+} */
+
+.logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5%;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding-right: 1.5%;
+}
+
+#join {
+    background-color: tomato;
+    color: white;
+    margin-left: 20px;
+    padding: 5px 10px 5px 10px;
+    font-size: 24px;
+    box-shadow: inherit;
+}
+
+a:hover#join {
+    background-color: white;
+    color: tomato;
+}
+
+
+#login {
+    color: tomato;
+    text-decoration: underline coral;
+    white-space: nowrap;
+}
+
+#WCG {
+    height: 36px;
+}
+
+#IBM {
+    height: 25px;
+}
+
+#logoSeparator {
+    border-right: 1px solid #E8E8E8;
+    height: 36px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#cancel {
+    height: 15px;
+    padding-left: 10px;
+}
+
+/********************* POSSIBLE REUSABLE CODE ************************/
 .infotext,
 .maintext {
     padding-bottom: 24px;
@@ -115,10 +211,26 @@ a {                       /* Removes default styling of links (i.e. underline) *
     background-position: center;
 }
 
-#layout {
+.subheader {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  background-color: royalblue;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  border-bottom: 1px solid aliceblue;
 }
+
+/*
+    =================================================
+
+    Section 1
+
+    =================================================
+*/
 
 #section1 {
       background:
@@ -128,19 +240,132 @@ a {                       /* Removes default styling of links (i.e. underline) *
       height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
+
+/*
+    =================================================
+
+    Section 2
+
+    =================================================
+*/
+
 #section2 {
-     background:
+    background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/elena-prokofyeva-17909.jpg');
     background-size: cover;
 }
 
+
+/*
+    =================================================
+
+    Section 3
+
+    =================================================
+*/
+
 #section3 {
-      background:
+    background:
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
 }
+
+#section3a {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3b {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+#section3c {
+  background:
+      linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+      url('../images/OAI3050.jpg');
+  background-size: cover;
+}
+
+
+
+.flex-container subsection {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content:center;
+  flex-wrap: wrap;
+  background-color: dodgerblue;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction:column;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.flex-container h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.flex-container p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.flex-container strong {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+  }
+
+/* Attribution section here only temporarily */
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:92vh;
+  width: 90%;
+  text-align: center;
+}
+
+/*
+    =================================================
+
+    Section 4
+
+    =================================================
+*/
 
 #section4 {
     background:
@@ -165,6 +390,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
+    padding-top: 8vh;
 }
 
 #section5b {
@@ -203,159 +429,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
     max-width: 10%;
 }
 
-/*
-    =================================================
-    Section 6
-    =================================================
-*/
-
-/* ---------- Nav bar ---------- */
-.section6-nav {
-    /* position: fixed; */
-    top: 0;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    height: 6vh;
-    align-items: bottom;
-}
-
-.nav6-items {
-    font-size: 1.5em;
-    font-weight: bold;
-    flex-grow: 1;
-    text-align: center;
-    height: 100%;
-    border-right: 1px solid gold;
-}
-
-#nav6-gold-background {
-    background-color: gold;
-}
-
-img.section6-icons {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.section6-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ---------- Content ---------- */
-.section6-content-container {
-    display: flex;
-    flex-direction: column;
-    height: 94vh;
-    background-color: gold;
-    text-align: center;
-}
-
-.section6-title {
-    font-size: 1.5em;
-    padding: 3%;
-    top: 10%;
-    font-weight: bold;
-}
-
-.section6-bold {
-    font-weight: bold;
-    padding: 1%;
-}
-
-#section6-image img {
-    height: 200px;
-    width: 200px;
-    margin: 7%;
-}
-
-#section7 {
-    background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/philippe-toupet-320689.jpg');
-    background-size: cover;
-}
-
-#section8 {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
-    background-size: cover;
-}
-
-.menu {
- width: 100%;
-  display: flex;
-  justify-content: space-between;
-position:fixed;
-background-color: white;
-}
-
-.section-container {
-  display: flex;
-}
-
-.logos {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 1.5%;
-}
-
-.links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  padding-right: 1.5%;
-}
-
-#join {
-	background-color: tomato;
-  color: white;
-  margin-left: 20px;
-  padding: 5px 10px 5px 10px;
-  font-size: 24px;
-  box-shadow: inherit;
-}
-
-a:hover#join {
-  background-color: white;
-  color: tomato;
-}
-
-
-#login {
-	color: tomato;
-  text-decoration: underline coral;
-  white-space: nowrap;
-}
-
-#WCG {
-  height: 36px;
-}
-
-#IBM {
-  height: 25px;
-}
-
-#logoSeparator {
-  border-right: 1px solid #E8E8E8;
-  height: 36px;
-  padding-left: 10px;
-  margin-right: 10px;
-}
-
-#cancel {
-  height: 15px;
-  padding-left: 10px;
-}
-
 .joinNow {
     font: 24px Arial, sans-serif;
     background-color: tomato;
@@ -363,7 +436,7 @@ a:hover#join {
     box-shadow: inherit;
     text-decoration: none;
     padding: 5px 8px;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 a.joinNow:hover {
@@ -412,7 +485,6 @@ a.joinNow:hover {
     justify-content: space-between;
     height: 45px;
     align-items: center;
-
 }
 
 .sec5navbar li {
@@ -421,12 +493,12 @@ a.joinNow:hover {
     border-right: 1px solid white;
     width: 100%;
     height: 100%;
-    background-color: #2e75cf;  
+    background-color: #2e75cf;
 }
 
 .sec5navbar li:last-child {
     border-right: 0;
-}   
+}
 
 .sec5navbar a {
     display: flex;
@@ -438,7 +510,7 @@ a.joinNow:hover {
     width: 100%;
     height: 100%;
     text-decoration: none;
-   
+
 }
 
 .sec5navbar img {
@@ -450,24 +522,205 @@ a.joinNow:hover {
     background-color: transparent;
 }
 
+
+/*
+    =================================================
+
+    Section 6
+
+    =================================================
+*/
+
+#section6,
+#section6-nav-container,
+#section6-nav,
+.section6-content-container {
+    display: flex;
+}
+
+#section6,
+.section6-content-container {
+    flex-direction: column;
+}
+
+#battery,
+#security,
+#data {
+    display: none;
+}
+
+
+/* ---------- Nav bar ---------- */
+#performance-nav {
+    background-color: gold;
+}
+
+#section6-nav {
+    width: 100%;
+    background-color: white;
+    justify-content: space-around;
+    height: 6vh;
+}
+
+.nav6-items {
+    font-size: 1.5em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid gold;
+}
+
+img.section6-icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#section6-nav a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+/* ---------- Content ---------- */
+.section6-content-container {
+    height: 94vh;
+    background-color: gold;
+    text-align: center;
+    color: black;
+}
+
+.section6-title {
+    font-size: 1.5em;
+    padding: 3%;
+    top: 10%;
+    font-weight: bold;
+}
+
+.section6-bold {
+    font-weight: bold;
+    padding: 1%;
+}
+
+#section6-image img {
+    height: 200px;
+    width: 200px;
+    margin: 7%;
+}
+
+
+/*
+    =================================================
+
+    Section 7
+
+    =================================================
+*/
+
+#section7 {
+    background:
+        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+        url('../images/philippe-toupet-320689.jpg');
+    background-size: cover;
+}
+
+
+/*
+    =================================================
+
+    Section 8
+
+    =================================================
+*/
+
+#section8 {
+    background:
+        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
+        url('../images/riccardo-chiarini-247364.jpg');
+    background-size: cover;
+}
+
+/*
+    =================================================
+
+    Media Queries
+
+    =================================================
+*/
+
+@media only screen and (min-width:100px) and (max-width:480px) and (orientation:portrait)
+{
+p,strong {
+font-size:1em;
+}
+
+#compass {
+  width:120px;
+  height:120px;
+}
+#binocular-man {
+  width: 180px;
+  height: 120px;
+}
+#calendar {
+  width: 120px;
+  height: 100px;
+}
+}
+
+@media only screen and (orientation:landscape) and (max-width:760px)  {
+.wrapper {
+  width:100%;
+}
+#compass {
+  display:none;
+}
+#binocular-man {
+  display:none;
+}
+#calendar {
+  display:none;
+}
+}
+@media only screen and (min-width:641px)  {
+
+}
+@media only screen and (min-width:961px)  {
+.wrapper {
+  width:50%;
+}
+
+  }
+@media only screen and (min-width:1025px) {
+
+
+ }
+
+@media only screen and (min-width:1281px) {
+
+
+ }
+
 /*  =================================================
     Carousel
     ================================================= */
 
-.carousel {
-    position: fixed;
-    margin: 35vh 0 0 1vw; 
-}
-
-.carousel li div {
-    margin-top: 37px;
-    border: 2px solid white;
-    height: 8px;
-    width: 8px;
-    border-radius: 100px;
-    background-color: none;
-}
-
-.carousel li:first-child div {
-    margin-top: 0;
-}
+    .carousel {
+        position: fixed;
+        margin: 35vh 0 0 1vw; 
+    }
+    
+    .carousel li div {
+        margin-top: 37px;
+        border: 2px solid white;
+        height: 8px;
+        width: 8px;
+        border-radius: 100px;
+        background-color: none;
+    }
+    
+    .carousel li:first-child div {
+        margin-top: 0;
+    }
