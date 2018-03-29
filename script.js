@@ -49,25 +49,26 @@ var sec5NavTabs = sec5Nav.getElementsByTagName('li');           // NodeList for 
 const sec5 = document.getElementById('section5');               // reference to section 5 element node
 var sec5SubSections = sec5.getElementsByTagName('section');     // NodeList for section 5 subsections
 
-function changeSec5Background() {
+function changeSec5Background(e) {
+  var target = e.target;
+  var elParent = target.parentNode;
   for (let i = 0; i < sec5NavTabs.length; i++) {
-    if (this.id == sec5NavTabs[i].id) {                         // "this" references element that triggered event
+    if ((target.id == sec5NavTabs[i].id) || (elParent.id == sec5NavTabs[i].id)) {                         // "this" references element that triggered event
       sec5NavTabs[i].className = 'nav5-itemsClear';             // change background color of subsection's tab
       sec5SubSections[i].className = 'section5ContentContainer' // render active subsection's html content visible
       sec5.className = sec5SubSections[i].id + 'Bckgd';         // modify's class to change to active subsection's background image
     } else {
       sec5NavTabs[i].className = 'nav5-itemsBlue';              // apply default color to inactive navbar tabs
       sec5SubSections[i].className = 'sec5Hidden';              // render inactive subsections' HTML hidden
-    }
-  } 
+    } 
+  }   
 }
 
 // IIFE automatically assigns a separate listening event to each tab in navbar
-(function () {
-  for (let i = 0; i < sec5NavTabs.length; i++) {
-    sec5NavTabs[i].addEventListener('click', changeSec5Background);
-  }
-})();
+
+sec5Nav.addEventListener('click', function(e) {
+  changeSec5Background(e);
+}, false);
 
 
 /*
