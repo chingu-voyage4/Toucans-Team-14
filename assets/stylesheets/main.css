@@ -534,6 +534,7 @@ a.joinNow:hover {
 #section6,
 #section6-nav-container,
 #section6-nav,
+#section6-nav a,
 .section6-content-container {
     display: flex;
 }
@@ -576,12 +577,17 @@ img.section6-icons {
     margin-right: 10px;
 }
 
+#section6-nav li {
+    text-align: center;
+}
+
 #section6-nav a {
     text-decoration: none;
-    display: block;
+    justify-content: center;
     width: 100%;
     height: 100%;
     color: black;
+    align-items: center;
 }
 
 /* ---------- Content ---------- */
@@ -608,6 +614,7 @@ img.section6-icons {
     height: 200px;
     width: 200px;
     margin: 7%;
+    align-self: center;
 }
 
 
