@@ -713,7 +713,7 @@ font-size:1em;
 
     #carousel {
         position: fixed;
-        margin: 35vh 0 0 1vw; 
+        margin: 29vh 0 0 1vw; 
     }
 
     #carousel li {
@@ -732,10 +732,9 @@ font-size:1em;
         border: 2px solid black;
     }
 
-    
-    .carousel li:first-child {
+/*    .carousel ul:first-child {
         margin-top: 0;
-    }
+    } */
 
     ul#carousel li {
         padding: 0;
