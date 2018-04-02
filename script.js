@@ -1,7 +1,7 @@
 /*
 ==================================================
 
-Section 6 (and 5) Navbar
+Section 6 Navbar
 
 ==================================================
 */
@@ -35,6 +35,40 @@ function displayContent(event) {
     }
 }
 setEventListeners();
+
+/*
+==================================================
+
+Section 5 Navbar
+
+==================================================
+*/
+
+var sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
+
+function changeSec5Background(e) {
+  var sec5 = document.getElementById('section5');                 // reference to section 5 element node
+  var sec5NavTabs = sec5Nav.getElementsByTagName('li');           // NodeList for section 5 navbar tabs
+  var sec5SubSections = sec5.getElementsByTagName('section');     // NodeList for section 5 subsections
+  var target = e.target;
+  var elParent = target.parentNode;
+  for (let i = 0; i < sec5NavTabs.length; i++) {
+    if ((target.id == sec5NavTabs[i].id) || (elParent.id == sec5NavTabs[i].id)) {     // If ID of targer OR target's parent element (if user clicks on image)
+      sec5NavTabs[i].className = 'nav5-itemsClear';                                   // change background color of subsection's tab
+      sec5SubSections[i].className = 'section5ContentContainer'                       // render active subsection's html content visible
+      sec5.className = sec5SubSections[i].id + 'Bckgd';                               // modify's class to change to active subsection's background image
+    } else {                                                                          // Otherwise:
+      sec5NavTabs[i].className = 'nav5-itemsBlue';                                    // apply default color to inactive navbar tabs
+      sec5SubSections[i].className = 'sec5Hidden';                                    // render inactive subsections' HTML hidden
+    } 
+  }   
+}
+
+// Set event listener and pass in event object ("e")
+sec5Nav.addEventListener('click', function(e) {
+  changeSec5Background(e);
+}, false);
+
 
 /*
 ==================================================
