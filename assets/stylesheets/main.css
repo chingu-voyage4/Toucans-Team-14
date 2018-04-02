@@ -1,10 +1,8 @@
-/*stylesheet for index.html*/
+/* stylesheet for index.html */
 
 /*
     =================================================
-
     CSS Styles Reset
-
     =================================================
 */
 
@@ -33,38 +31,40 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* End of CSS reset */
-
 
 /*
     =================================================
-
     Custom Styles
-
     =================================================
 
 */
@@ -92,12 +92,9 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 /* paragraph style for detailed info text */
 
-
 /*
     =================================================
-
     Top Navigation/Menu Bar
-
     =================================================
 */
 
@@ -197,15 +194,6 @@ a:hover#join {
     padding-top: 20px;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-a {                       /* Removes default styling of links (i.e. underline) */
-  text-decoration: none;
-}
-
 .bg {
     height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
@@ -224,11 +212,10 @@ a {                       /* Removes default styling of links (i.e. underline) *
   border-bottom: 1px solid aliceblue;
 }
 
+
 /*
     =================================================
-
     Section 1
-
     =================================================
 */
 
@@ -243,9 +230,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 /*
     =================================================
-
     Section 2
-
     =================================================
 */
 
@@ -259,9 +244,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 /*
     =================================================
-
     Section 3
-
     =================================================
 */
 
@@ -292,8 +275,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
       url('../images/OAI3050.jpg');
   background-size: cover;
 }
-
-
 
 .flex-container subsection {
   display:flex;
@@ -361,9 +342,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 /*
     =================================================
-
     Section 4
-
     =================================================
 */
 
@@ -376,56 +355,73 @@ a {                       /* Removes default styling of links (i.e. underline) *
 
 /*
     =================================================
-
     Section 5
-
     =================================================
 */
 
 /*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
     with different background images  */
 
-#section5a {
+/* similar to .section6ContentContainer */
+.section5ContentContainer {
+    height: 94vh;
+    background-color: rgba(46,117,207,0.45);
+    text-align: center;
+    color: white;
+    /*margin-top: -45px;*/ /* how to overlap background with navbar? */
+}
+
+#section5,
+.section5ContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec5Hidden {
+  display: none;
+}
+
+.microbiomeBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
-    padding-top: 8vh;
+    /*padding-top: 8vh;*/
 }
 
-#section5b {
+.cancerBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
-#section5c {
+.zikaBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
-#section5d {
+.tbBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
-#section5e {
+.aidsBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
     background-size: cover;
 }
 
-#section5a img,
-#section5b img,
-#section5c img,
-#section5d img,
-#section5e img {
+#microbiome img,
+#cancer img,
+#zika img,
+#tb img,
+#aids img {
     max-width: 10%;
 }
 
@@ -444,13 +440,7 @@ a.joinNow:hover {
     color: tomato;
 }
 
-/*
-    =================================================
-
-    container positioning
-
-    =================================================
-*/
+/* ------------- Container positioning ------------- */
 
 .centerBox {
     display: flex;
@@ -459,26 +449,14 @@ a.joinNow:hover {
     margin-top: 150px;
 }
 
-/*
-    =================================================
-
-    image positioning
-
-    =================================================
-*/
+/* -------------- Image positioning -------------- */
 
 .centerImage {
     display: block;
     margin: auto;
 }
 
-/*
-    =================================================
-
-    navigation bars
-
-    =================================================
-*/
+/* --------------- Navigation bars --------------- */
 
 .sec5navbar ul {
     display: flex;
@@ -490,27 +468,17 @@ a.joinNow:hover {
 .sec5navbar li {
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: white;
     border-right: 1px solid white;
     width: 100%;
     height: 100%;
-    background-color: #2e75cf;
+    cursor: pointer;
+    /*background-color: #2e75cf; */
 }
 
 .sec5navbar li:last-child {
     border-right: 0;
-}
-
-.sec5navbar a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-
 }
 
 .sec5navbar img {
@@ -518,16 +486,30 @@ a.joinNow:hover {
     padding-right: 10px;
 }
 
-.sec5navbar li.clearLink {
-    background-color: transparent;
+.nav5-itemsClear,
+.nav5-itemsBlue {
+    color: inherit;
+    font-size: 1.3em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
 }
+
+/* Shoud be transparent with section background image behind it*/
+.nav5-itemsClear {
+    background-color: rgba(46,117,207,0.45);
+}
+
+.nav5-itemsBlue {
+  background-color: #2e75cf;
+}
+
 
 
 /*
     =================================================
-
     Section 6
-
     =================================================
 */
 
@@ -546,11 +528,11 @@ a.joinNow:hover {
 #battery,
 #security,
 #data {
-    display: none;
+    display: none;  
 }
 
 
-/* ---------- Nav bar ---------- */
+/* ----------------- Navigation bar ------------------ */
 #performance-nav {
     background-color: gold;
 }
@@ -584,7 +566,7 @@ img.section6-icons {
     color: black;
 }
 
-/* ---------- Content ---------- */
+/* ------------------ Content ------------------ */
 .section6-content-container {
     height: 94vh;
     background-color: gold;
@@ -613,9 +595,7 @@ img.section6-icons {
 
 /*
     =================================================
-
     Section 7
-
     =================================================
 */
 
@@ -629,9 +609,7 @@ img.section6-icons {
 
 /*
     =================================================
-
     Section 8
-
     =================================================
 */
 
@@ -644,9 +622,7 @@ img.section6-icons {
 
 /*
     =================================================
-
     Media Queries
-
     =================================================
 */
 
