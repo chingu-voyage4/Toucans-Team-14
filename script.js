@@ -149,15 +149,8 @@ function changeCarouselColors(e) {
                     carButtons[i].style.backgroundColor = 'transparent';    // reset all other buttons to transparent
                 }
                 break;
-            // Default case    
-            default:
-                carousel.className = 'carouselWhite';
-                if (carButtons[i].id == targetParentId) {
-                    carButtons[i].style.backgroundColor = 'white';
-                } else {
-                    carButtons[i].style.backgroundColor = 'transparent';
-                }
-                break; 
+
+            // SF Removed default case because it leads to <li> elements triggering carousel color change
         }
   }
 }
