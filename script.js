@@ -50,7 +50,7 @@ Section 5 Navbar
 var sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
 
 function changeSec5Background(e) {
-  var sec5 = document.getElementById('section5');                 // reference to section 5 element node
+  var sec5 = document.getElementById('current-projects');                 // reference to section 5 element node
   var sec5NavTabs = sec5Nav.getElementsByTagName('li');           // NodeList for section 5 navbar tabs
   var sec5SubSections = sec5.getElementsByTagName('section');     // NodeList for section 5 subsections
   var target = e.target;
@@ -106,3 +106,59 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+
+/*
+==================================================
+
+Carousel Styling
+
+==================================================
+*/
+
+var carousel = document.getElementById('carousel');         // Reference to carousel
+
+function changeCarouselColors(e) {
+    var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
+    var targetParent = e.target.parentNode;                 // Reference to parent of event target
+    var targetParentId = targetParent.id;                   // Reference to id of parent node
+    for (let i = 0; i < carButtons.length; i++) {
+        switch (targetParentId) {  
+ 
+            // Assign white outline to the following sections                       
+            case 'section1Car':
+            case 'section3Car':
+            case 'section4Car': 
+            case 'current-projectsCar':
+                carousel.className = 'carouselWhite';
+                if (carButtons[i].id == targetParentId) {
+                    carButtons[i].style.backgroundColor = 'white';
+                } else {
+                    carButtons[i].style.backgroundColor = 'transparent';
+                }
+                break;
+
+            // Assign black outline to the following sections 
+            case 'section2Car':                     
+            case 'performanceCar':
+            case 'section7Car':
+            case 'section8Car':
+                carousel.className = 'carouselBlack';
+
+                // Assign black fill to target
+                if (carButtons[i].id == targetParentId) {                   // id belongs to parent <li>, as opposed to inner <a>
+                    carButtons[i].style.backgroundColor = 'black';
+                } else {
+                    carButtons[i].style.backgroundColor = 'transparent';    // reset all other buttons to transparent
+                }
+                break;
+
+            // SF Removed default case because it leads to <li> elements triggering carousel color change
+        }
+  }
+}
+
+// ADD EVENT LISTENER
+carousel.addEventListener('click', function(e) {
+  changeCarouselColors(e);
+}, false);
