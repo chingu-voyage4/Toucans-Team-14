@@ -190,7 +190,13 @@ a:hover#join {
 }
 
 .bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    height: 100vh;   /* For all sections except #1, height does not include the height of WCG header. Refer to #section1 below */
+    background-position: center;
+}
+
+.bgSec1 {
+    height: calc(100vh - 8vh);          /* Section 1 vh INCLUDES the header's height */
+    padding-top: 8vh;
     background-position: center;
 }
 
@@ -219,7 +225,6 @@ a:hover#join {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
       background-size: cover;
-      height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
 
@@ -391,7 +396,7 @@ a:hover#join {
 
 /* similar to .section6ContentContainer */
 .section5ContentContainer {
-    height: 94vh;
+    height: 100vh;
     background-color: rgba(46,117,207,0.45);
     text-align: center;
     color: white;
@@ -601,7 +606,7 @@ img.section6-icons {
 
 /* ------------------ Content ------------------ */
 .section6-content-container {
-    height: 94vh;
+    height: 100vh;
     background-color: gold;
     text-align: center;
     color: black;
