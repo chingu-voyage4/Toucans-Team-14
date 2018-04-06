@@ -85,11 +85,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
   text-decoration: none;
 }
 
-.bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
-    background-position: center;
-}
-
 /* paragraph style for detailed info text */
 
 /*
