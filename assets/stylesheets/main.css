@@ -179,10 +179,6 @@ a:hover#join {
     font-style: normal;
 }
 
-.mainContent {
-    text-align: center;
-}
-
 .maintext {
     font-size: 36px;
     line-height: 40px;
@@ -276,14 +272,16 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     z-index: 18;
 }
 
-#sec2Flex {
-    height: 100%;
+.secFlexBox {
     display: flex;
+    height: 100%;
+    margin-top: -8vh;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
+    /*overflow: hidden;*/
 }
 
 #sec2Accelerate {
@@ -437,18 +435,13 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     z-index: 15;
     display: block;
     height: 100vh;
-}
-
-.section5ContentContainer {
     background-color: rgba(46,117,207,0.45);
-    height: 100%;
-    text-align: center;
-    color: white;
+    background-size: cover;
 }
 
 .section5ContentContainer {
-  display: flex;
-  flex-direction: column;
+    
+    color: white;
 }
 
 .sec5Hidden {
@@ -572,7 +565,7 @@ a.joinNow:hover {
 
 /* Shoud be transparent with section background image behind it*/
 .nav5-itemsClear {
-    background-color: rgba(46,117,207,0.45);
+    background-color: none);
 }
 
 .nav5-itemsBlue {
