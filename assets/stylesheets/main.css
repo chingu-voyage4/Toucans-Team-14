@@ -214,11 +214,34 @@ a:hover#join {
   border-bottom: 1px solid aliceblue;
 }
 
+/*
+    =================================================
+    All sections
+    =================================================
+*/
+
+/* All sections EXCEPT first, b/c it uses padding instead. This approach
+is from https://css-tricks.com/hash-tag-links-padding/ */
+
+#introduction::before,
+#section3::before,
+#section4::before,
+#current-projects::before,
+#performance::before,
+#section7::before,
+#section8::before {
+    display: block;
+    content: " ";
+    margin-top: -8vh;
+    height: 8vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* To use z-index, all subsections must have a position other than 'static'  */
 .setSectionPosition {
     position: relative;
 }
-
 
 /*
     =================================================
@@ -406,10 +429,12 @@ a:hover#join {
 /* similar to .section6ContentContainer */
 #current-projects {
     z-index: 15;
+    height: 100vh;
 }
 
 .section5ContentContainer {
-    height: 100vh;
+    /*height: calc(100vh - 8vh); */
+    height: 100%;
     background-color: rgba(46,117,207,0.45);
     text-align: center;
     color: white;
