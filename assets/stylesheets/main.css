@@ -440,8 +440,19 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 }
 
 .section5ContentContainer {
-    
     color: white;
+}
+
+.sec5FlexBox {
+    display: flex;
+    height: 100%;
+    margin-top: -45px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /*overflow: hidden;*/
 }
 
 .sec5Hidden {
