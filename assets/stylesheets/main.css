@@ -100,6 +100,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
     justify-content: space-between;
     position:fixed;
     background-color: white;
+    z-index: 20;
 }
 
 /**************** Couldn't find this class in index.html
@@ -213,6 +214,11 @@ a:hover#join {
   border-bottom: 1px solid aliceblue;
 }
 
+/* To use z-index, all subsections must have a position other than 'static'  */
+.setSectionPosition {
+    position: relative;
+}
+
 
 /*
     =================================================
@@ -225,6 +231,7 @@ a:hover#join {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
       background-size: cover;
+      z-index: 19;
 }
 
 
@@ -240,7 +247,6 @@ a:hover#join {
         linear-gradient(rgba(255, 217, 0, 0.8), rgba(255, 217,0, 0.8)),
         url('../images/climber_web.jpg');
     background-size: cover;
- 
     align-items: center;
     font-family: "Helvetica";
     height: 100vh;
@@ -249,6 +255,7 @@ a:hover#join {
     justify-content: center;
     text-align: center;
     color: black;
+    z-index: 18;
 }
 
 #sec2Accelerate {
@@ -285,6 +292,7 @@ a:hover#join {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 17;
 }
 
 #section3a {
@@ -383,6 +391,7 @@ a:hover#join {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    z-index: 16;
 }
 
 /*
@@ -395,6 +404,10 @@ a:hover#join {
     with different background images  */
 
 /* similar to .section6ContentContainer */
+#current-projects {
+    z-index: 15;
+}
+
 .section5ContentContainer {
     height: 100vh;
     background-color: rgba(46,117,207,0.45);
@@ -403,7 +416,7 @@ a:hover#join {
     /*margin-top: -45px;*/ /* how to overlap background with navbar? */
 }
 
-#section5,
+#current-projects,
 .section5ContentContainer {
   display: flex;
   flex-direction: column;
@@ -545,6 +558,10 @@ a.joinNow:hover {
     =================================================
 */
 
+#section6 {
+    z-index: 14;
+}
+
 #section6,
 #section6-nav-container,
 #section6-nav,
@@ -643,6 +660,7 @@ img.section6-icons {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 13;
 }
 
 
@@ -657,6 +675,7 @@ img.section6-icons {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    z-index: 12;
 }
 
 /*
@@ -729,6 +748,7 @@ font-size:1em;
     #carousel {
         position: fixed;
         margin: 29vh 0 0 1vw; 
+        z-index: 20;
     }
 
     #carousel li {
