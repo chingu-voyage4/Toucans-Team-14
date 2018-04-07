@@ -591,10 +591,10 @@ a.joinNow:hover {
 */
 
 #section6 {
+    display: block;
     z-index: 14;
 }
 
-#section6,
 #section6-nav-container,
 #section6-nav,
 #section6-nav a,
@@ -602,7 +602,6 @@ a.joinNow:hover {
     display: flex;
 }
 
-#section6,
 .section6-content-container {
     flex-direction: column;
 }
@@ -655,10 +654,12 @@ img.section6-icons {
 
 /* ------------------ Content ------------------ */
 .section6-content-container {
-    height: 100vh;
+    height: calc(100vh - 8vh - 6vh);  /* viewhight minus height of navbar and header */
     background-color: gold;
     text-align: center;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .section6-title {
