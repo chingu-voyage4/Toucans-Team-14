@@ -590,6 +590,9 @@ a.joinNow:hover {
     =================================================
 */
 
+/* For content to align below header bar, parent container for Sec 6 must be set
+to disply: block (i.e. not display: flex */
+
 #section6 {
     display: block;
     z-index: 14;
