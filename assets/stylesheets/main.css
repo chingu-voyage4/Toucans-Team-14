@@ -445,14 +445,13 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 .sec5FlexBox {
     display: flex;
-    height: 100%;
-    margin-top: -45px;
+    height: calc(100vh - 8vh - 45px);  /* viewheight minus navbar and header heights */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    /*overflow: hidden;*/
+    /*overflow: hidden; */
 }
 
 .sec5Hidden {
