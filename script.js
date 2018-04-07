@@ -140,7 +140,7 @@ function changeCarouselColors(e) {
 
             // Assign black outline to the following sections 
             case 'section2Car':                     
-            case 'performanceCar':
+            case 'section6Car':
             case 'section7Car':
             case 'section8Car':
                 carousel.className = 'carouselBlack';

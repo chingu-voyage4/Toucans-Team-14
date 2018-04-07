@@ -223,7 +223,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #section3::before,
 #section4::before,
 #current-projects::before,
-#performance::before,
+#section6::before,
 #section7::before,
 #section8::before {
     display: block;
