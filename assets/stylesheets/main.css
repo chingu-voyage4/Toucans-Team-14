@@ -197,6 +197,10 @@ a:hover#join {
     background-position: center;
 }
 
+.bgSec3 {
+    height: calc(100vh - 16vh);  
+}
+
 .subheader {
   display: flex;
   justify-content: center;
@@ -221,6 +225,10 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #introduction::before,
 #section3::before,
+#section3a::before,
+#section3b::before,
+#section3c::before,
+#attribution::before,
 #section4::before,
 #current-projects::before,
 #section6::before,
@@ -237,6 +245,10 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 /* To use z-index, all subsections must have a position other than 'static'  */
 .setSectionPosition {
     position: relative;
+}
+
+.setBlock {
+    display: block;
 }
 
 /*
@@ -326,6 +338,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 16;
 }
 
 #section3b {
@@ -333,6 +346,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 15;
 }
 
 #section3c {
@@ -340,42 +354,50 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 14;
 }
 
-.flex-container subsection {
-  display:flex;
+.sec3-container subsection {
+  display:block;
   width: 100%;
   height: 100%;
-  justify-content:center;
-  flex-wrap: wrap;
+  /*justify-content:center;
+  flex-wrap: wrap; */
   background-color: dodgerblue;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+.sec3-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sec3-container {
+  display: block;
+  /*flex-wrap: wrap; */
   width: 100%;
-  flex-direction:column;
+  /*flex-direction:column; */
 }
 
 .icon {
   margin-right: 10px;
 }
 
-.flex-container h3 {
+.sec3-container h3 {
   color: white;
   font-family: sans-serif;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.flex-container p {
+.sec3-container p {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
 }
 
-.flex-container strong {
+.sec3-container strong {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
@@ -388,8 +410,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
+  height:calc(100vh - 16vh);
+  width: 100%;
   text-align: center;
   }
 
@@ -401,8 +423,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
+  height: calc(100vh - 8vh - 8vh); /* 100vh minus height of header, and nav bar */
+  width: 100%;
   text-align: center;
 }
 
@@ -418,7 +440,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
     display: block;
-    z-index: 16;
+    z-index: 13;
 }
 
 /*
@@ -432,7 +454,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 /* similar to .section6ContentContainer */
 #current-projects {
-    z-index: 15;
+    z-index: 12;
     display: block;
     height: 100vh;
     background-color: rgba(46,117,207,0.45);
@@ -595,7 +617,7 @@ to disply: block (i.e. not display: flex */
 
 #section6 {
     display: block;
-    z-index: 14;
+    z-index: 11;
 }
 
 #section6-nav-container,
@@ -696,7 +718,7 @@ img.section6-icons {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
-    z-index: 13;
+    z-index: 10;
 }
 
 
@@ -711,7 +733,7 @@ img.section6-icons {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
-    z-index: 12;
+    z-index: 9;
 }
 
 /*
@@ -757,10 +779,13 @@ font-size:1em;
 @media only screen and (min-width:641px)  {
 
 }
+
+/* STU DISABLED THIS TO CENTER SECTION 3 CONTENT
+
 @media only screen and (min-width:961px)  {
 .wrapper {
   width:50%;
-}
+} */
 
   }
 @media only screen and (min-width:1025px) {
