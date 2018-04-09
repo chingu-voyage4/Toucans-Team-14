@@ -142,7 +142,7 @@ function changeCarouselColors(e) {
             case 'section2Car':                     
             case 'section6Car':
             case 'section7Car':
-            case 'section8Car':
+            case 'attributionCar':
                 carousel.className = 'carouselBlack';
 
                 // Assign black fill to target

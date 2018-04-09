@@ -214,6 +214,18 @@ a:hover#join {
   border-bottom: 1px solid aliceblue;
 }
 
+.secFlexBox {
+    display: flex;
+    height: 100%;
+    margin-top: -8vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /*overflow: hidden;*/
+}
+
 /*
     =================================================
     All sections
@@ -228,12 +240,11 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #section3a::before,
 #section3b::before,
 #section3c::before,
-#attribution::before,
 #section4::before,
 #current-projects::before,
 #section6::before,
 #section7::before,
-#section8::before {
+#attribution::before {
     display: block;
     content: " ";
     margin-top: -8vh;
@@ -278,18 +289,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: 100vh;
     color: black;
     z-index: 18;
-}
-
-.secFlexBox {
-    display: flex;
-    height: 100%;
-    margin-top: -8vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    /*overflow: hidden;*/
 }
 
 #sec2Accelerate {
@@ -410,19 +409,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
   width: 100%;
   text-align: center;
   }
-
-/* Attribution section here only temporarily */
-
-.attribution {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: calc(100vh - 8vh - 8vh); /* 100vh minus height of header, and nav bar */
-  width: 100%;
-  text-align: center;
-}
 
 /*
     =================================================
@@ -720,17 +706,30 @@ img.section6-icons {
 
 /*
     =================================================
-    Section 8
+    Section 8 - Attribution
     =================================================
 */
 
-#section8 {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
+#attribution {
+    background-color: rgb(200,210,210);
     background-size: cover;
+    display: block;
     z-index: 9;
 }
+
+/* Attribution section here only temporarily */
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 8vh); /* 100vh minus height of header */
+    width: 100%;
+    text-align: center;
+  }
+  
 
 /*
     =================================================
