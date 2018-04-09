@@ -714,12 +714,16 @@ img.section6-icons {
     background-color: rgb(200,210,210);
     background-size: cover;
     display: block;
+    font-family: Helvetica;
+    color: rgb(38,74,96);
+    font-size: 1.25em;
+    font-weight: 500;
     z-index: 9;
 }
 
 /* Attribution section here only temporarily */
 
-.attribution {
+.attributionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -728,6 +732,27 @@ img.section6-icons {
     height: calc(100vh - 8vh); /* 100vh minus height of header */
     width: 100%;
     text-align: center;
+  }
+
+  .attributionContainer a {
+    color: rgb(45,117, 207);
+  }
+
+  .attributionContainer h2 {
+      font-size: 1.75em;
+      font-weight: bold;
+      padding-bottom: .3em;
+      color: black;
+  }
+
+  .attributionContainer p {
+      padding-bottom: 0.25em;
+  }
+
+  .attributionContainer h3 {
+      color: black;
+      padding: 0.7em 0 0.4em 0;
+      font-weight: 550;
   }
   
 
