@@ -716,7 +716,7 @@ img.section6-icons {
     display: block;
     font-family: Helvetica;
     color: rgb(38,74,96);
-    font-size: 1.25em;
+    font-size: 2vmin;
     font-weight: 500;
     z-index: 9;
 }
@@ -739,7 +739,7 @@ img.section6-icons {
   }
 
   .attributionContainer h2 {
-      font-size: 1.75em;
+      font-size: 5.5vmin;
       font-weight: bold;
       padding-bottom: .3em;
       color: black;
@@ -750,9 +750,10 @@ img.section6-icons {
   }
 
   .attributionContainer h3 {
-      color: black;
+      color: rgb(38,74,96);
       padding: 0.7em 0 0.4em 0;
-      font-weight: 550;
+      font-size: 3vmin;
+      font-weight: 600;
   }
   
 
