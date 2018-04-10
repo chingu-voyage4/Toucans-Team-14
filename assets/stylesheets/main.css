@@ -85,11 +85,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
   text-decoration: none;
 }
 
-.bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
-    background-position: center;
-}
-
 /* paragraph style for detailed info text */
 
 /*
@@ -105,6 +100,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
     justify-content: space-between;
     position:fixed;
     background-color: white;
+    z-index: 20;
 }
 
 /**************** Couldn't find this class in index.html
@@ -183,10 +179,6 @@ a:hover#join {
     font-style: normal;
 }
 
-.mainContent {
-    text-align: center;
-}
-
 .maintext {
     font-size: 36px;
     line-height: 40px;
@@ -195,8 +187,18 @@ a:hover#join {
 }
 
 .bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    height: 100vh;   /* For all sections except #1, height does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
+}
+
+.bgSec1 {
+    height: calc(100vh - 8vh);          /* Section 1 vh INCLUDES the header's height */
+    padding-top: 8vh;
+    background-position: center;
+}
+
+.bgSec3 {
+    height: calc(100vh - 16vh);  
 }
 
 .subheader {
@@ -212,6 +214,38 @@ a:hover#join {
   border-bottom: 1px solid aliceblue;
 }
 
+/*
+    =================================================
+    All sections
+    =================================================
+*/
+
+/* All sections EXCEPT first, b/c it uses padding instead. This approach
+is from https://css-tricks.com/hash-tag-links-padding/ */
+
+#introduction::before,
+#section3::before,
+#section3a::before,
+#section3b::before,
+#section3c::before,
+#attribution::before,
+#section4::before,
+#current-projects::before,
+#section6::before,
+#section7::before,
+#section8::before {
+    display: block;
+    content: " ";
+    margin-top: -8vh;
+    height: 8vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* To use z-index, all subsections must have a position other than 'static'  */
+.setSectionPosition {
+    position: relative;
+}
 
 /*
     =================================================
@@ -224,7 +258,7 @@ a:hover#join {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/annie-spratt-42459.jpg');
       background-size: cover;
-      height: 100vh;          /* Section 1 vh INCLUDES the header's height */
+      z-index: 19;
 }
 
 
@@ -235,20 +269,27 @@ a:hover#join {
 */
 
 #introduction {
-    display: flex;
+    display: block;
     background:
         linear-gradient(rgba(255, 217, 0, 0.8), rgba(255, 217,0, 0.8)),
         url('../images/climber_web.jpg');
     background-size: cover;
- 
-    align-items: center;
     font-family: "Helvetica";
     height: 100vh;
+    color: black;
+    z-index: 18;
+}
+
+.secFlexBox {
+    display: flex;
+    height: 100%;
+    margin-top: -8vh;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
-    color: black;
+    /*overflow: hidden;*/
 }
 
 #sec2Accelerate {
@@ -285,6 +326,7 @@ a:hover#join {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 17;
 }
 
 #section3a {
@@ -292,6 +334,7 @@ a:hover#join {
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 16;
 }
 
 #section3b {
@@ -299,6 +342,7 @@ a:hover#join {
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 15;
 }
 
 #section3c {
@@ -306,42 +350,50 @@ a:hover#join {
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 14;
 }
 
-.flex-container subsection {
-  display:flex;
+.sec3-container subsection {
+  display:block;
   width: 100%;
   height: 100%;
-  justify-content:center;
-  flex-wrap: wrap;
+  /*justify-content:center;
+  flex-wrap: wrap; */
   background-color: dodgerblue;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+.sec3-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sec3-container {
+  display: block;
+  /*flex-wrap: wrap; */
   width: 100%;
-  flex-direction:column;
+  /*flex-direction:column; */
 }
 
 .icon {
   margin-right: 10px;
 }
 
-.flex-container h3 {
+.sec3-container h3 {
   color: white;
   font-family: sans-serif;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.flex-container p {
+.sec3-container p {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
 }
 
-.flex-container strong {
+.sec3-container strong {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
@@ -354,8 +406,8 @@ a:hover#join {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
+  height:calc(100vh - 16vh);
+  width: 100%;
   text-align: center;
   }
 
@@ -367,8 +419,8 @@ a:hover#join {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
+  height: calc(100vh - 8vh - 8vh); /* 100vh minus height of header, and nav bar */
+  width: 100%;
   text-align: center;
 }
 
@@ -383,6 +435,8 @@ a:hover#join {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    display: block;
+    z-index: 13;
 }
 
 /*
@@ -395,18 +449,27 @@ a:hover#join {
     with different background images  */
 
 /* similar to .section6ContentContainer */
-.section5ContentContainer {
-    height: 94vh;
+#current-projects {
+    z-index: 12;
+    display: block;
+    height: 100vh;
     background-color: rgba(46,117,207,0.45);
-    text-align: center;
-    color: white;
-    /*margin-top: -45px;*/ /* how to overlap background with navbar? */
+    background-size: cover;
 }
 
-#section5,
 .section5ContentContainer {
-  display: flex;
-  flex-direction: column;
+    color: white;
+}
+
+.sec5FlexBox {
+    display: flex;
+    height: calc(100vh - 8vh - 45px);  /* viewheight minus navbar and header heights */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /*overflow: hidden; */
 }
 
 .sec5Hidden {
@@ -530,7 +593,7 @@ a.joinNow:hover {
 
 /* Shoud be transparent with section background image behind it*/
 .nav5-itemsClear {
-    background-color: rgba(46,117,207,0.45);
+    background-color: none;
 }
 
 .nav5-itemsBlue {
@@ -545,7 +608,14 @@ a.joinNow:hover {
     =================================================
 */
 
-#section6,
+/* For content to align below header bar, parent container for Sec 6 must be set
+to disply: block (i.e. not display: flex */
+
+#section6 {
+    display: block;
+    z-index: 11;
+}
+
 #section6-nav-container,
 #section6-nav,
 #section6-nav a,
@@ -553,7 +623,6 @@ a.joinNow:hover {
     display: flex;
 }
 
-#section6,
 .section6-content-container {
     flex-direction: column;
 }
@@ -606,10 +675,12 @@ img.section6-icons {
 
 /* ------------------ Content ------------------ */
 .section6-content-container {
-    height: 94vh;
+    height: calc(100vh - 8vh - 6vh);  /* viewhight minus height of navbar and header */
     background-color: gold;
     text-align: center;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .section6-title {
@@ -643,6 +714,7 @@ img.section6-icons {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 10;
 }
 
 
@@ -657,6 +729,7 @@ img.section6-icons {
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    z-index: 9;
 }
 
 /*
@@ -702,12 +775,14 @@ font-size:1em;
 @media only screen and (min-width:641px)  {
 
 }
+
+/* STU DISABLED THIS TO CENTER SECTION 3 CONTENT
+
 @media only screen and (min-width:961px)  {
 .wrapper {
   width:50%;
-}
+} */
 
-  }
 @media only screen and (min-width:1025px) {
 
 
@@ -729,6 +804,7 @@ font-size:1em;
     #carousel {
         position: fixed;
         margin: 29vh 0 0 1vw; 
+        z-index: 20;
     }
 
     #carousel li {
