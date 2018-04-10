@@ -223,7 +223,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
 #section1 {
     background:
     linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-    url('../images/annie-spratt-42459.jpg');
+    url('../images/section1/sec1backgroundpic.jpg');
     background-size: cover;
     height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
