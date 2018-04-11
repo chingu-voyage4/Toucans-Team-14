@@ -20,9 +20,23 @@
         </div>
     </div> <!-- /.menu -->
 
+<!-- Carousel Start -->
+
+<ul class="carouselWhite" id="carousel">
+    <li id="section1Car"><a href="#section1"></a></li>
+    <li id="section2Car"><a href="#introduction"></a></li>
+    <li id="section3Car"><a href="#section3"></a></li>
+    <li id="section4Car"><a href="#section4"></a></li>
+    <li id="current-projectsCar"><a href="#current-projects"></a></li>
+    <li id="section6Car"><a href="#section6"></a></li>
+    <li id="section7Car"><a href="#section7"></a></li>
+    <li id="attributionCar"><a href="#attribution"></a></li>
+</ul>
+
+<!-- Carousel End -->
 
 	<!-- Section 1 - Blue -->
-	<section class="bg" id="section1">
+	<section class="bgSec1" id="section1">  <!-- SF changed class to .bgSec1 b/c sec1 needs custom height -->
         <div class="mainContent">
             <div class="laptop-container">
                 <img src="assets\images\section1\laptop.png" class="laptop" />
@@ -48,25 +62,56 @@
     </section> <!-- /#section1 -->
 
 	<!-- Section 2 - Yellow -->
-	<section class="bg" id="section2">
+	<section class="setSectionPosition" id="introduction">
 
-    </section> <!-- /#section2 -->
+        <div class="secFlexBox">
+        
+            <div class="mainContent" id="sec2Accelerate">
+                
+                Accelerate research with no investment of time or money.
+            
+            </div>
+
+            <div id="sec2Line"></div>
+
+            <div id="sec2Volunteer">
+                
+                When you become a <b>World Community Grid</b> volunteer, you donate your device's spare computing power to help scientists solve the world's biggest problems in health and sustainability.
+            
+            </div>
+        
+        </div>
+
+    </section>
 
 	<!-- Section 3 - Blue -->
 
-    <section class="flex-container">
+        <!-- Edits by Stu (08/04/2018)
+        - parent 'section' container no longer display:flex
+        - subsections' hieghts modified to fit below WCG header and subheader
+        - parent section and subsections all assigned "position:relative" 
+        - subsections assigned z-indexes
+        - subsections assigned hidden pseudo-elements "before" subsections, to align WCG header above visible content.
+        - changed class "bg" to "bgSec3" due to custom height of subsections.
+        - additional modifications to ensure content displays as before.   
+        -->
 
-        <subsection class="bg" id="section3a">
-            <div class="subheader" id="header-challenge"> <img src="assets\images\003-mountain.png" height=36px width="36px" class="icon">
-                <h2>Challenge</h2></div>
-            <div class="wrapper">
-                <h3>Scientists need help</h3> <img src="assets/images/boobaloo-Compass-300px.png" height=200px width=200px id="compass">
-                <p text="center">They’re searching the microscopic world for answers to our biggest problems, but it’s hard to know where to start. That’s why many use computer simulations to point them in the right direction, just as explorers rely on maps to find their way.</p> <strong text="center">Finding answers is tough, and without more computers, doing scientific research can be a bit like exploring with an incomplete map</strong>
-                <a href="#section3b"> <img src="assets/images/down-arrow.png" height=48px width=48px id="arrow3"></a>
-            </div>
+    <section class="sec3-container setSectionPosition" id="section3">
+        
+        <subsection class="bgSec3 setSectionPosition" id="section3a">
+            
+                <div class="subheader" id="header-challenge"> <img src="assets\images\003-mountain.png" height=36px width="36px" class="icon">
+                    <h2>Challenge</h2></div>
 
-        </subsection> <!-- /#section3a -->
-        <subsection class="bg" id="section3b">
+                <div class="wrapper">
+                    <h3>Scientists need help</h3> <img src="assets/images/boobaloo-Compass-300px.png" height=200px width=200px id="compass">
+                    <p text="center">They’re searching the microscopic world for answers to our biggest problems, but it’s hard to know where to start. That’s why many use computer simulations to point them in the right direction, just as explorers rely on maps to find their way.</p> <strong text="center">Finding answers is tough, and without more computers, doing scientific research can be a bit like exploring with an incomplete map</strong>
+                    <a href="#section3b"> <img src="assets/images/down-arrow.png" height=48px width=48px id="arrow3"></a>
+                </div>
+
+        </subsection>
+
+        <subsection class="bgSec3 setSectionPosition" id="section3b">
             <div class="subheader" id="header-solution"> <img src="assets\images\002-small-circular-compass.png" height=36px width="36px" class="icon">
                 <h2>Solution</h2></div>
             <div class="wrapper">
@@ -76,7 +121,7 @@
             </div>
         </subsection> <!-- /#section3b -->
 
-        <subsection class="bg" id="section3c">
+        <subsection class="bgSec3 setSectionPosition" id="section3c">
             <div class="subheader" id="header-impact"> <img src="assets\images\001-waving-flag.png" height=36px width="36px" class="icon,ui-accordion-header-icon">
                 <h2>Impact</h2></div>
             <div class="wrapper">
@@ -84,83 +129,38 @@
                 <p>As a World Community Grid volunteer, your device does research calculations when it’s idle, so just by using it as you do every day, you can help scientists get results in months instead of decades. With your help, they can identify the most important areas to study in the lab, bringing them one step closer to discoveries that save lives and address global problems.</p>
                 <a href="#attribution"> <img src="assets/images/down-arrow.png" height=48px width=48px id="arrow5"> </a>
             </div>
-        </subsection> <!-- /#section3c -->
-        <subsection class="bg" id="attribution">
-            <div class="subheader" id="header-attribution">
-                <h2>Attribution</h2>
-            </div>
-            <div class="attribution">
-                <p>Icons made by <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
-                <p>Background image of DNA <a href="https://www.freepik.com/free-photo/dna-helix_932015.htm"> Designed by Freepik</a></p>
-                <p>
-                    Infographic bars, battery, and padlock icons designed by
-                    <a href="https://www.freepik.com" title="Freepik">Freepik</a>
-                    from
-                    <a href="https://www.flaticon.com/">www.flaticon.com</a>
-                </p>
-                <p>
-                    Antenna icon designed by
-                    <a href="http://simpleicon.com/" title="simple icon">simple icon</a>
-                    from
-                    <a href="https://www.flaticon.com/">www.flaticon.com</a>
-                </p>
-                <p>
-                    Laptop, play button, music notes, and ellipsis speech bubble icons designed by
-                    <a href="https://www.freepik.com" title="Freepik">Freepik</a>
-                    from
-                    <a href="https://www.flaticon.com/">www.flaticon.com</a>
-                </p>
-            </div> <!-- /.attribution -->
-        </subsection> <!-- /#attribution -->
-    </section> <!-- /.flex-container (section 3) -->
+		</subsection>
+
+	</section>
 
 	<!-- Section 4 - Grey -->
-	<section class="bg" id="section4">
-    </section> <!-- /#section4 -->
+	<section class="bg setSectionPosition" id="section4">
+    </section>
 
-	<!-- Section 5 - Blue -->
-    <section>
-        <!-- Section 5a - Blue - Gut Microbiome -->
-        <section class="bg" id="section5a">
+    <!-- Section 5 - Blue -->
+        <!-- Default background is for microbiome. JS changes class accordingly upon interaction with subsection's menu tab -->
+    <section id="current-projects" class="microbiomeBckgd setSectionPosition">
 
-            <div class="sec5navbar">
-                <ul>
+    <!--Section 5 navbar -->
+        <!-- navbar tabs (except for microbiome-nav) start as default blue color but JS changes to clear upon user interaction -->
+        <div class="sec5navbar">
+            <ul id="section5-nav">
+                <li id="microbiome-nav" class="nav5-itemsClear"><img src="assets/images/bacteria_white.png" alt="bacteria">Gut Microbiome</li>
+                <li id="cancer-nav" class="nav5-itemsBlue"><img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">Cancer</li>
+                <li id="zika-nav" class="nav5-itemsBlue"><img src="assets/images/mosquito.png" alt="Mosquito">Zika</li>
+                <li id="tb-nav" class="nav5-itemsBlue"><img src="assets/images/lungs.png" alt="Lungs">TB</li>
+                <li id="aids-nav" class="nav5-itemsBlue"><img src="assets/images/virusicon.png" alt="HIV Virus">AIDS</li>
+            </ul>
+        </div>
 
-                    <li class="clearLink">
-                        <a href="#section5a" >
-                        <img src="assets/images/bacteria_white.png" alt="bacteria">
-                        Gut Microbiome
-                        </a>
-                    </li>
+        <!-- All Subsections (applies flexbox to all of them)-->
 
-                    <li>
-                        <a href="#section5b">
-                        <img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
-                        Cancer</a>
-                    </li>
+        <div class="sec5FlexBox">
 
-                    <li>
-                        <a href="#section5c"><img src="assets/images/mosquito.png" alt="Mosquito">
-                        Zika</a>
-                    </li>
+            <!-- Section 5a - Blue - Gut Microbiome -->
 
 
-                    <li>
-                        <a href="#section5d"><img src="assets/images/lungs.png" alt="Lungs">
-                        TB</a>
-                    </li>
-
-                    <li>
-                        <a href="#section5e"><img src="assets/images/virusicon.png" alt="HIV Virus">
-                        AIDS</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="centerBox">
-
-                <div class="mainContent">
+            <section class="section5ContentContainer" id="microbiome">
 
                     <p class="infotext">Your device could help...</p>
 
@@ -172,238 +172,99 @@
 
                     <a href="#" class="joinNow">Join Now</a>
 
-                </div>
+            </section>
 
-            </div>
+            <!-- Section 5b - Blue - Cancer -->
+            <section class="sec5Hidden" id="cancer">
 
-        </section> <!-- /#section5a -->
+                    <div class="mainContent">
 
-        <!-- Section 5b - Blue - Cancer -->
-        <section class="bg" id="section5b">
+                        <p class="infotext">Your device could help...</p>
 
-            <div class="sec5navbar">
-                <ul>
+                        <img class="centerImage" src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
 
-                    <li>
-                        <a href="#section5a" >
-                        <img src="assets/images/bacteria_white.png" alt="bacteria">
-                        Gut Microbiome
-                        </a>
-                    </li>
+                        <p class="maintext">...find better ways to detect and treat cancer.</p>
 
-                    <li class="clearLink">
-                        <a href="#section5b">
-                        <img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
-                        Cancer</a>
-                    </li>
+                        <p class="infotext">Two research groups are using World Community Grid to fight some of the most common and deadly types of cancer in adults and children.</p>
 
-                    <li>
-                        <a href="#section5c"><img src="assets/images/mosquito.png" alt="Mosquito">
-                        Zika</a>
-                    </li>
+                        <a href="#" class="joinNow">Join Now</a>
 
+                    </div>
 
-                    <li>
-                        <a href="#section5d"><img src="assets/images/lungs.png" alt="Lungs">
-                        TB</a>
-                    </li>
+            </section>
 
-                    <li>
-                        <a href="#section5e"><img src="assets/images/virusicon.png" alt="HIV Virus">
-                        AIDS</a>
-                    </li>
+            <!-- Section 5c - Blue - Zika -->
+            <section class="sec5Hidden" id="zika">
 
-                </ul>
-            </div>
+                    <div class="mainContent">
 
-            <div class="mainContent">
+                        <p class="infotext">Your device could help...</p>
 
-                <p class="infotext">Your device could help...</p>
+                        <img class="centerImage" src="assets/images/mosquito.png" alt="Mosquito">
 
-                <img class="centerImage" src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
+                        <p class="maintext">...fight the Zika virus.</p>
 
-                <p class="maintext">...find better ways to detect and treat cancer.</p>
+                        <p class="infotext">Through an international collaboration, researchers are looking for drugs to combat the Zika virus, which can cause severe neurological problems.</p>
 
-                <p class="infotext">Two research groups are using World Community Grid to fight some of the most common and deadly types of cancer in adults and children.</p>
+                        <a href="#" class="joinNow">Join Now</a>
 
-                <a href="#" class="joinNow">Join Now</a>
+                    </div>
 
-            </div>
+            </section>
 
-        </section> <!-- /#section5b -->
+            <!-- Section 5d - Blue - TB -->
+            <section class="sec5Hidden" id="tb">
 
-    	<!-- Section 5c - Blue - Zika -->
-        <section class="bg" id="section5c">
+                    <div class="mainContent">
 
-            <div class="sec5navbar">
-                <ul>
+                        <p class="infotext">Your device could help...</p>
 
-                    <li>
-                        <a href="#section5a" >
-                        <img src="assets/images/bacteria_white.png" alt="bacteria">
-                        Gut Microbiome
-                        </a>
-                    </li>
+                        <img class="centerImage" src="assets/images/lungs.png" alt="Lungs">
 
-                    <li>
-                        <a href="#section5b">
-                        <img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
-                        Cancer</a>
-                    </li>
+                        <p class="maintext">...fight tuberculosis (TB).</p>
 
-                    <li class="clearLink">
-                        <a href="#section5c"><img src="assets/images/mosquito.png" alt="Mosquito">
-                        Zika</a>
-                    </li>
+                        <p class="infotext">Researchers are building an understanding of the TB bacteria's defenses, to help overcome one of the world's deadliest diseases.</p>
 
+                        <a href="#" class="joinNow">Join Now</a>
 
-                    <li>
-                        <a href="#section5d"><img src="assets/images/lungs.png" alt="Lungs">
-                        TB</a>
-                    </li>
+                    </div>
 
-                    <li>
-                        <a href="#section5e"><img src="assets/images/virusicon.png" alt="HIV Virus">
-                        AIDS</a>
-                    </li>
+            </section>
 
-                </ul>
-            </div>
+            <!-- Section 5e - Blue - AIDS -->
+            <section class="sec5Hidden" id="aids">
 
-            <div class="mainContent">
+                    <div class="mainContent">
 
-                <p class="infotext">Your device could help...</p>
+                        <p class="infotext">Your device could help...</p>
 
-                <img class="centerImage" src="assets/images/mosquito.png" alt="Mosquito">
+                        <img class="centerImage" src="assets/images/virusicon.png" alt="HIV Virus">
 
-                <p class="maintext">...fight the Zika virus.</p>
+                        <p class="maintext">...identify more effective HIV/AIDS treatments.</p>
 
-                <p class="infotext">Through an international collaboration, researchers are looking for drugs to combat the Zika virus, which can cause severe neurological problems.</p>
+                        <p class="infotext">Researchers are searching for new antiviral drugs to control the progression of HIV, prevent the onset of AIDS and prolong life.</p>
 
-                <a href="#" class="joinNow">Join Now</a>
+                        <a href="#" class="joinNow">Join Now</a>
 
-            </div>
+                    </div>
 
-        </section> <!-- /#section5c -->
+            </section>
+        
+        </div> <!-- End of "all subsections" container -->
 
-    	<!-- Section 5d - Blue - TB -->
-        <section class="bg" id="section5d">
-
-            <div class="sec5navbar">
-                <ul>
-
-                    <li>
-                        <a href="#section5a" >
-                        <img src="assets/images/bacteria_white.png" alt="bacteria">
-                        Gut Microbiome
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#section5b">
-                        <img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
-                        Cancer</a>
-                    </li>
-
-                    <li>
-                        <a href="#section5c"><img src="assets/images/mosquito.png" alt="Mosquito">
-                        Zika</a>
-                    </li>
-
-
-                    <li class="clearLink">
-                        <a href="#section5d"><img src="assets/images/lungs.png" alt="Lungs">
-                        TB</a>
-                    </li>
-
-                    <li>
-                        <a href="#section5e"><img src="assets/images/virusicon.png" alt="HIV Virus">
-                        AIDS</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="mainContent">
-
-                <p class="infotext">Your device could help...</p>
-
-                <img class="centerImage" src="assets/images/lungs.png" alt="Lungs">
-
-                <p class="maintext">...fight tuberculosis (TB).</p>
-
-                <p class="infotext">Researchers are building an understanding of the TB bacteria's defenses, to help overcome one of the world's deadliest diseases.</p>
-
-                <a href="#" class="joinNow">Join Now</a>
-
-            </div>
-
-        </section> <!-- /#section5d -->
-
-    	<!-- Section 5e - Blue - AIDS -->
-        <section class="bg" id="section5e">
-
-            <div class="sec5navbar">
-                <ul>
-
-                    <li>
-                        <a href="#section5a" >
-                        <img src="assets/images/bacteria_white.png" alt="bacteria">
-                        Gut Microbiome
-                        </a>
-                    </li>
-
-                    <li >
-                        <a href="#section5b">
-                        <img src="assets/images/awarenessRibbon.png" alt="Awareness ribbon">
-                        Cancer</a>
-                    </li>
-
-                    <li>
-                        <a href="#section5c"><img src="assets/images/mosquito.png" alt="Mosquito">
-                        Zika</a>
-                    </li>
-
-
-                    <li>
-                        <a href="#section5d"><img src="assets/images/lungs.png" alt="Lungs">
-                        TB</a>
-                    </li>
-
-                    <li class="clearLink">
-                        <a href="#section5e"><img src="assets/images/virusicon.png" alt="HIV Virus">
-                        AIDS</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="mainContent">
-
-                <p class="infotext">Your device could help...</p>
-
-                <img class="centerImage" src="assets/images/virusicon.png" alt="HIV Virus">
-
-                <p class="maintext">...identify more effective HIV/AIDS treatments.</p>
-
-                <p class="infotext">Researchers are searching for new antiviral drugs to control the progression of HIV, prevent the onset of AIDS and prolong life.</p>
-
-                <a href="#" class="joinNow">Join Now</a>
-
-            </div>
-
-        </section> <!-- /#section5e -->
-    </section> <!-- (section 5) -->
+    </section>
+    
 
 	<!-- Section 6 - Yellow -->
-    <section id="section6">
+    <section class="setSectionPosition" id="section6">
         <!-- Section 6 navbar -->
         <div id="section6-nav-container">
             <ul id="section6-nav">
-                <li id="performance-nav" class="nav6-items"><a href=#section6-nav><img src="assets/images/section6-icons/performance.png" alt="graph icon" class="section6-icons"/>Performance</a></li>
-                <li id="battery-nav" class="nav6-items"><a href=#section6-nav><img src="assets/images/section6-icons/battery.png" alt="battery icon" class="section6-icons"/>Battery</a></li>
-                <li id="security-nav" class="nav6-items"><a href=#section6-nav><img src="assets/images/section6-icons/security.png" alt="lock icon" class="section6-icons"/>Security</a></li>
-                <li id="data-nav" class="nav6-items"><a href=#section6-nav><img src="assets/images/section6-icons/data.png" alt="signal transmission icon" class="section6-icons"/>Data</a></li>
+                <!-- Links are to top of Section 6-->
+                <li id="performance-nav" class="nav6-items"><a href=#section6><img src="assets/images/section6-icons/performance.png" alt="graph icon" class="section6-icons"/>Performance</a></li>
+                <li id="battery-nav" class="nav6-items"><a href=#section6><img src="assets/images/section6-icons/battery.png" alt="battery icon" class="section6-icons"/>Battery</a></li>
+                <li id="security-nav" class="nav6-items"><a href=#section6><img src="assets/images/section6-icons/security.png" alt="lock icon" class="section6-icons"/>Security</a></li>
+                <li id="data-nav" class="nav6-items"><a href=#section6><img src="assets/images/section6-icons/data.png" alt="signal transmission icon" class="section6-icons"/>Data</a></li>
             </ul>
         </div>
 
@@ -475,18 +336,48 @@
     </section> <!-- /#section6 -->
 
 	<!-- Section 7 - Flat Grey -->
-	<section class="bg" id="section7">
-    </section> <!-- /#section7 -->
+	<section class="bg setSectionPosition" id="section7">
+    </section>
 
-	<!-- Section 8 - White -->
-	<section class="bg" id="section8">
-	</section> <!-- /#section8 -->
+	<!-- Section 8 - White (Attribution) -->
+	<section class="setSectionPosition" id="attribution">
+            
+            <div class="attributionContainer">
+                
+                <h2>Attribution</h2>
+
+                <h3>Section 2</h3>
+
+                <p>Photo of climber by <a href="https://unsplash.com/photos/F7KPyatac-g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jackson Hendry</a> on <a href="https://unsplash.com/photos/F7KPyatac-g">Unsplash</a></p>
+
+                <h3>Section 3</h3>
+
+                <p>Icons in section 3 made by <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+                <p>Background image of DNA <a href="https://www.freepik.com/free-photo/dna-helix_932015.htm"> Designed by Freepik</a></p>
+
+                <h3>Section 5</h3>
+
+                <p>Bacteria icon designed by <a href="https://www.flaticon.com/authors/voysla">Voysla</a> on <a href="https://www.flaticon.com/free-icon/bacteria_749250#term=bacteria&page=1&position=1">Flaticon</a> </p>
+                <p>Ribbon icon designed by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> on <a href="https://www.flaticon.com/free-icon/awareness-ribbon_63681#term=ribbon&page=1&position=34">Flaticon</a></p>
+                <p>Mosquito icon by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> on <a href="https://www.flaticon.com/free-icon/mosquito-insect-side-view_47225#term=mosquito&page=1&position=1">Flaticon</a></p>
+                <p>Lungs icon by <a href="https://www.flaticon.com/authors/roundicons">Roundicons</a> on <a href="https://www.flaticon.com/free-icon/lungs_467740#term=lungs&page=1&position=88">Flaticon</a></p>
+                <p>Virus icon by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> on <a href="https://www.flaticon.com/free-icon/computer-virus_30992#term=virus&page=1&position=40">Flaticon</a></p>
+                <p>Cholera background image by <a href="https://www.flickr.com/photos/sanofi-pasteur/">Sanofi Pasteur</a> on <a href="https://www.flickr.com/photos/sanofi-pasteur/26613653799/in/photolist-9djCHD-7PHdmd-7Q1WJ6-7Q1xwZ-93yfyr-7PUfpc-7PDS94-93AHXm-nHJn57-7Q8GXC-7Q5uVa-7PDY6Z-7Ptm4u-7PDYJB-7Q1mPz-7Q8PG7-7PGSEN-7PDV34-93xyia-7PDZsV-GxKW4Z-93ydqD-93BsDA-nHKXVK-gQYe5x-cdxC6s-cdxCaJ-7Q5tpT-7Q8Gg3-7PDXj6-7Q5sKV-7Q8FG1-7Q55q9-7Q5vni-7PXyc5-7Q5rd4-7Q5qsV-fvaGAj-76YBhz-76YTwR-asjoUs-bWbiyc-cdxC4o-bWbiuD-cdxC2C-nHKnQn-fvdBQj-ffunXG-asgKxt-fff9jM">Flickr</a></p>
+                <P>Mosquito background image by <a href="https://www.flickr.com/photos/ahilliker/">Adam Hilliker</a> on <a href="https://www.flickr.com/photos/ahilliker/5813979420/in/photolist-9RLawu-PWHsWJ-EhL9P5-gfMYCS-9p32Uq-oKBJd1-6hrFJ5-7BhQYH-pWdkJo-gmb6dQ-5eFtAu-b98dhF-dK38hh-87852N-8hsXZN-9GGdtA-K8FuXZ-4ivEfg-aNK4sT-22i46W-CiyVZy-NZB3B5-HxKPUD-LprYFN-vd7UQe-cF6cRC-tJYHw-4X7nXS-jEboS-wwwTK-6yxfMC-a9TZvX-dkASi3-6J4RWD-qobbbE-2T76th-UWFihb-dL2Wn-53Vqkb-pQqPu-pQqHm-fpNBZL-8uDRoF-aRrfFr-XN6Aj9-4PabMG-dHDCHP-6eU8Y-HNaat8-yCSuS">Flickr</a></p>
+                <P>Drugs background image by <a href="https://pixabay.com/en/users/qimono-1962238/">@qimono</a> on <a href="https://pixabay.com/en/syringe-pill-bottle-morphine-small-1884784/">pixabay</a></p>
+                <P>Girl in hosptial background image by <a href="https://www.flickr.com/photos/rubenperez/">@rubenperez</a> on <a href="https://www.flickr.com/photos/rubenperez/452108745/in/photolist-FXbbn-mx8n8M-YCGRbJ-skH4JR-4zYgvV-XM37u1-rqaEFq-5Yxq2-jvMHXU-5CERfq-7WQNkw-mx9ERR-8MTrjX-mxcxXo-mxbkkS-4m2Jwo-brSSqa-88joVY-nVBdLs-9WqEeG-mxbq1V-mxbsbp-mx8RFi-9MuMhR-YhRtPt-oajeUb-4zYgZp-7i8Dk3-ocebjc-SALaZ-NYVj4-o8pPoQ-rHo14-mxcaj8-4M2NnB-oaj5wU-5WEoxa-mxceF2-mxcRz6-nSXww2-5yYSWU-czG7zy-oce3sa-oa9Mex-7RLFtB-oarVMV-nSYgdT-25FZuV-nSXMx4-oajoW9"> Flickr</a></p>
+                <P>HIV/AIDS ribbon background image by <a href="https://www.flickr.com/photos/worldbank/">World Bank</a> on <a href="https://www.flickr.com/photos/worldbank/6442254013/in/photolist-aPheF4-6pqCDS-pnMvKU-8qfsCB-aPte2B-HsUwrH-EgRMRA-aQ4ZMT-aQ4Yrn-aQ4ZJn-aQ4WYk-HsUw5k-aQ4VYK-aQ4ZpT-pYcckv-76Cws-6pmuJ8-aQ4ZsX-aQ4YxZ-4aDxTw-8XFBXU-5FDYcH-qfr9pa-aQ4Zea-21jmwpj-aQ4VBK-aQ4XW2-aQ4ZET-aQ4Zaa-aQ4Z3v-phPh7i-aQ4Zwi-aQ4Yft-aQ4YNM-aQ4YBa-aQ4YXi-8niHsi-aQ4ZCe-qfB8Zg-aNH2ov-xfy7c-aQ4WcP-aPtdMB-pY4dqA-aPtdU2-aNHrmp-i1Nagx-4aCpwe-hZrzP9-aQ4VEX">Flickr</a></p>
+
+            </div>
+
+        </div>
+        
+    </section>
+    
 
 
-
-	<!--down arrow icon attribution-->
+	<!-- down arrow icon attribution -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

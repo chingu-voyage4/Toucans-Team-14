@@ -1,10 +1,8 @@
-/*stylesheet for index.html*/
+/* stylesheet for index.html */
 
 /*
     =================================================
-
     CSS Styles Reset
-
     =================================================
 */
 
@@ -33,38 +31,40 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* End of CSS reset */
-
 
 /*
     =================================================
-
     Custom Styles
-
     =================================================
 
 */
@@ -85,19 +85,11 @@ a {                       /* Removes default styling of links (i.e. underline) *
   text-decoration: none;
 }
 
-.bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
-    background-position: center;
-}
-
 /* paragraph style for detailed info text */
-
 
 /*
     =================================================
-
     Top Navigation/Menu Bar
-
     =================================================
 */
 
@@ -108,6 +100,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
     justify-content: space-between;
     position:fixed;
     background-color: white;
+    z-index: 20;
 }
 
 .logos {
@@ -176,27 +169,28 @@ a:hover#join {
     =================================================
 */
 
-.mainContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 150px;
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
 }
 
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-a {                       /* Removes default styling of links (i.e. underline) */
-  text-decoration: none;
-}
+/* To do: check if .bg is assigned to any sections - maybe it's not being used? */
 
 .bg {
-    height: calc(100vh - 45px);   /* For all sections except #1, heigh does not include the height of WCG header. Refer to #section1 below */
+    height: 100vh;   /* For all sections except #1, height does not include the height of WCG header. Refer to #section1 below */
     background-position: center;
+}
+
+.bgSec1 {
+    height: calc(100vh - 8vh);          /* Section 1 vh INCLUDES the header's height */
+    padding-top: 8vh;
+    background-position: center;
+}
+
+.bgSec3 {
+    height: calc(100vh - 16vh);  
 }
 
 .subheader {
@@ -212,11 +206,53 @@ a {                       /* Removes default styling of links (i.e. underline) *
   border-bottom: 1px solid aliceblue;
 }
 
+.secFlexBox {
+    display: flex;
+    height: 100%;
+    margin-top: -8vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /*overflow: hidden;*/
+}
+
 /*
     =================================================
+    All sections
+    =================================================
+*/
 
+/* All sections EXCEPT first, b/c it uses padding instead. This approach
+is from https://css-tricks.com/hash-tag-links-padding/ */
+
+#introduction::before,
+#section3::before,
+#section3a::before,
+#section3b::before,
+#section3c::before,
+#section4::before,
+#current-projects::before,
+#section6::before,
+#section7::before,
+#attribution::before {
+    display: block;
+    content: " ";
+    margin-top: -8vh;
+    height: 8vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* To use z-index, all subsections must have a position other than 'static'  */
+.setSectionPosition {
+    position: relative;
+}
+
+/*
+    =================================================
     Section 1
-
     =================================================
 */
 
@@ -272,28 +308,60 @@ a {                       /* Removes default styling of links (i.e. underline) *
     font-weight: bold;
 }
 
+/* .mainContent re-added by SF.  *** Need to address: flexbox in parent container */
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
 
 /*
     =================================================
-
     Section 2
-
     =================================================
 */
 
-#section2 {
+#introduction {
+    display: block;
     background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/elena-prokofyeva-17909.jpg');
+        linear-gradient(rgba(255, 217, 0, 0.8), rgba(255, 217,0, 0.8)),
+        url('../images/climber_web.jpg');
     background-size: cover;
+    font-family: "Helvetica";
+    height: 100vh;
+    color: black;
+    z-index: 18;
+}
+
+#sec2Accelerate {
+    font-size: 1.25em;
+    width: 75vw;
+    font-weight: 500;
+}
+
+#sec2Line {
+ border-bottom: 0.15rem solid black;
+ width: 35vw;
+ margin: 1.5em 0 1.5em 0;
+}
+
+#sec2Volunteer {
+    font-size: 1.75em;
+    width: 60vw;
+    font-weight: 500;
+}
+
+#sec2Volunteer b {
+    font-weight: bold;
 }
 
 
 /*
     =================================================
-
     Section 3
-
     =================================================
 */
 
@@ -302,6 +370,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 17;
 }
 
 #section3a {
@@ -309,6 +378,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 16;
 }
 
 #section3b {
@@ -316,6 +386,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 15;
 }
 
 #section3c {
@@ -323,44 +394,50 @@ a {                       /* Removes default styling of links (i.e. underline) *
       linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
       url('../images/OAI3050.jpg');
   background-size: cover;
+  z-index: 14;
 }
 
-
-
-.flex-container subsection {
-  display:flex;
+.sec3-container subsection {
+  display:block;
   width: 100%;
   height: 100%;
-  justify-content:center;
-  flex-wrap: wrap;
+  /*justify-content:center;
+  flex-wrap: wrap; */
   background-color: dodgerblue;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+.sec3-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sec3-container {
+  display: block;
+  /*flex-wrap: wrap; */
   width: 100%;
-  flex-direction:column;
+  /*flex-direction:column; */
 }
 
 .icon {
   margin-right: 10px;
 }
 
-.flex-container h3 {
+.sec3-container h3 {
   color: white;
   font-family: sans-serif;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.flex-container p {
+.sec3-container p {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
 }
 
-.flex-container strong {
+.sec3-container strong {
   color: white;
   font-family: sans-serif;
   font-size: 1em;
@@ -373,29 +450,14 @@ a {                       /* Removes default styling of links (i.e. underline) *
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
+  height:calc(100vh - 16vh);
+  width: 100%;
   text-align: center;
   }
 
-/* Attribution section here only temporarily */
-
-.attribution {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height:92vh;
-  width: 90%;
-  text-align: center;
-}
-
 /*
     =================================================
-
     Section 4
-
     =================================================
 */
 
@@ -404,60 +466,88 @@ a {                       /* Removes default styling of links (i.e. underline) *
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    display: block;
+    z-index: 13;
 }
 
 /*
     =================================================
-
     Section 5
-
     =================================================
 */
 
 /*  Stu: there must be some way to avoid repeating the transparent gradient overlay text,
     with different background images  */
 
-#section5a {
+/* similar to .section6ContentContainer */
+#current-projects {
+    z-index: 12;
+    display: block;
+    height: 100vh;
+    background-color: rgba(46,117,207,0.45);
+    background-size: cover;
+}
+
+.section5ContentContainer {
+    color: white;
+}
+
+.sec5FlexBox {
+    display: flex;
+    height: calc(100vh - 8vh - 45px);  /* viewheight minus navbar and header heights */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    /*overflow: hidden; */
+}
+
+.sec5Hidden {
+  display: none;
+}
+
+.microbiomeBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/choleraBacteria_bw.jpg');
     background-size: cover;
-    padding-top: 8vh;
+    /*padding-top: 8vh;*/
 }
 
-#section5b {
+.cancerBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/drugs_bw.jpg');
     background-size: cover;
 }
 
-#section5c {
+.zikaBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/mosquitoBckgd_bw.jpg');
     background-size: cover;
 }
 
-#section5d {
+.tbBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/oxygen_bw.jpg');
     background-size: cover;
 }
 
-#section5e {
+.aidsBckgd {
     background:
         linear-gradient(rgba(46,117,207,0.45),rgba(46,117,207,0.45)),
         url('../images/ribbonBackground_bw-2.jpg');
     background-size: cover;
 }
 
-#section5a img,
-#section5b img,
-#section5c img,
-#section5d img,
-#section5e img {
+#microbiome img,
+#cancer img,
+#zika img,
+#tb img,
+#aids img {
     max-width: 10%;
 }
 
@@ -476,13 +566,7 @@ a.joinNow:hover {
     color: tomato;
 }
 
-/*
-    =================================================
-
-    container positioning
-
-    =================================================
-*/
+/* ------------- Container positioning ------------- */
 
 .infotext,
 .maintext {
@@ -503,26 +587,14 @@ a.joinNow:hover {
     padding-top: 20px;
 }
 
-/*
-    =================================================
-
-    image positioning
-
-    =================================================
-*/
+/* -------------- Image positioning -------------- */
 
 .centerImage {
     display: block;
     margin: auto;
 }
 
-/*
-    =================================================
-
-    navigation bars
-
-    =================================================
-*/
+/* --------------- Navigation bars --------------- */
 
 .sec5navbar ul {
     display: flex;
@@ -534,27 +606,17 @@ a.joinNow:hover {
 .sec5navbar li {
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: white;
     border-right: 1px solid white;
     width: 100%;
     height: 100%;
-    background-color: #2e75cf;
+    cursor: pointer;
+    /*background-color: #2e75cf; */
 }
 
 .sec5navbar li:last-child {
     border-right: 0;
-}
-
-.sec5navbar a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-
 }
 
 .sec5navbar img {
@@ -562,27 +624,48 @@ a.joinNow:hover {
     padding-right: 10px;
 }
 
-.sec5navbar li.clearLink {
-    background-color: transparent;
+.nav5-itemsClear,
+.nav5-itemsBlue {
+    color: inherit;
+    font-size: 1.3em;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
 }
+
+/* Shoud be transparent with section background image behind it*/
+.nav5-itemsClear {
+    background-color: none;
+}
+
+.nav5-itemsBlue {
+  background-color: #2e75cf;
+}
+
 
 
 /*
     =================================================
-
     Section 6
-
     =================================================
 */
 
-#section6,
+/* For content to align below header bar, parent container for Sec 6 must be set
+to disply: block (i.e. not display: flex */
+
+#section6 {
+    display: block;
+    z-index: 11;
+}
+
 #section6-nav-container,
 #section6-nav,
+#section6-nav a,
 .section6-content-container {
     display: flex;
 }
 
-#section6,
 .section6-content-container {
     flex-direction: column;
 }
@@ -590,11 +673,11 @@ a.joinNow:hover {
 #battery,
 #security,
 #data {
-    display: none;
+    display: none;  
 }
 
 
-/* ---------- Nav bar ---------- */
+/* ----------------- Navigation bar ------------------ */
 #performance-nav {
     background-color: gold;
 }
@@ -620,20 +703,27 @@ img.section6-icons {
     margin-right: 10px;
 }
 
+#section6-nav li {
+    text-align: center;
+}
+
 #section6-nav a {
     text-decoration: none;
-    display: block;
+    justify-content: center;
     width: 100%;
     height: 100%;
     color: black;
+    align-items: center;
 }
 
-/* ---------- Content ---------- */
+/* ------------------ Content ------------------ */
 .section6-content-container {
-    height: 94vh;
+    height: calc(100vh - 8vh - 6vh);  /* viewhight minus height of navbar and header */
     background-color: gold;
     text-align: center;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .section6-title {
@@ -652,14 +742,13 @@ img.section6-icons {
     height: 200px;
     width: 200px;
     margin: 7%;
+    align-self: center;
 }
 
 
 /*
     =================================================
-
     Section 7
-
     =================================================
 */
 
@@ -668,29 +757,66 @@ img.section6-icons {
         linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
         url('../images/philippe-toupet-320689.jpg');
     background-size: cover;
+    z-index: 10;
 }
 
 
 /*
     =================================================
-
-    Section 8
-
+    Section 8 - Attribution
     =================================================
 */
 
-#section8 {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
+#attribution {
+    background-color: rgb(200,210,210);
     background-size: cover;
+    display: block;
+    font-family: Helvetica;
+    color: rgb(38,74,96);
+    font-size: 2vmin;
+    font-weight: 500;
+    z-index: 9;
 }
+
+/* Attribution section here only temporarily */
+
+.attributionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 8vh); /* 100vh minus height of header */
+    width: 100%;
+    text-align: center;
+  }
+
+  .attributionContainer a {
+    color: rgb(45,117, 207);
+  }
+
+  .attributionContainer h2 {
+      font-size: 5.5vmin;
+      font-weight: bold;
+      padding-bottom: .3em;
+      color: black;
+  }
+
+  .attributionContainer p {
+      padding-bottom: 0.25em;
+  }
+
+  .attributionContainer h3 {
+      color: rgb(38,74,96);
+      padding: 0.7em 0 0.4em 0;
+      font-size: 3vmin;
+      font-weight: 600;
+  }
+  
 
 /*
     =================================================
-
     Media Queries
-
     =================================================
 */
 
@@ -731,18 +857,65 @@ font-size:1em;
 @media only screen and (min-width:641px)  {
 
 }
+
+/* STU DISABLED THIS TO CENTER SECTION 3 CONTENT
+
 @media only screen and (min-width:961px)  {
 .wrapper {
   width:50%;
-}
+} */
 
-  }
 @media only screen and (min-width:1025px) {
 
 
  }
-}
+
 @media only screen and (min-width:1281px) {
 
 
  }
+
+/*  =================================================
+    Carousel
+    ================================================= */
+
+    #section1Car {
+        background-color: white;
+    }
+
+    #carousel {
+        position: fixed;
+        margin: 29vh 0 0 1vw; 
+        z-index: 20;
+    }
+
+    #carousel li {
+        margin-top: 37px;
+        height: 8px;
+        width: 8px;
+        border-radius: 100px;
+        background-color: none;
+    }
+
+    .carouselWhite li  {
+        border: 2px solid white;
+    }
+
+    .carouselBlack li {
+        border: 2px solid black;
+    }
+
+/*    .carousel ul:first-child {
+        margin-top: 0;
+    } */
+
+    ul#carousel li {
+        padding: 0;
+    }
+
+    ul#carousel li a {
+        margin: 0px;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
