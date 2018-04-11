@@ -4,26 +4,21 @@
 	<title>IBM World Community Grid Clone</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-
 </head>
 
 <body>
-
-<!-- Top menu -->
-<div>
-	    <div class='menu'>
-	        <div class='logos'>
-						<a href="#"><img id= "WCG" src="assets/images/wcglogo2.png"></a>
-                        <div id= "logoSeparator"></div>
-                        <a><img id="IBM" src="assets/images/IBMLogo.png">
-					</div>
-	        <div class='links'>
-	            <a href="#" id='login'>Log In</a>
-	            <a href="#" id='join'>Join</a>
-                <a href="#"><img id='cancel' src="assets/images/cancel.png"> </a>
-	        </div>
-	    </div>
-</div>
+    <div class='menu'>
+        <div class='logos'>
+					<a href="#"><img id= "WCG" src="assets/images/wcglogo2.png"></a>
+                    <div id= "logoSeparator"></div>
+                    <a><img id="IBM" src="assets/images/IBMLogo.png">
+		</div>
+        <div class='links'>
+            <a href="#" id='login'>Log In</a>
+            <a href="#" id='join'>Join</a>
+            <a href="#"><img id='cancel' src="assets/images/cancel.png"> </a>
+        </div>
+    </div> <!-- /.menu -->
 
 <!-- Carousel Start -->
 
@@ -41,20 +36,49 @@
 <!-- Carousel End -->
 
 	<!-- Section 1 - Blue -->
-	<section class="bgSec1 setSectionPosition" id="section1">
-
-    </section>
+	<section class="bgSec1" id="section1">  <!-- SF changed class to .bgSec1 b/c sec1 needs custom height -->
+        <div class="mainContent">
+            <div class="laptop-container">
+                <img src="assets\images\section1\laptop.png" class="laptop" />
+                <img src="assets\images\section1\message.png" class="icon-in-laptop" id="icon1"/>
+                <img src="assets\images\section1\play.png" class="icon-in-laptop" id="icon2"/>
+                <img src="assets\images\section1\music.png" class="icon-in-laptop" id="icon3"/>
+                <img src="assets\images\section1\message.png" class="icon-in-laptop" id="icon4"/>
+            </div>
+            <div class="rotating-text" id="text1">
+                What if you could<br /><span class="bold">study bacteria</span><br />while tweeting?
+            </div>
+            <div class="rotating-text" id="text2">
+                What if you could help<br /><span class="bold">treat childhood cancer</span><br />while watching a video?
+            </div>
+            <div class="rotating-text" id="text3">
+                What if you could help<br /><span class="bold">cure Zika</span><br />while listening to music?
+            </div>
+            <div class="rotating-text" id="text4">
+                What if you could help<br /><span class="bold">treat HIV/AIDS</span><br />while posting a status update?
+            </div>
+            <a href="#" class="joinNow">Join 748K volunteers now</a>
+        </div>
+    </section> <!-- /#section1 -->
 
 	<!-- Section 2 - Yellow -->
 	<section class="setSectionPosition" id="introduction">
 
         <div class="secFlexBox">
         
-            <div id="sec2Accelerate">Accelerate research with no investment of time or money.</div>
+            <div id="sec2Accelerate">
+                
+                Accelerate research with no investment of time or money.
+            
+            </div>
 
             <div id="sec2Line"></div>
 
-            <div id="sec2Volunteer">When you become a <b>World Community Grid</b> volunteer, you donate your device's spare computing power to help scientists solve the world's biggest problems in health and sustainability.</div>
+            <div id="sec2Volunteer">
+                
+                When you become a <b>World Community Grid</b> volunteer, you donate your device's spare computing power to help scientists solve the world's biggest problems in health and sustainability.
+            
+            </div>
         
         </div>
 
@@ -95,8 +119,7 @@
                 <p>World Community Grid turns your device into an explorer. You choose a research area, download a toolkit called BOINC and join the thousands of volunteers helping to chart the microscopic jungle.</p>
                 <a href="#section3c"> <img src="assets/images/down-arrow.png" height=48px width=48px id="arrow4"> </a>
             </div>
-
-        </subsection>
+        </subsection> <!-- /#section3b -->
 
         <subsection class="bgSec3 setSectionPosition" id="section3c">
             <div class="subheader" id="header-impact"> <img src="assets\images\001-waving-flag.png" height=36px width="36px" class="icon,ui-accordion-header-icon">
@@ -106,9 +129,9 @@
                 <p>As a World Community Grid volunteer, your device does research calculations when it’s idle, so just by using it as you do every day, you can help scientists get results in months instead of decades. With your help, they can identify the most important areas to study in the lab, bringing them one step closer to discoveries that save lives and address global problems.</p>
                 <a href="#attribution"> <img src="assets/images/down-arrow.png" height=48px width=48px id="arrow5"> </a>
             </div>
-					</subsection>
+		</subsection>
 
-					</section>
+	</section>
 
 	<!-- Section 4 - Grey -->
 	<section class="bg setSectionPosition" id="section4">
@@ -243,7 +266,7 @@
             <div id="section6-image">
                 <img src="assets/images/circles.jpg" alt="circles" />
             </div>
-        </section>
+        </section> <!-- /#performance -->
 
         <!-- Section 6b - Yellow - Battery -->
         <section id="battery" class="section6-content-container">
@@ -259,7 +282,8 @@
                     By default, World Community Grid only runs when you’re connected to power.
                 </p>
             </div>
-        </section>
+        </section> <!-- /#battery -->
+
         <!-- Section 6c - Yellow - Security -->
         <section id="security" class="section6-content-container">
             <div class="section6-title">
@@ -276,7 +300,8 @@
                     Security experts constantly test the system for vulnerabilities to the latest threats.
                 </p>
             </div>
-        </section>
+        </section> <!-- /#security -->
+
         <!-- Section 6d - Yellow - Data -->
         <section id="data" class="section6-content-container">
             <div class="section6-title">
@@ -291,8 +316,8 @@
                     World Community Grid only downloads research tasks and uploads results when you’re connected to a wireless network.
                 </p>
             </div>
-        </section>
-    </section>
+        </section> <!-- /#data -->
+    </section> <!-- /#section6 -->
 
 	<!-- Section 7 - Flat Grey -->
 	<section class="bg setSectionPosition" id="section7">

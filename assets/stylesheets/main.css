@@ -103,11 +103,6 @@ a {                       /* Removes default styling of links (i.e. underline) *
     z-index: 20;
 }
 
-/**************** Couldn't find this class in index.html
-.section-container {
-    display: flex;
-} */
-
 .logos {
     display: flex;
     justify-content: flex-start;
@@ -166,18 +161,13 @@ a:hover#join {
     padding-left: 10px;
 }
 
-/********************* POSSIBLE REUSABLE CODE ************************/
-.infotext,
-.maintext {
-    padding-bottom: 24px;
-}
+/*
+    =================================================
 
-.infotext {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 400px;
-    font-style: normal;
-}
+    Content container to be used in each section
+
+    =================================================
+*/
 
 .maintext {
     font-size: 36px;
@@ -185,6 +175,8 @@ a:hover#join {
     font-style: normal;
     padding-top: 20px;
 }
+
+/* To do: check if .bg is assigned to any sections - maybe it's not being used? */
 
 .bg {
     height: 100vh;   /* For all sections except #1, height does not include the height of WCG header. Refer to #section1 below */
@@ -265,13 +257,66 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 */
 
 #section1 {
-      background:
-        linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
-        url('../images/annie-spratt-42459.jpg');
-      background-size: cover;
-      z-index: 19;
+    background:
+    linear-gradient(rgba(0,0,255,0.45),rgba(0,0,255,0.45)),
+    url('../images/section1/sec1backgroundpic.jpg');
+    background-size: cover;
+    height: 100vh;          /* Section 1 vh INCLUDES the header's height */
 }
 
+#message-icon,
+#play-icon {
+    display: none;
+}
+
+.rotating-text,
+.icon-in-laptop {
+    display: none;
+}
+
+/* #icon1 {
+    display: block;
+} */
+
+.laptop-container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.laptop {
+    height: 200px;
+    width: 200px;
+}
+
+.icon-in-laptop {
+    position: absolute;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    top: 65px;
+    left: 80px;
+}
+
+.rotating-text {
+    font-size: 2em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* .mainContent re-added by SF.  *** Need to address: flexbox in parent container */
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
 
 /*
     =================================================
@@ -523,11 +568,23 @@ a.joinNow:hover {
 
 /* ------------- Container positioning ------------- */
 
-.centerBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+.infotext,
+.maintext {
+    padding-bottom: 24px;
+}
+
+.infotext {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.maintext {
+    font-size: 36px;
+    line-height: 40px;
+    font-style: normal;
+    padding-top: 20px;
 }
 
 /* -------------- Image positioning -------------- */
