@@ -232,7 +232,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #section3a::before,
 #section3b::before,
 #section3c::before,
-#section4::before,
+#impact::before,
 #current-projects::before,
 #section6::before,
 #section7::before,
@@ -461,14 +461,69 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     =================================================
 */
 
-#section4 {
+#impact {
+    z-index: 13;
+}
+
+#drugCandidates {
+    background:
+        linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45)),
+        url('../images/riccardo-chiarini-247364.jpg');
+    background-size: cover;
+}
+
+#cleanWater {
+    background:
+        linear-gradient(rgba(0,255,0,0.45), rgba(0,255,0,0.45)),
+        url('../images/riccardo-chiarini-247364.jpg');
+    background-size: cover;
+}
+
+#solarPower {
     background:
         linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
-    display: block;
-    z-index: 13;
 }
+
+#newDrugs,
+#nanoTech,
+#newCompounds {
+    font-size: 2em;
+    font-weight: bold;
+    width: 75%;
+}
+
+#newDrugs {
+    color: rgb(214,169,254);
+}
+
+#nanoTech {
+    color: rgb(85,150,230);
+}
+
+#newCompounds {
+    color: rgb(252,212,0);
+}
+
+.section4ContentContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    height: calc(100vh - 8vh);
+    width: 100%;
+    position: relative;
+}
+
+.powerOf {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 500;
+}
+
 
 /*
     =================================================
