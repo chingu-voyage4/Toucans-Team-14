@@ -99,7 +99,7 @@ a {                       /* Removes default styling of links (i.e. underline) *
     display: flex;
     justify-content: space-between;
     position:fixed;
-    background-color: white;
+    background-color: rgb(223,233,233);
     z-index: 20;
 }
 
