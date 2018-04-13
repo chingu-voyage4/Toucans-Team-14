@@ -172,7 +172,7 @@ function changeCarouselColors(e) {
             // Assign white outline to the following sections                       
             case 'section1Car':
             case 'section3Car':
-            case 'section4Car': 
+            case 'impactCar': 
             case 'current-projectsCar':
                 carousel.className = 'carouselWhite';
                 if (carButtons[i].id == targetParentId) {
