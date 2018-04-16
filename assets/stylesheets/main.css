@@ -465,11 +465,106 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     z-index: 13;
 }
 
+#testSection {
+    animation: backgroundFade1 5s linear forwards;
+}
+
+#sec4BackGround1 {
+    position: absolute;
+    background: linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45)), 
+                url('../images/riccardo-chiarini-247364.jpg'); 
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    animation: firstFadeOut 15s linear forwards;
+}
+
+@keyframes firstFadeOut {
+    28% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#sec4BackGround2 {
+    position: absolute;
+    background: linear-gradient(rgba(0,255,0,0.45), rgba(0,255,0,0.45)), 
+                url('../images/riccardo-chiarini-247364.jpg'); 
+    background-size: cover;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    animation: secondFadeInOut 15s linear forwards;
+}
+
+@keyframes secondFadeInOut {
+    28% {
+        opacity:0;
+    }
+    33.33% {
+        opacity:1;
+    }
+    61% {
+        opacity: 1;
+    }
+    66.67% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#sec4BackGround3 {
+    position: absolute;
+    background: linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)), 
+                url('../images/riccardo-chiarini-247364.jpg'); 
+    background-size: cover;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    animation: thirdFadeIn 15s linear forwards;
+}
+
+@keyframes thirdFadeIn {
+    61% {
+        opacity: 0;
+    }
+    66.67% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#power,
+#newDrugs {
+    position: relative;
+    z-index: 13;
+}
+
+
 #drugCandidates {
     background:
         linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45)),
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
+    animation: backgroundFade1 5s linear forwards;
+}
+
+@keyframes backgroundFade1 {
+
 }
 
 #cleanWater {
