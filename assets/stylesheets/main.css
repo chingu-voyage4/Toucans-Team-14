@@ -461,6 +461,18 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     =================================================
 */
 
+.section4ContentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    height: calc(100vh - 8vh);
+    width: 100%;
+    position: relative;
+}
+
 #impact {
     z-index: 13;
 }
@@ -547,12 +559,17 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     }
 }
 
-
 #power,
-#newDrugs,
+#sec4TextChange,
 #progressBar {
     position: relative;
     z-index: 13;
+}
+
+#sec4TextChange {
+    display: flex;
+    justify-content: center;
+    width: 60%;
 }
 
 
@@ -581,13 +598,18 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #newDrugs,
 #nanoTech,
 #newCompounds {
+    position: absolute;
+    width: 100%;
     font-size: 2em;
     font-weight: bold;
-    width: 75%;
 }
 
 #newDrugs {
+    /*position: absolute; */
     color: rgb(214,169,254);
+    animation: 
+        slideTextUp 0.5s linear forwards,
+        firstFadeOut 15s linear forwards;
 }
 
 #nanoTech {
@@ -598,17 +620,18 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     color: rgb(252,212,0);
 }
 
-.section4ContentContainer {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    height: calc(100vh - 8vh);
-    width: 100%;
-    position: relative;
+@keyframes slideTextUp {
+    0% {
+        top: 250px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
+
+
 
 .powerOf {
     color: white;
