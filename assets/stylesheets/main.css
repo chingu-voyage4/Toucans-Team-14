@@ -475,6 +475,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #impact {
     z-index: 13;
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45));
 }
 
 
@@ -567,29 +568,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     display: flex;
     justify-content: center;
     width: 60%;
-}
-
-
-#drugCandidates {
-    background:
-        linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
-    background-size: cover;
-    animation: backgroundFade1 5s linear forwards;
-}
-
-#cleanWater {
-    background:
-        linear-gradient(rgba(0,255,0,0.45), rgba(0,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
-    background-size: cover;
-}
-
-#solarPower {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
-    background-size: cover;
 }
 
 #newDrugs,
