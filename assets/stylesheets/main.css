@@ -471,8 +471,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround1 {
     position: absolute;
-    background: linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45)), 
-                url('../images/riccardo-chiarini-247364.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/riccardo-chiarini-247364_bw.jpg'); 
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -495,8 +495,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround2 {
     position: absolute;
-    background: linear-gradient(rgba(0,255,0,0.45), rgba(0,255,0,0.45)), 
-                url('../images/riccardo-chiarini-247364.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/elena-prokofyeva-17909_bw.jpg'); 
     background-size: cover;
     opacity: 0;
     height: 100%;
@@ -525,8 +525,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround3 {
     position: absolute;
-    background: linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)), 
-                url('../images/riccardo-chiarini-247364.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/annie-spratt-42459_bw.jpg'); 
     background-size: cover;
     opacity: 0;
     height: 100%;
@@ -549,7 +549,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 
 #power,
-#newDrugs {
+#newDrugs,
+#progressBar {
     position: relative;
     z-index: 13;
 }
@@ -561,10 +562,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
         url('../images/riccardo-chiarini-247364.jpg');
     background-size: cover;
     animation: backgroundFade1 5s linear forwards;
-}
-
-@keyframes backgroundFade1 {
-
 }
 
 #cleanWater {
@@ -618,6 +615,55 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     font-size: 1.75em;
     font-weight: 500;
 }
+/* ------------- Section 4 Progress Bar -----------*/
+
+#progressBar {
+    background-color: white;
+    width: 800px;
+    height: 2px;
+    margin: 30px 0 30px 0;
+  } 
+  
+  #multiColorLine {
+    background-color: rgb(214,169,254);
+    width: 0.5%;
+    height: 2px;
+    animation: 
+      grow 15s linear forwards,
+      colorChange 15s linear forwards; 
+    transform-origin:left;
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scaleX(0)
+    }
+    100% {
+      transform: scaleX(200)
+    }
+  }
+  
+  @keyframes colorChange {
+    30% {
+      background: rgb(214,169,254);
+    }
+    33.33% {
+      background: rgb(85,150,230);
+    }
+    60% {
+      background: rgb(85,150,230);
+    }
+    66.67% {
+     background: rgb(252,212,0);
+    }
+    100% {
+      background: rgb(252,212,0); 
+    }
+    
+    
+  }
+
+
 
 
 /*
