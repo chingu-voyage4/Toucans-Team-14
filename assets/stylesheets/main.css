@@ -477,9 +477,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     z-index: 13;
 }
 
-#testSection {
-    animation: backgroundFade1 5s linear forwards;
-}
 
 #sec4BackGround1 {
     position: absolute;
@@ -488,7 +485,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     background-size: cover;
     height: 100%;
     width: 100%;
-    z-index: 9;
+    opacity: 1;
     animation: firstFadeOut 15s linear forwards;
 }
 
@@ -608,19 +605,27 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     /*position: absolute; */
     color: rgb(214,169,254);
     animation: 
-        slideTextUp 0.5s linear forwards,
+        slideTextUp1 0.5s linear forwards,
         firstFadeOut 15s linear forwards;
 }
 
 #nanoTech {
     color: rgb(85,150,230);
+    opacity: 0;
+    animation:
+        slideTextUp2 15s linear forwards,
+        secondFadeInOut 15s linear forwards;
 }
 
 #newCompounds {
     color: rgb(252,212,0);
+    opacity: 0;
+    animation:
+        slideTextUp3 15s linear forwards,
+        thirdFadeIn 15s linear forwards;
 }
 
-@keyframes slideTextUp {
+@keyframes slideTextUp1 {
     0% {
         top: 250px;
         opacity: 0;
@@ -628,6 +633,36 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     100% {
         top: 0;
         opacity: 1;
+    }
+}
+
+@keyframes slideTextUp2 {
+    0% {
+        top: 250px;
+    }
+    25% {
+        top: 250px;
+    }
+    33.33% {
+        top:0%;
+    }
+    100% {
+        top:0%;
+    }
+}
+
+@keyframes slideTextUp3 {
+    0% {
+        top: 250px;
+    }
+    59% {
+        top: 250px;
+    }
+    66.67% {
+        top:0%;
+    }
+    100% {
+        top:0%;
     }
 }
 
