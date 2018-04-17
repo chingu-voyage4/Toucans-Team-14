@@ -213,6 +213,61 @@ carousel.addEventListener('click', function(e) {
 // Scroll on wheel event
 
 var prevPos = window.scrollY;
+console.log('initial position:', prevPos);
+
+function getScrollDirection() {
+    
+    //disable event listener for now
+    document.removeEventListener('scroll', getScrollDirection);
+
+    var startPos = prevPos;
+
+    var endPos = window.scrollY;
+
+    console.log('starting position:', startPos);
+    console.log('ending position:', endPos);
+
+    // Set prevPos to ending position for next iteration
+    prevPos = endPos;
+    console.log('new starting position:', prevPos);
+
+    //re-enable event listener after short pause
+    setTimeout(reEnableListener, 1000);
+
+    printScrollDirection(startPos,endPos);
+
+    console.log('------------------')
+
+    
+
+}
+
+function printScrollDirection(start, end) {
+    if (start < end) {
+        console.log('down');
+    }else if (start > end) {
+        console.log('up');
+    } else {
+        console.log('error?');
+    }
+}
+
+function reEnableListener() {
+    document.addEventListener('scroll', getScrollDirection, false);
+}
+
+document.addEventListener('scroll', getScrollDirection, false);
+
+
+
+
+
+
+
+/*
+
+
+var prevPos = window.scrollY;
 console.log('Initial position:', prevPos);
 
 function detectMouseWheelDirection() {
@@ -253,5 +308,7 @@ function reEnableListener() {
 }
 
 /*  scroll event listener */
-
+/*
 document.addEventListener('scroll', detectMouseWheelDirection, false);
+
+*/
