@@ -216,28 +216,36 @@ var prevPos = window.scrollY;
 console.log('Initial position:', prevPos);
 
 function detectMouseWheelDirection() {
+
     document.removeEventListener('scroll', detectMouseWheelDirection);
-    console.log('old previous position:', prevPos);
-    var currentPos = window.scrollY;
-    var scrollDirection;
-    if (prevPos < currentPos) {
-        scrollDirection = 'down';
-    } else if (prevPos > currentPos) {
-        scrollDirection = 'up';
-    } else {
-        scrollDirection = 'error!';
-    }
+
+    var direction;
+    var currentPos;
+    // Fix issue where scroll is to top?
+   
+    console.log('Starting position', prevPos);
+
+    currentPos = window.scrollY;
+
+    console.log('Stopping position',currentPos);
+
     
     prevPos = currentPos;
-    
 
-    console.log(scrollDirection);
-    console.log('CurrentPos:', currentPos);
-    console.log('New previous position:', prevPos);
-    //prevPos = currentPos; 
+    console.log('New starting position', prevPos);
+
+  
+    
+ 
+    console.log('--------------------');
+  
 
     setTimeout(reEnableListener, 1000);
 
+}
+
+function getScrollPosition() {
+    return window.scrollY;
 }
 
 function reEnableListener() {
