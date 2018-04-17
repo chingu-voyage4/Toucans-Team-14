@@ -559,7 +559,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #power,
 #sec4TextChange,
-#progressBar {
+#progressBar,
+#replay {
     position: relative;
     z-index: 13;
 }
@@ -652,6 +653,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     font-size: 1.75em;
     font-weight: 500;
 }
+
+
 /* ------------- Section 4 Progress Bar -----------*/
 
 #progressBar {
@@ -670,6 +673,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       colorChange 15s linear 1s forwards; 
     transform-origin:left;
   }
+  
   
   @keyframes grow {
     0% {
@@ -700,6 +704,41 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     
   }
 
+  /* Replay Button */
+
+  #replay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 150px;
+      border: solid 2px white;
+      margin-top: 175px;
+      font-size: 1.5em;
+      font-weight: 300;
+      animation: replayFadeIn 1s linear 16s forwards;
+      opacity: 0;
+      visibility: hidden; /* disables interaction when not visible */
+  }
+
+  #replay:hover {
+      background: white;
+      color:black;
+      cursor: pointer;
+  }
+
+
+
+  @keyframes replayFadeIn {
+      0% {
+          opacity: 0;
+          visibility: hidden;
+      }
+      100% {
+          opacity: 1;
+          visibility: visible; /* re-enables interaction */
+      }
+  }
 
 
 
