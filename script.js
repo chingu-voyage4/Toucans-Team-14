@@ -202,7 +202,48 @@ function changeCarouselColors(e) {
   }
 }
 
-// ADD EVENT LISTENER
+// ADD EVENT LISTENER -----------------------
+
+
 carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
+
+
+// Scroll on wheel event
+
+var prevPos = window.scrollY;
+console.log('Initial position:', prevPos);
+
+function detectMouseWheelDirection() {
+    document.removeEventListener('scroll', detectMouseWheelDirection);
+    console.log('old previous position:', prevPos);
+    var currentPos = window.scrollY;
+    var scrollDirection;
+    if (prevPos < currentPos) {
+        scrollDirection = 'down';
+    } else if (prevPos > currentPos) {
+        scrollDirection = 'up';
+    } else {
+        scrollDirection = 'error!';
+    }
+    
+    prevPos = currentPos;
+    
+
+    console.log(scrollDirection);
+    console.log('CurrentPos:', currentPos);
+    console.log('New previous position:', prevPos);
+    //prevPos = currentPos; 
+
+    setTimeout(reEnableListener, 1000);
+
+}
+
+function reEnableListener() {
+    document.addEventListener('scroll', detectMouseWheelDirection, false);
+}
+
+/*  scroll event listener */
+
+document.addEventListener('scroll', detectMouseWheelDirection, false);
