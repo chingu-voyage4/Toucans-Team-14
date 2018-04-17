@@ -206,3 +206,33 @@ function changeCarouselColors(e) {
 carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
+
+
+/* ---------- Replay button for section 4 ----------------- */
+
+/* Button removes and immediately re-adds section4 to restart animations 
+
+References: 
+- https://css-tricks.com/restart-css-animation/
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+*/
+
+var replayButton = document.getElementById('replay');
+
+// Remove and re-add content of section4 to re-start animations
+function removeAddSection4() {
+    //parent node
+    var section4 = document.getElementById('impact');
+    // child node
+    var subsection4 = document.getElementById('impactSubsection');
+    //remove child node
+    var removed = section4.removeChild(subsection4);
+    
+    // Re-add subsection in section 4
+    section4.appendChild(removed);
+}
+
+// add listener to replay button
+replayButton.addEventListener('click', removeAddSection4, false);
