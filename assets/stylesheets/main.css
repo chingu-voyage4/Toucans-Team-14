@@ -475,7 +475,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #impact {
     z-index: 13;
-    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45));
+    background: rgba(122,122,122);
 }
 
 
@@ -487,7 +487,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: 100%;
     width: 100%;
     opacity: 1;
-    animation: firstFadeOut 15s linear forwards;
+    animation: firstFadeOut 15s linear 1s forwards;
 }
 
 @keyframes firstFadeOut {
@@ -512,7 +512,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: 100%;
     width: 100%;
     z-index: 9;
-    animation: secondFadeInOut 15s linear forwards;
+    animation: secondFadeInOut 15s linear 1s forwards;
 }
 
 @keyframes secondFadeInOut {
@@ -542,7 +542,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: 100%;
     width: 100%;
     z-index: 9;
-    animation: thirdFadeIn 15s linear forwards;
+    animation: thirdFadeIn 15s linear 1s forwards;
 }
 
 @keyframes thirdFadeIn {
@@ -583,24 +583,25 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     /*position: absolute; */
     color: rgb(214,169,254);
     animation: 
-        slideTextUp1 0.5s linear forwards,
-        firstFadeOut 15s linear forwards;
+        slideTextUp1 0.5s linear 1s forwards,
+        firstFadeOut 15s linear 1s forwards;
+    opacity: 0;
 }
 
 #nanoTech {
     color: rgb(85,150,230);
     opacity: 0;
     animation:
-        slideTextUp2 15s linear forwards,
-        secondFadeInOut 15s linear forwards;
+        slideTextUp2 15s linear 1s forwards,
+        secondFadeInOut 15s linear 1s forwards;
 }
 
 #newCompounds {
     color: rgb(252,212,0);
     opacity: 0;
     animation:
-        slideTextUp3 15s linear forwards,
-        thirdFadeIn 15s linear forwards;
+        slideTextUp3 15s linear 1s forwards,
+        thirdFadeIn 15s linear 1s forwards;
 }
 
 @keyframes slideTextUp1 {
@@ -665,8 +666,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     width: 0.5%;
     height: 2px;
     animation: 
-      grow 15s linear forwards,
-      colorChange 15s linear forwards; 
+      grow 15s linear 1s forwards,
+      colorChange 15s linear 1s forwards; 
     transform-origin:left;
   }
   
