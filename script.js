@@ -207,6 +207,17 @@ carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
 
+/* --- Listen for hash change ---  */
+
+function checkSection4() {
+    if (location.hash == '#impact') {
+        removeAddSection4();
+    }
+}
+
+window.addEventListener("hashchange", checkSection4, false);
+
+
 
 /* ---------- Replay button for section 4 ----------------- */
 
@@ -218,6 +229,7 @@ References:
 - https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 
 */
+
 
 var replayButton = document.getElementById('replay');
 
@@ -236,3 +248,5 @@ function removeAddSection4() {
 
 // add listener to replay button
 replayButton.addEventListener('click', removeAddSection4, false);
+
+
