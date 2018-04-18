@@ -471,6 +471,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: calc(100vh - 8vh);
     width: 100%;
     position: relative;
+    /* padding-top: 100px; */
 }
 
 #impact {
@@ -673,7 +674,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     width: 800px;
     height: 2px;
     margin: 30px 0 30px 0;
-    animation: lineFadeIn 0.5s linear 1.5s forwards;
+    animation: lineFadeIn 0.5s linear 1.75s forwards;
     opacity: 0;
   } 
 
