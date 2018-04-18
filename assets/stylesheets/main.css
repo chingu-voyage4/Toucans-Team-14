@@ -471,7 +471,6 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     height: calc(100vh - 8vh);
     width: 100%;
     position: relative;
-    /* padding-top: 100px; */
 }
 
 #impact {
@@ -483,7 +482,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #sec4BackGround1 {
     position: absolute;
     background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/riccardo-chiarini-247364_bw.jpg'); 
+                url('../images/happyChild_bw.jpg'); 
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -507,7 +506,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #sec4BackGround2 {
     position: absolute;
     background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/elena-prokofyeva-17909_bw.jpg'); 
+                url('../images/water_bw.jpg'); 
     background-size: cover;
     opacity: 0;
     height: 100%;
@@ -537,7 +536,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #sec4BackGround3 {
     position: absolute;
     background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/annie-spratt-42459_bw.jpg'); 
+                url('../images/solarArray_bw2.jpg'); 
     background-size: cover;
     opacity: 0;
     height: 100%;
