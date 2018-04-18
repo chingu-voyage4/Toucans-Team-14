@@ -213,6 +213,9 @@ carousel.addEventListener('click', function(e) {
 /* Resource: https://stackoverflow.com/questions/31223341/detecting-scroll-direction */
 
 // https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
+// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+
+
 
 //array of hashes for all main sections
 var sectionHashes = [
@@ -246,9 +249,6 @@ function goToSection(e, direction) {
     //get the integer location of current hash in list
     hashLocation = returnHashLocation(hash);
     console.log('Hash location:', hashLocation);
-
-    
-
 
     //if scroll direction is *up*
     if ((direction === 'up') && (hashLocation !== 0)) {
@@ -317,151 +317,20 @@ function keyUpDown(e) {
     }
 }
 
-// window.addEventListener('keydown', keyUpDown, false); 
 
-// add event listener for arrow key press!!
-// add delay to avoid errors
+// May be useful to disable event listener:
 
-
-/*var lastScrollTop = window.pageYOffset || document.body.scrollTop; */
-// console.log('lastScrollTop:', lastScrollTop);
-
-
-/*var mainBody = document.getElementById('mainBody'); */
-/*
-function scrollDirection(e) {
-    var st = window.pageYOffset || document.body.scrollTop;
-    // console.log('st:',st);
-    if (st < lastScrollTop){
-        console.log('up!');
-        e.preventDefault();
-        //prevent default?
-        let hash = "#section1";
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-
-       /* window.location.hash = "#section1";*/
-/*
-    } else {
-        console.log('down');
-        window.location.hash = "#attribution";
-    }
-    lastScrollTop = st;
-}
-
-
-document.addEventListener('scroll', function(e) {
-    scrollDirection(e);
-}, false);
-
-*/
-
-
-
-
-
-
-/*
-var prevPos = document.body.scrollTop;
-console.log('initial position:', prevPos);
-
-function getScrollDirection() {
-    
+/*  
     //disable event listener for now
     document.removeEventListener('scroll', getScrollDirection);
 
-    var startPos = prevPos;
-
-    var endPos = document.body.scrollTop;
-
-    console.log('starting position:', startPos);
-    console.log('ending position:', endPos);
-
-    // Set prevPos to ending position for next iteration
-    prevPos = endPos;
-    console.log('new starting position:', prevPos);
 
     //re-enable event listener after short pause
     setTimeout(reEnableListener, 1000);
 
-    printScrollDirection(startPos,endPos);
 
-    console.log('------------------')
-
-}
-
-function printScrollDirection(start, end) {
-    if (start < end) {
-        console.log('down');
-    }else if (start > end) {
-        console.log('up');
-    } else {
-        console.log('error?');
-    }
-}
 
 function reEnableListener() {
     document.addEventListener('scroll', getScrollDirection, false);
 }
-
-document.addEventListener('scroll', getScrollDirection, false);
-
-
-
-
-
-
-
-/*
-
-
-var prevPos = window.scrollY;
-console.log('Initial position:', prevPos);
-
-function detectMouseWheelDirection() {
-
-    document.removeEventListener('scroll', detectMouseWheelDirection);
-
-    var direction;
-    var currentPos;
-    // Fix issue where scroll is to top?
-   
-    console.log('Starting position', prevPos);
-
-    currentPos = window.scrollY;
-
-    console.log('Stopping position',currentPos);
-
-    
-    prevPos = currentPos;
-
-    console.log('New starting position', prevPos);
-
-  
-    
- 
-    console.log('--------------------');
-  
-
-    setTimeout(reEnableListener, 1000);
-
-}
-
-function getScrollPosition() {
-    return window.scrollY;
-}
-
-function reEnableListener() {
-    document.addEventListener('scroll', detectMouseWheelDirection, false);
-}
-
-/*  scroll event listener */
-/*
-document.addEventListener('scroll', detectMouseWheelDirection, false);
-
 */
