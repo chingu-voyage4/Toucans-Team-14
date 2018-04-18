@@ -213,22 +213,26 @@ carousel.addEventListener('click', function(e) {
 /* Resource: https://stackoverflow.com/questions/31223341/detecting-scroll-direction */
 
 var lastScrollTop = window.pageYOffset || document.body.scrollTop;
-console.log('lastScrollTop:', lastScrollTop);
+// console.log('lastScrollTop:', lastScrollTop);
 
 
-var mainBody = document.getElementById('mainBody');
+/*var mainBody = document.getElementById('mainBody'); */
 
-
-document.addEventListener('scroll', function() {
+function scrollDirection() {
     var st = window.pageYOffset || document.body.scrollTop;
-    console.log('st:',st);
+    // console.log('st:',st);
     if (st < lastScrollTop){
         console.log('up!');
+        window.location.hash = "#section1";
     } else {
         console.log('down');
+        window.location.hash = "#attribution";
     }
     lastScrollTop = st;
-}, false);
+}
+
+
+document.addEventListener('scroll', scrollDirection, false);
 
 
 
