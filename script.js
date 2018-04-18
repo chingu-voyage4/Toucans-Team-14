@@ -51,10 +51,6 @@ Section 6 Navbar
 */
 const section6Nav = document.getElementById('section6-nav');
 
-function setEventListeners() {
-    section6Nav.addEventListener('click', function(event) {changeBackground(event);});
-}
-
 function changeBackground(event) {
     let lis = section6Nav.getElementsByTagName('li');
     for (let i = 0; i < lis.length; i++) {
@@ -81,7 +77,6 @@ function displayContent(parentTarget) {
         }
     }
 }
-setEventListeners();
 
 /*
 ==================================================
@@ -107,15 +102,9 @@ function changeSec5Background(e) {
     } else {                                                                          // Otherwise:
       sec5NavTabs[i].className = 'nav5-itemsBlue';                                    // apply default color to inactive navbar tabs
       sec5SubSections[i].className = 'sec5Hidden';                                    // render inactive subsections' HTML hidden
-    } 
-  }   
+    }
+  }
 }
-
-// Set event listener and pass in event object ("e")
-sec5Nav.addEventListener('click', function(e) {
-  changeSec5Background(e);
-}, false);
-
 
 /*
 ==================================================
@@ -167,12 +156,12 @@ function changeCarouselColors(e) {
     var targetParent = e.target.parentNode;                 // Reference to parent of event target
     var targetParentId = targetParent.id;                   // Reference to id of parent node
     for (let i = 0; i < carButtons.length; i++) {
-        switch (targetParentId) {  
- 
-            // Assign white outline to the following sections                       
+        switch (targetParentId) {
+
+            // Assign white outline to the following sections
             case 'section1Car':
             case 'section3Car':
-            case 'impactCar': 
+            case 'impactCar':
             case 'current-projectsCar':
                 carousel.className = 'carouselWhite';
                 if (carButtons[i].id == targetParentId) {
@@ -182,8 +171,8 @@ function changeCarouselColors(e) {
                 }
                 break;
 
-            // Assign black outline to the following sections 
-            case 'section2Car':                     
+            // Assign black outline to the following sections
+            case 'section2Car':
             case 'section6Car':
             case 'section7Car':
             case 'attributionCar':
@@ -202,11 +191,6 @@ function changeCarouselColors(e) {
   }
 }
 
-// ADD EVENT LISTENER
-carousel.addEventListener('click', function(e) {
-  changeCarouselColors(e);
-}, false);
-
 /* --- Listen for hash change ---  */
 
 function checkSection4() {
@@ -215,15 +199,12 @@ function checkSection4() {
     }
 }
 
-window.addEventListener("hashchange", checkSection4, false);
-
-
 
 /* ---------- Replay button for section 4 ----------------- */
 
-/* Button removes and immediately re-adds section4 to restart animations 
+/* Button removes and immediately re-adds section4 to restart animations
 
-References: 
+References:
 - https://css-tricks.com/restart-css-animation/
 - https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
 - https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
@@ -241,12 +222,23 @@ function removeAddSection4() {
     var subsection4 = document.getElementById('impactSubsection');
     //remove child node
     var removed = section4.removeChild(subsection4);
-    
+
     // Re-add subsection in section 4
     section4.appendChild(removed);
 }
 
-// add listener to replay button
-replayButton.addEventListener('click', removeAddSection4, false);
+function setEventListeners() {
+    carousel.addEventListener('click', function(e) {
+        changeCarouselColors(e);}, false);
+    // section 4 replay button - listen for hash change
+    replayButton.addEventListener('click', removeAddSection4, false);
+    window.addEventListener("hashchange", checkSection4, false);
+    // Navbar for sections 5 and 6
+    sec5Nav.addEventListener('click', function(e) {
+        changeSec5Background(e);}, false);
+    section6Nav.addEventListener('click', function(event) {
+        changeBackground(event);});
 
+}
 
+setEventListeners();
