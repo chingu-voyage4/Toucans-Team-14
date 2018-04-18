@@ -214,7 +214,7 @@ carousel.addEventListener('click', function(e) {
 
 // https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
 
-
+//array of hashes for all main sections
 var sectionHashes = [
     '#section1',
     '#introduction',
@@ -225,11 +225,12 @@ var sectionHashes = [
     '#section7',
     '#attribution'
 ]
-
+//returns location of current hash in hash list
 function returnHashLocation(hash) {
     return sectionHashes.indexOf(hash);
 }
 
+//smooth scroll to section
 function goToSection(e, direction) {
     //get hash from current view (assumes it replects current view)
     hash = window.location.hash;
@@ -255,11 +256,11 @@ function goToSection(e, direction) {
         console.log('New hash location (downscroll)', hashLocation);
         hash = sectionHashes[hashLocation];
         console.log('New hash:', hash);
-        console.log('-----------------------------')
     // else if hash location is first or last item in list do nothing
     }  else {
         console.log('do nothing!');
     }  // smooth-scroll to the appropriate section
+        console.log('-----------------------------')
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $(hash).offset().top
@@ -286,9 +287,26 @@ function scrollUpDown(e) {
     goToSection(e, direction);
 }
 
+/* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads
+does not work for arrow keys (add in next) */
 window.addEventListener('wheel', function(e) {
     scrollUpDown(e);
 });
+
+function keyUpDown(e) {
+    if (e.keyCode == '38') {
+        direction = 'up';
+    } else if (e.keyCode == '40') {
+        direction = 'down';
+    }
+    goToSection(e, direction);
+}
+
+
+
+window.addEventListener('keydown', function(e) {
+    keyUpDown(e);
+})
 
 // add event listener for arrow key press!!
 // add delay to avoid errors
