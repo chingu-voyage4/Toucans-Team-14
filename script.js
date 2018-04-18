@@ -234,6 +234,11 @@ function returnHashLocation(hash) {
 function goToSection(e, direction) {
     //get hash from current view (assumes it replects current view)
     hash = window.location.hash;
+
+    if (hash == null) {
+        hash = '#section1';
+    }
+
     console.log('hash:', hash);
     // determine list of sectionHashes list
     hashListLength = sectionHashes.length;
@@ -241,6 +246,9 @@ function goToSection(e, direction) {
     //get the integer location of current hash in list
     hashLocation = returnHashLocation(hash);
     console.log('Hash location:', hashLocation);
+
+    
+
 
     //if scroll direction is *up*
     if ((direction === 'up') && (hashLocation !== 0)) {
