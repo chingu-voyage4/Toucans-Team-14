@@ -210,6 +210,7 @@ carousel.addEventListener('click', function(e) {
 
 
 // ------------------ Scroll on wheel event -----------------
+/* Resource: https://stackoverflow.com/questions/31223341/detecting-scroll-direction */
 
 var lastScrollTop = window.pageYOffset || document.body.scrollTop;
 console.log('lastScrollTop:', lastScrollTop);
