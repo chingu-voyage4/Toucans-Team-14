@@ -260,7 +260,7 @@ function goToSection(e, direction) {
     }  else {
         console.log('do nothing!');
     }  // smooth-scroll to the appropriate section
-        console.log('-----------------------------')
+        console.log('-----------------------------');
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $(hash).offset().top
@@ -274,7 +274,7 @@ function goToSection(e, direction) {
 
 //determines scroll direction and returns string 'up' or 'down'
 function scrollUpDown(e) {
-
+    var direction;
     if (e.deltaY < 0) {
         console.log('scrolling up');
         direction = 'up';
@@ -289,9 +289,7 @@ function scrollUpDown(e) {
 
 /* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads
 does not work for arrow keys (add in next) */
-window.addEventListener('wheel', function(e) {
-    scrollUpDown(e);
-});
+window.addEventListener('wheel', scrollUpDown, false);
 
 function keyUpDown(e) {
     if (e.keyCode == '38') {
@@ -304,9 +302,7 @@ function keyUpDown(e) {
 
 
 
-window.addEventListener('keydown', function(e) {
-    keyUpDown(e);
-})
+window.addEventListener('keydown', keyUpDown, false);
 
 // add event listener for arrow key press!!
 // add delay to avoid errors
