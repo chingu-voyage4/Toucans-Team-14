@@ -208,14 +208,20 @@ carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
 
+/*
+==================================================
 
-// ------------------ Scroll on wheel event -----------------
-/* Resource: https://stackoverflow.com/questions/31223341/detecting-scroll-direction */
+Smooth auto-scroll on wheel and keyboard arrow events 
 
-// https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
-// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+==================================================
+*/
+/* Known bugs:  scrolling for more than 1 "click" is an issue, as is immediate repeated arrow.  Need to add short delay between events?
 
-
+// ------------------  ----------------- //
+/* Resources used: 
+    https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+    https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
+    https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript  */
 
 //array of hashes for all main sections
 var sectionHashes = [
@@ -233,7 +239,7 @@ function returnHashLocation(hash) {
     return sectionHashes.indexOf(hash);
 }
 
-//smooth scroll to section
+// Scrolls smoothly to section
 function goToSection(e, direction) {
     //get hash from current view (assumes it replects current view)
     hash = window.location.hash;
@@ -279,8 +285,7 @@ function goToSection(e, direction) {
           });
 }
 
-
-//determines scroll direction and returns string 'up' or 'down'
+// Determines scroll direction and returns string 'up' or 'down'
 function scrollUpDown(e) {
     var direction;
     if (e.deltaY < 0) {
@@ -299,8 +304,7 @@ function scrollUpDown(e) {
 does not work for arrow keys (add in next) */
 window.addEventListener('wheel', scrollUpDown, false);
 
-
-//listen for key-down event
+// Listen for key-down event
 document.onkeydown = keyUpDown;
 
 function keyUpDown(e) {
@@ -318,7 +322,7 @@ function keyUpDown(e) {
 }
 
 
-// May be useful to disable event listener:
+// May be useful to disable event listener to add delay:
 
 /*  
     //disable event listener for now
