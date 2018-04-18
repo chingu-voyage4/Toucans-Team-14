@@ -212,18 +212,110 @@ carousel.addEventListener('click', function(e) {
 // ------------------ Scroll on wheel event -----------------
 /* Resource: https://stackoverflow.com/questions/31223341/detecting-scroll-direction */
 
-var lastScrollTop = window.pageYOffset || document.body.scrollTop;
+// https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
+
+
+var sectionHashes = [
+    '#section1',
+    '#introduction',
+    '#section3',
+    '#section4',
+    '#current-projects',
+    '#section6',
+    '#section7',
+    '#attribution'
+]
+
+function returnHashLocation(hash) {
+    return sectionHashes.indexOf(hash);
+}
+
+function goToSection(e, direction) {
+    //get hash from current view (assumes it replects current view)
+    hash = window.location.hash;
+    console.log('hash:', hash);
+    // determine list of sectionHashes list
+    hashListLength = sectionHashes.length;
+    console.log('List length:', hashListLength);
+    //get the integer location of current hash in list
+    hashLocation = returnHashLocation(hash);
+    console.log('Hash location:', hashLocation);
+
+    //if scroll direction is *up*
+    if ((direction === 'up') && (hashLocation !== 0)) {
+        //move up on section if not already at top (otherwise do nothing)
+        hashLocation = hashLocation - 1;
+        console.log('New hash location (upscroll)', hashLocation);
+        hash = sectionHashes[hashLocation];
+        console.log('New hash:', hash);
+        //if scroll direction is *down*
+    } else if ((direction === 'down') && (hashLocation < hashListLength)) {
+        //move down a section if not already at bottom
+        hashLocation = hashLocation + 1;
+        console.log('New hash location (downscroll)', hashLocation);
+        hash = sectionHashes[hashLocation];
+        console.log('New hash:', hash);
+        console.log('-----------------------------')
+    // else if hash location is first or last item in list do nothing
+    }  else {
+        console.log('error - fix this!');
+    }  // scroll to the appropriate section
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+}
+
+
+//determines scroll direction and returns string 'up' or 'down'
+function scrollUpDown(e) {
+
+    if (e.deltaY < 0) {
+        console.log('scrolling up');
+        direction = 'up';
+        
+    }
+    if (e.deltaY >0) {
+        console.log('scrolling down');
+        direction = 'down';
+    }
+    goToSection(e, direction);
+}
+
+window.addEventListener('wheel', function(e) {
+    scrollUpDown(e);
+});
+
+
+
+/*var lastScrollTop = window.pageYOffset || document.body.scrollTop; */
 // console.log('lastScrollTop:', lastScrollTop);
 
 
 /*var mainBody = document.getElementById('mainBody'); */
-
-function scrollDirection() {
+/*
+function scrollDirection(e) {
     var st = window.pageYOffset || document.body.scrollTop;
     // console.log('st:',st);
     if (st < lastScrollTop){
         console.log('up!');
-        window.location.hash = "#section1";
+        e.preventDefault();
+        //prevent default?
+        let hash = "#section1";
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+
+       /* window.location.hash = "#section1";*/
+/*
     } else {
         console.log('down');
         window.location.hash = "#attribution";
@@ -232,9 +324,11 @@ function scrollDirection() {
 }
 
 
-document.addEventListener('scroll', scrollDirection, false);
+document.addEventListener('scroll', function(e) {
+    scrollDirection(e);
+}, false);
 
-
+*/
 
 
 
