@@ -291,18 +291,25 @@ function scrollUpDown(e) {
 does not work for arrow keys (add in next) */
 window.addEventListener('wheel', scrollUpDown, false);
 
+
+//listen for key-down event
+document.onkeydown = keyUpDown;
+
 function keyUpDown(e) {
+
+    e = e || window.event;
+
     if (e.keyCode == '38') {
         direction = 'up';
+        // "goToSection" functions are in if statement to prevent execution if some other key is pressed
+        goToSection(e, direction);
     } else if (e.keyCode == '40') {
         direction = 'down';
+        goToSection(e, direction);
     }
-    goToSection(e, direction);
 }
 
-
-
-window.addEventListener('keydown', keyUpDown, false);
+// window.addEventListener('keydown', keyUpDown, false); 
 
 // add event listener for arrow key press!!
 // add delay to avoid errors
