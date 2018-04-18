@@ -204,15 +204,40 @@ function changeCarouselColors(e) {
 
 // ADD EVENT LISTENER -----------------------
 
-
 carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
 
 
-// Scroll on wheel event
+// ------------------ Scroll on wheel event -----------------
 
-var prevPos = window.scrollY;
+var lastScrollTop = window.pageYOffset || document.body.scrollTop;
+console.log('lastScrollTop:', lastScrollTop);
+
+
+var mainBody = document.getElementById('mainBody');
+
+
+document.addEventListener('scroll', function() {
+    var st = window.pageYOffset || document.body.scrollTop;
+    console.log('st:',st);
+    if (st < lastScrollTop){
+        console.log('up!');
+    } else {
+        console.log('down');
+    }
+    lastScrollTop = st;
+}, false);
+
+
+
+
+
+
+
+
+/*
+var prevPos = document.body.scrollTop;
 console.log('initial position:', prevPos);
 
 function getScrollDirection() {
@@ -222,7 +247,7 @@ function getScrollDirection() {
 
     var startPos = prevPos;
 
-    var endPos = window.scrollY;
+    var endPos = document.body.scrollTop;
 
     console.log('starting position:', startPos);
     console.log('ending position:', endPos);
@@ -237,8 +262,6 @@ function getScrollDirection() {
     printScrollDirection(startPos,endPos);
 
     console.log('------------------')
-
-    
 
 }
 
