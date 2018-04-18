@@ -283,6 +283,12 @@ function goToSection(e, direction) {
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           });
+
+  /*        setTimeout(delay, 4000);
+
+          function delay() {
+              console.log('delay!')
+          } */
 }
 
 // Determines scroll direction and returns string 'up' or 'down'
