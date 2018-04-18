@@ -249,7 +249,7 @@ function goToSection(e, direction) {
         hash = sectionHashes[hashLocation];
         console.log('New hash:', hash);
         //if scroll direction is *down*
-    } else if ((direction === 'down') && (hashLocation < hashListLength)) {
+    } else if ((direction === 'down') && (hashLocation < (hashListLength - 1))) {
         //move down a section if not already at bottom
         hashLocation = hashLocation + 1;
         console.log('New hash location (downscroll)', hashLocation);
@@ -258,8 +258,8 @@ function goToSection(e, direction) {
         console.log('-----------------------------')
     // else if hash location is first or last item in list do nothing
     }  else {
-        console.log('error - fix this!');
-    }  // scroll to the appropriate section
+        console.log('do nothing!');
+    }  // smooth-scroll to the appropriate section
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $(hash).offset().top
@@ -290,6 +290,8 @@ window.addEventListener('wheel', function(e) {
     scrollUpDown(e);
 });
 
+// add event listener for arrow key press!!
+// add delay to avoid errors
 
 
 /*var lastScrollTop = window.pageYOffset || document.body.scrollTop; */
