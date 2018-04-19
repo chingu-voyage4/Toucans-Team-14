@@ -1250,4 +1250,5 @@ font-size:1em;
             margin-top: 92vh; 
             margin-left: 46vw;
             z-index: 20;
+            cursor: pointer;
         }

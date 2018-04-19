@@ -79,6 +79,59 @@ function changeCarouselColor(e) {
 /*
 ==================================================
 
+Main Arrow Styling and Function (according to hash changes)
+
+==================================================
+*/
+
+// reference to down arrow icon
+mainDownArrow = document.getElementById('downArrowIcon');
+
+function shiftDown() {
+    // move down if not at bottom
+    //get initial hash
+    currentHash = location.hash;
+    console.log('Arrow - current hash:',currentHash);
+    hashListItem = returnHashLocation(currentHash);
+    nextItem = hashListItem + 1;
+    nextHash = sectionHashes[nextItem];
+
+    console.log('Hash list location:', hashListItem);
+    console.log('Next list location:', nextItem);
+    console.log('Next hash:', sectionHashes[nextItem]);
+    /// got to next section down
+    if (sectionHashes[nextItem]) {  //if the next item has a hash (i.e. not 'undefined')
+        //smoothscroll to bottom
+        $('html, body').animate({
+            scrollTop: $(nextHash).offset().top
+        }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = nextHash;
+        });
+
+    }
+ 
+    // get new hash
+    // change color
+}
+
+// event listener for main down arrow
+mainDownArrow.addEventListener('click', shiftDown, false);
+
+
+
+
+
+
+
+
+
+
+
+/*
+==================================================
+
 Scrolling
 
 ==================================================
