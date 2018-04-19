@@ -1248,7 +1248,8 @@ font-size:1em;
             display: block;
             position: fixed;
             margin-top: 92vh; 
-            margin-left: 46vw;
             z-index: 20;
+            margin-left: 48%;
             cursor: pointer;
+
         }

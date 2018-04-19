@@ -23,6 +23,9 @@ function returnHashLocation(hash) {
     return sectionHashes.indexOf(hash);
 }
 
+// reference to down arrow icon
+const mainDownArrow = document.getElementById('downArrowIcon');
+
 /*
 ==================================================
 
@@ -57,6 +60,9 @@ function changeCarouselColor(e) {
                 } else {
                     carButtons[i].style.backgroundColor = 'transparent';
                 }
+                // change color of main arrow
+                mainDownArrow.src = "assets/images/circular-down-arrow-button_white.png"
+                mainDownArrow.styledisplay = 'block';
                     break;
                 
             // Assign black outline to the following sections
@@ -71,6 +77,14 @@ function changeCarouselColor(e) {
                 } else {
                     carButtons[i].style.backgroundColor = 'transparent';
                 }
+                // change color of main arrow to black
+                if (currentHash != '#attribution') {
+                    mainDownArrow.src = "assets/images/circular-down-arrow-button_black.png";
+                    mainDownArrow.style.display = 'block';
+                } else {
+                    mainDownArrow.style.display = "none";
+                }
+                
                 break;
         }
     }
@@ -79,28 +93,30 @@ function changeCarouselColor(e) {
 /*
 ==================================================
 
-Main Arrow Styling and Function (according to hash changes)
+Main Arrow Function (according to hash changes)^
 
 ==================================================
-*/
+*/ 
 
-// reference to down arrow icon
-mainDownArrow = document.getElementById('downArrowIcon');
+//^arrow styling is included in code logic for carousel, above
 
+// Move to next section down
 function shiftDown() {
-    // move down if not at bottom
     //get initial hash
     currentHash = location.hash;
-    console.log('Arrow - current hash:',currentHash);
+    // console.log('Arrow - current hash:',currentHash);
     hashListItem = returnHashLocation(currentHash);
+    // get location of next hash in list
     nextItem = hashListItem + 1;
+    // reference for the next hash
     nextHash = sectionHashes[nextItem];
 
-    console.log('Hash list location:', hashListItem);
-    console.log('Next list location:', nextItem);
-    console.log('Next hash:', sectionHashes[nextItem]);
+    // console.log('Hash list location:', hashListItem);
+    // console.log('Next list location:', nextItem);
+    // console.log('Next hash:', sectionHashes[nextItem]);
+
     /// got to next section down
-    if (sectionHashes[nextItem]) {  //if the next item has a hash (i.e. not 'undefined')
+    if (sectionHashes[nextItem]) {  // "If the next item has a hash" (i.e. not 'undefined', which the last section would return)
         //smoothscroll to bottom
         $('html, body').animate({
             scrollTop: $(nextHash).offset().top
@@ -111,22 +127,8 @@ function shiftDown() {
         });
 
     }
- 
-    // get new hash
-    // change color
+
 }
-
-// event listener for main down arrow
-mainDownArrow.addEventListener('click', shiftDown, false);
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -330,6 +332,8 @@ Event Listeners
 function setEventListeners() {
     // triggers carousel color change with hash change event
     window.addEventListener("hashchange", changeCarouselColor, false);
+    // event listener for main down arrow
+    mainDownArrow.addEventListener('click', shiftDown, false);
     // section 4 replay button - listen for hash change
     replayButton.addEventListener('click', removeAddSection4, false);
     window.addEventListener("hashchange", checkSection4, false);
@@ -477,3 +481,4 @@ function keyUpDown(e) {
 // Listen for key-down event
 window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
 
+// End of smooth auto-scroll section
