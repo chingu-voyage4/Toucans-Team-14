@@ -1,3 +1,21 @@
+// Global values and objects
+
+//array of hashes for all main sections
+const sectionHashes = [
+    '#section1',
+    '#introduction',
+    '#section3',
+    '#impact',
+    '#current-projects',
+    '#section6',
+    '#section7',
+    '#attribution'
+]
+//returns location of current hash in hash list
+function returnHashLocation(hash) {
+    return sectionHashes.indexOf(hash);
+}
+
 /*
 ==================================================
 
@@ -5,6 +23,38 @@ Carousel Styling
 
 ==================================================
 */
+
+var carousel = document.getElementById('carousel');
+var carButtons = carousel.getElementsByTagName('li');
+
+
+function changeCarouselColor(e) {
+    currentHash = location.hash;
+  //  console.log(currentHash);
+  //  console.log(carButtons.item(currentHash).id)
+ //   var hashLocation = carButtons.item(currentHash);
+  //  console.log('hash location:', hashLocation);
+    switch (currentHash) {
+        case '#section1':
+        case '#section3':
+        case '#impact': 
+        case '#current-projects':
+            carousel.className = 'carouselWhite';
+  //          carButtons[hashLocation].style.backgroundColor = 'white';
+            break;
+
+        case '#introduction':                     
+        case '#section6':
+        case '#section7':
+        case '#attribution':
+            carousel.className = 'carouselBlack';
+            break;
+    }
+   
+}
+
+window.addEventListener("hashchange", changeCarouselColor, false);
+
 
 // var carousel = document.getElementById('carousel');         // Reference to carousel
 
@@ -279,22 +329,6 @@ Smooth auto-scroll on mousewheel and keyboard up/down arrow events
 // https://lodash.com/ 
 // https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined
     
-
-//array of hashes for all main sections
-var sectionHashes = [
-    '#section1',
-    '#introduction',
-    '#section3',
-    '#impact',
-    '#current-projects',
-    '#section6',
-    '#section7',
-    '#attribution'
-]
-//returns location of current hash in hash list
-function returnHashLocation(hash) {
-    return sectionHashes.indexOf(hash);
-}
 
 /* -------------  Mousewheel event handling ------- */
 
