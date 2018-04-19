@@ -30,27 +30,41 @@ var carButtons = carousel.getElementsByTagName('li');
 
 function changeCarouselColor(e) {
     currentHash = location.hash;
+    hashListItem = returnHashLocation(currentHash);
   //  console.log(currentHash);
   //  console.log(carButtons.item(currentHash).id)
  //   var hashLocation = carButtons.item(currentHash);
   //  console.log('hash location:', hashLocation);
-    switch (currentHash) {
-        case '#section1':
-        case '#section3':
-        case '#impact': 
-        case '#current-projects':
-            carousel.className = 'carouselWhite';
-  //          carButtons[hashLocation].style.backgroundColor = 'white';
-            break;
+    for (let i = 0; i < sectionHashes.length; i++) {
 
-        case '#introduction':                     
-        case '#section6':
-        case '#section7':
-        case '#attribution':
-            carousel.className = 'carouselBlack';
-            break;
+        switch (currentHash) {
+
+            case '#section1':
+            case '#section3':
+            case '#impact': 
+            case '#current-projects':
+                carousel.className = 'carouselWhite';
+                if (currentHash == sectionHashes[i]) {
+                    carButtons[i].style.backgroundColor = 'white';
+                } else {
+                    carButtons[i].style.backgroundColor = 'transparent';
+                }
+                    break;
+                
+
+            case '#introduction':                     
+            case '#section6':
+            case '#section7':
+            case '#attribution':
+                carousel.className = 'carouselBlack';
+                if (currentHash == sectionHashes[i]) {
+                    carButtons[i].style.backgroundColor = 'black';
+                } else {
+                    carButtons[i].style.backgroundColor = 'transparent';
+                }
+                break;
+        }
     }
-   
 }
 
 window.addEventListener("hashchange", changeCarouselColor, false);
