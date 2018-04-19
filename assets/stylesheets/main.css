@@ -232,7 +232,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #section3a::before,
 #section3b::before,
 #section3c::before,
-#section4::before,
+#impact::before,
 #current-projects::before,
 #section6::before,
 #section7::before,
@@ -461,14 +461,306 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     =================================================
 */
 
-#section4 {
-    background:
-        linear-gradient(rgba(255,255,0,0.45), rgba(255,255,0,0.45)),
-        url('../images/riccardo-chiarini-247364.jpg');
+.section4ContentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    height: calc(100vh - 8vh);
+    width: 100%;
+    position: relative;
+}
+
+#impact {
+    z-index: 13;
+    background: rgba(122,122,122);
+}
+
+
+#sec4BackGround1 {
+    position: absolute;
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/happyChild_bw.jpg'); 
     background-size: cover;
-    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    animation: firstFadeOut 15s linear 1.5s forwards;
+}
+
+@keyframes firstFadeOut {
+    28% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#sec4BackGround2 {
+    position: absolute;
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/water_bw.jpg'); 
+    background-size: cover;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    animation: secondFadeInOut 15s linear 1.5s forwards;
+}
+
+@keyframes secondFadeInOut {
+    28% {
+        opacity:0;
+    }
+    33.33% {
+        opacity:1;
+    }
+    61% {
+        opacity: 1;
+    }
+    66.67% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#sec4BackGround3 {
+    position: absolute;
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
+                url('../images/solarArray_bw2.jpg'); 
+    background-size: cover;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    animation: thirdFadeIn 15s linear 1.5s forwards;
+}
+
+@keyframes thirdFadeIn {
+    61% {
+        opacity: 0;
+    }
+    66.67% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#power,
+#sec4TextChange,
+#progressBar,
+#replay {
+    position: relative;
     z-index: 13;
 }
+
+#sec4TextChange {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+#newDrugs,
+#nanoTech,
+#newCompounds {
+    position: absolute;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#newDrugs {
+    /*position: absolute; */
+    color: rgb(214,169,254);
+    animation: 
+        slideTextUp1 0.5s linear 1.5s forwards,
+        firstFadeOut 15s linear 1.5s forwards;
+    opacity: 0;
+}
+
+#nanoTech {
+    color: rgb(85,150,230);
+    opacity: 0;
+    animation:
+        slideTextUp2 15s linear 1.5s forwards,
+        secondFadeInOut 15s linear 1.5s forwards;
+}
+
+#newCompounds {
+    color: rgb(252,212,0);
+    opacity: 0;
+    animation:
+        slideTextUp3 15s linear 1.5s forwards,
+        thirdFadeIn 15s linear 1.5s forwards;
+}
+
+@keyframes slideTextUp1 {
+    0% {
+        top: 250px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideTextUp2 {
+    0% {
+        top: 250px;
+    }
+    25% {
+        top: 250px;
+    }
+    33.33% {
+        top:0%;
+    }
+    100% {
+        top:0%;
+    }
+}
+
+@keyframes slideTextUp3 {
+    0% {
+        top: 250px;
+    }
+    59% {
+        top: 250px;
+    }
+    66.67% {
+        top:0%;
+    }
+    100% {
+        top:0%;
+    }
+}
+
+
+
+.powerOf {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 500;
+    top: 50px;
+    animation: shiftUp 0.5s linear 1s forwards;
+}
+
+@keyframes shiftUp {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+/* ------------- Section 4 Progress Bar -----------*/
+
+#progressBar {
+    background-color: white;
+    width: 800px;
+    height: 2px;
+    margin: 30px 0 30px 0;
+    animation: lineFadeIn 0.5s linear 1.75s forwards;
+    opacity: 0;
+  } 
+
+  @keyframes lineFadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+  
+  #multiColorLine {
+    background-color: rgb(214,169,254);
+    width: 0.5%;
+    height: 2px;
+    animation: 
+      grow 15s linear 1.5s forwards,
+      colorChange 15s linear 1.5s forwards; 
+    transform-origin:left;
+    
+  }
+  
+  
+  @keyframes grow {
+    0% {
+      transform: scaleX(0)
+    }
+    100% {
+      transform: scaleX(200)
+    }
+  }
+  
+  @keyframes colorChange {
+    30% {
+      background: rgb(214,169,254);
+    }
+    33.33% {
+      background: rgb(85,150,230);
+    }
+    60% {
+      background: rgb(85,150,230);
+    }
+    66.67% {
+     background: rgb(252,212,0);
+    }
+    100% {
+      background: rgb(252,212,0); 
+    } 
+  }
+
+
+
+  /* Replay Button */
+
+  #replay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 150px;
+      border: solid 2px white;
+      margin-top: 175px;
+      font-size: 1.5em;
+      font-weight: 300;
+      animation: replayFadeIn 1s linear 16s forwards;
+      opacity: 0;
+      visibility: hidden; /* disables interaction when not visible */
+  }
+
+  #replay:hover {
+      background: white;
+      color:black;
+      cursor: pointer;
+  }
+
+
+
+  @keyframes replayFadeIn {
+      0% {
+          opacity: 0;
+          visibility: hidden;
+      }
+      100% {
+          opacity: 1;
+          visibility: visible; /* re-enables interaction */
+      }
+  }
+
+
 
 /*
     =================================================

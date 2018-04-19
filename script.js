@@ -172,7 +172,7 @@ function changeCarouselColors(e) {
             // Assign white outline to the following sections                       
             case 'section1Car':
             case 'section3Car':
-            case 'section4Car': 
+            case 'impactCar': 
             case 'current-projectsCar':
                 carousel.className = 'carouselWhite';
                 if (carButtons[i].id == targetParentId) {
@@ -206,7 +206,52 @@ carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
 
+/* --- Listen for hash change ---  */
+
+function checkSection4() {
+    if (location.hash == '#impact') {
+        removeAddSection4();
+    }
+}
+
+window.addEventListener("hashchange", checkSection4, false);
+
+
+
+/* ---------- Replay button for section 4 ----------------- */
+
+/* Button removes and immediately re-adds section4 to restart animations 
+
+References: 
+- https://css-tricks.com/restart-css-animation/
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+*/
+
+
+var replayButton = document.getElementById('replay');
+
+// Remove and re-add content of section4 to re-start animations
+function removeAddSection4() {
+    //parent node
+    var section4 = document.getElementById('impact');
+    // child node
+    var subsection4 = document.getElementById('impactSubsection');
+    //remove child node
+    var removed = section4.removeChild(subsection4);
+    
+    // Re-add subsection in section 4
+    section4.appendChild(removed);
+}
+
+// add listener to replay button
+replayButton.addEventListener('click', removeAddSection4, false);
+
+
+
 /*
+
 ==================================================
 
 Smooth auto-scroll on mousewheel and keyboard up/down arrow events 
@@ -228,7 +273,7 @@ var sectionHashes = [
     '#section1',
     '#introduction',
     '#section3',
-    '#section4',
+    '#impact',
     '#current-projects',
     '#section6',
     '#section7',
@@ -355,3 +400,5 @@ function keyUpDown(e) {
 
 // Listen for key-down event
 window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
+
+
