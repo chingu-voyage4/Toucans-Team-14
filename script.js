@@ -368,7 +368,7 @@ function scrollUpDown(e) {
 // additional helpful resource: https://www.sitepoint.com/throttle-scroll-events/
 
 /* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads. */
-window.addEventListener('wheel', _.throttle(scrollUpDown, 1250, { leading: true, trailing: false}));
+window.addEventListener('wheel', _.throttle(scrollUpDown, 1500, { leading: true, trailing: false}));
 
 // Prevents default scrolling action for wheel globally.  Prevents standard scrolling between intentional delays, caused by the "throttling" - see below
 function noScroll(e) {
