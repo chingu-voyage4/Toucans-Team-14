@@ -19,13 +19,13 @@ function returnHashLocation(hash) {
 /*
 ==================================================
 
-Carousel Styling
+Carousel Styling (according to hash changes)
 
 ==================================================
 */
 
-var carousel = document.getElementById('carousel');
-var carButtons = carousel.getElementsByTagName('li');
+var carousel = document.getElementById('carousel');     // Reference to carousel
+var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
 
 
 function changeCarouselColor(e) {
@@ -44,6 +44,7 @@ function changeCarouselColor(e) {
             case '#impact': 
             case '#current-projects':
                 carousel.className = 'carouselWhite';
+                // assign white or transparent fill to carousel icon accordingly
                 if (currentHash == sectionHashes[i]) {
                     carButtons[i].style.backgroundColor = 'white';
                 } else {
@@ -51,12 +52,13 @@ function changeCarouselColor(e) {
                 }
                     break;
                 
-
+            // Assign black outline to the following sections
             case '#introduction':                     
             case '#section6':
             case '#section7':
             case '#attribution':
                 carousel.className = 'carouselBlack';
+                // assign black or transparent fill to carousel icon accordingly
                 if (currentHash == sectionHashes[i]) {
                     carButtons[i].style.backgroundColor = 'black';
                 } else {
@@ -67,50 +69,7 @@ function changeCarouselColor(e) {
     }
 }
 
-window.addEventListener("hashchange", changeCarouselColor, false);
 
-
-// var carousel = document.getElementById('carousel');         // Reference to carousel
-
-// function changeCarouselColors(e) {
-//     var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
-//     var targetParent = e.target.parentNode;                 // Reference to parent of event target
-//     var targetParentId = targetParent.id;                   // Reference to id of parent node
-//     for (let i = 0; i < carButtons.length; i++) {
-//         switch (targetParentId) {
-
-//             // Assign white outline to the following sections
-//             case 'section1Car':
-//             case 'section3Car':
-//             case 'impactCar':
-//             case 'current-projectsCar':
-//                 carousel.className = 'carouselWhite';
-//                 if (carButtons[i].id == targetParentId) {
-//                     carButtons[i].style.backgroundColor = 'white';
-//                 } else {
-//                     carButtons[i].style.backgroundColor = 'transparent';
-//                 }
-//                 break;
-
-//             // Assign black outline to the following sections
-//             case 'section2Car':
-//             case 'section6Car':
-//             case 'section7Car':
-//             case 'attributionCar':
-//                 carousel.className = 'carouselBlack';
-
-//                 // Assign black fill to target
-//                 if (carButtons[i].id == targetParentId) {                   // id belongs to parent <li>, as opposed to inner <a>
-//                     carButtons[i].style.backgroundColor = 'black';
-//                 } else {
-//                     carButtons[i].style.backgroundColor = 'transparent';    // reset all other buttons to transparent
-//                 }
-//                 break;
-
-//             // SF Removed default case because it leads to <li> elements triggering carousel color change
-//         }
-//     }
-// }
 
 
 /*
@@ -312,8 +271,8 @@ Event Listeners
 */
 
 function setEventListeners() {
-    // carousel.addEventListener('click', function(e) {
-    //     changeCarouselColors(e);}, false);
+    // triggers carousel color change with hash change event
+    window.addEventListener("hashchange", changeCarouselColor, false);
     // section 4 replay button - listen for hash change
     replayButton.addEventListener('click', removeAddSection4, false);
     window.addEventListener("hashchange", checkSection4, false);
