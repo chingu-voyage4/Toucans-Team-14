@@ -299,7 +299,7 @@ function scrollUpDown(e) {
         direction = 'up';
         
     }
-    if (e.deltaY >0) {
+    if (e.deltaY > 0) {
         console.log('scrolling down');
         direction = 'down';
     }
@@ -308,13 +308,28 @@ function scrollUpDown(e) {
 
 /* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads
 does not work for arrow keys (add in next) */
-window.addEventListener('wheel', scrollUpDown, false);
+window.addEventListener('wheel', _.throttle(scrollUpDown, 1250, { leading: true, trailing: false}));
+
+// Prevents default scrolling action for wheel globally
+function noScroll(e) {
+    e.preventDefault();
+}
+
+window.addEventListener('wheel', noScroll);
+
 
 // Listen for key-down event
-document.onkeydown = keyUpDown;
+
+
+window.addEventListener('keydown', _.throttle(keyUpDown, 5000));
+
+// prevent default keydown event for up and down arrows
+
+
+// document.onkeydown = keyUpDown;
 
 function keyUpDown(e) {
-
+    // console.log('throttle test');
     e = e || window.event;
 
     if (e.keyCode == '38') {
@@ -326,6 +341,16 @@ function keyUpDown(e) {
         goToSection(e, direction);
     }
 }
+
+
+var tester = function testMessage() {
+    console.log('Is there a delay?');
+}
+
+window.addEventListener('wheel', _.throttle(tester, 5000, { leading: true, trailing: true}));
+
+// window.addEventListener('wheel', _.throttle(testMessage, 100));
+
 
 
 // May be useful to disable event listener to add delay:
