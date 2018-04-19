@@ -321,10 +321,20 @@ window.addEventListener('wheel', noScroll);
 // Listen for key-down event
 
 
-window.addEventListener('keydown', _.throttle(keyUpDown, 5000));
+window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
 
 // prevent default keydown event for up and down arrows
+// BUG:  command-r doesn't refresh page
 
+function disableDefaultKeyActn(e) {
+    e = e || window.event;
+
+    if (e.keyCode === '38' || '40') {
+        e.preventDefault();
+    }
+}
+
+window.addEventListener('keydown', disableDefaultKeyActn, false);
 
 // document.onkeydown = keyUpDown;
 
@@ -341,31 +351,3 @@ function keyUpDown(e) {
         goToSection(e, direction);
     }
 }
-
-
-var tester = function testMessage() {
-    console.log('Is there a delay?');
-}
-
-window.addEventListener('wheel', _.throttle(tester, 5000, { leading: true, trailing: true}));
-
-// window.addEventListener('wheel', _.throttle(testMessage, 100));
-
-
-
-// May be useful to disable event listener to add delay:
-
-/*  
-    //disable event listener for now
-    document.removeEventListener('scroll', getScrollDirection);
-
-
-    //re-enable event listener after short pause
-    setTimeout(reEnableListener, 1000);
-
-
-
-function reEnableListener() {
-    document.addEventListener('scroll', getScrollDirection, false);
-}
-*/
