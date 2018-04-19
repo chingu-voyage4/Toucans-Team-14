@@ -202,8 +202,6 @@ function changeCarouselColors(e) {
   }
 }
 
-// ADD EVENT LISTENER -----------------------
-
 carousel.addEventListener('click', function(e) {
   changeCarouselColors(e);
 }, false);
@@ -211,17 +209,19 @@ carousel.addEventListener('click', function(e) {
 /*
 ==================================================
 
-Smooth auto-scroll on wheel and keyboard arrow events 
+Smooth auto-scroll on mousewheel and keyboard up/down arrow events 
 
 ==================================================
-*/
-/* Known bugs:  scrolling for more than 1 "click" is an issue, as is immediate repeated arrow.  Need to add short delay between events?
 
-// ------------------  ----------------- //
-/* Resources used: 
-    https://stackoverflow.com/questions/31223341/detecting-scroll-direction
-    https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
-    https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript  */
+*/
+// Resources used: 
+// https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+// https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
+// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript  
+// https://www.sitepoint.com/throttle-scroll-events/
+// https://lodash.com/ 
+// https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined
+    
 
 //array of hashes for all main sections
 var sectionHashes = [
@@ -238,6 +238,8 @@ var sectionHashes = [
 function returnHashLocation(hash) {
     return sectionHashes.indexOf(hash);
 }
+
+/* -------------  Mousewheel event handling ------- */
 
 // Scrolls smoothly to section
 function goToSection(e, direction) {
@@ -284,44 +286,42 @@ function goToSection(e, direction) {
             window.location.hash = hash;
           });
 
-  /*        setTimeout(delay, 4000);
-
-          function delay() {
-              console.log('delay!')
-          } */
 }
 
 // Determines scroll direction and returns string 'up' or 'down'
 function scrollUpDown(e) {
     var direction;
+
     if (e.deltaY < 0) {
         console.log('scrolling up');
         direction = 'up';
-        
     }
+
     if (e.deltaY > 0) {
         console.log('scrolling down');
         direction = 'down';
     }
+
     goToSection(e, direction);
+
 }
 
-/* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads
-does not work for arrow keys (add in next) */
+// In order to avoid multiple events firing on scroll or repeated key presses, utilized the _.throttle function through "lodash" Plugin
+// see: https://lodash.com/ for infomation and documentation
+// additional helpful resource: https://www.sitepoint.com/throttle-scroll-events/
+
+/* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads. */
 window.addEventListener('wheel', _.throttle(scrollUpDown, 1250, { leading: true, trailing: false}));
 
-// Prevents default scrolling action for wheel globally
+// Prevents default scrolling action for wheel globally.  Prevents standard scrolling between intentional delays, caused by the "throttling" - see below
 function noScroll(e) {
     e.preventDefault();
 }
 
-window.addEventListener('wheel', noScroll);
+// Listen for mousewheel event
+window.addEventListener('wheel', noScroll, false);
 
-
-// Listen for key-down event
-
-
-window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
+/* ------- Arrow key-press event handling -------- */
 
 // prevent default keydown event for up and down arrows
 // BUG:  command-r doesn't refresh page
@@ -332,12 +332,13 @@ function disableDefaultKeyActn(e) {
     if (e.keyCode === '38' || '40') {
         e.preventDefault();
     }
+
 }
 
+// Listen for keydown event and disable default behaviour
 window.addEventListener('keydown', disableDefaultKeyActn, false);
 
-// document.onkeydown = keyUpDown;
-
+// determine if "up or down key has been pressed and pass result to goToSection function
 function keyUpDown(e) {
     // console.log('throttle test');
     e = e || window.event;
@@ -351,3 +352,6 @@ function keyUpDown(e) {
         goToSection(e, direction);
     }
 }
+
+// Listen for key-down event
+window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
