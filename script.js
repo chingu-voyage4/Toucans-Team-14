@@ -1,6 +1,13 @@
-// Global values and objects
+/*
+==================================================
+
+Global objects
+
+==================================================
+*/
 
 //array of hashes for all main sections
+//used in Carousel Styling and Smooth Auto-Scroll features
 const sectionHashes = [
     '#section1',
     '#introduction',
@@ -68,9 +75,6 @@ function changeCarouselColor(e) {
         }
     }
 }
-
-
-
 
 /*
 ==================================================
