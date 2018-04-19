@@ -61,8 +61,12 @@ function changeCarouselColor(e) {
                     carButtons[i].style.backgroundColor = 'transparent';
                 }
                 // change color of main arrow
-                mainDownArrow.src = "assets/images/circular-down-arrow-button_white.png"
-                mainDownArrow.styledisplay = 'block';
+                if (currentHash != '#section3') {
+                    mainDownArrow.src = "assets/images/circular-down-arrow-button_white.png"
+                    mainDownArrow.style.display = 'block';
+                } else {
+                    mainDownArrow.style.display = 'none';
+                }
                     break;
                 
             // Assign black outline to the following sections
@@ -82,7 +86,7 @@ function changeCarouselColor(e) {
                     mainDownArrow.src = "assets/images/circular-down-arrow-button_black.png";
                     mainDownArrow.style.display = 'block';
                 } else {
-                    mainDownArrow.style.display = "none";
+                    mainDownArrow.style.display = 'none';
                 }
                 
                 break;
