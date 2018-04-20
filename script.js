@@ -223,6 +223,7 @@ function changeBackground(event) {
     displayContent(parentTarget);
 }
 
+
 function displayContent(parentTarget) {
     var section6 = document.getElementById('section6');
     var subSections = section6.getElementsByTagName('section');
@@ -260,3 +261,155 @@ function setEventListeners() {
 }
 
 setEventListeners();
+
+/*
+
+==================================================
+
+Smooth auto-scroll on mousewheel and keyboard up/down arrow events 
+
+==================================================
+
+*/
+// Resources used: 
+// https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+// https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
+// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript  
+// https://www.sitepoint.com/throttle-scroll-events/
+// https://lodash.com/ 
+// https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined
+    
+
+//array of hashes for all main sections
+var sectionHashes = [
+    '#section1',
+    '#introduction',
+    '#section3',
+    '#impact',
+    '#current-projects',
+    '#section6',
+    '#section7',
+    '#attribution'
+]
+//returns location of current hash in hash list
+function returnHashLocation(hash) {
+    return sectionHashes.indexOf(hash);
+}
+
+/* -------------  Mousewheel event handling ------- */
+
+// Scrolls smoothly to section
+function goToSection(e, direction) {
+    //get hash from current view (assumes it replects current view)
+    hash = window.location.hash;
+
+    if (hash == null) {
+        hash = '#section1';
+    }
+
+    console.log('hash:', hash);
+    // determine list of sectionHashes list
+    hashListLength = sectionHashes.length;
+    console.log('List length:', hashListLength);
+    //get the integer location of current hash in list
+    hashLocation = returnHashLocation(hash);
+    console.log('Hash location:', hashLocation);
+
+    //if scroll direction is *up*
+    if ((direction === 'up') && (hashLocation !== 0)) {
+        //move up on section if not already at top (otherwise do nothing)
+        hashLocation = hashLocation - 1;
+        console.log('New hash location (upscroll)', hashLocation);
+        hash = sectionHashes[hashLocation];
+        console.log('New hash:', hash);
+        //if scroll direction is *down*
+    } else if ((direction === 'down') && (hashLocation < (hashListLength - 1))) {
+        //move down a section if not already at bottom
+        hashLocation = hashLocation + 1;
+        console.log('New hash location (downscroll)', hashLocation);
+        hash = sectionHashes[hashLocation];
+        console.log('New hash:', hash);
+    // else if hash location is first or last item in list do nothing
+    }  else {
+        console.log('do nothing!');
+    }  // smooth-scroll to the appropriate section
+        console.log('-----------------------------');
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+
+}
+
+// Determines scroll direction and returns string 'up' or 'down'
+function scrollUpDown(e) {
+    var direction;
+
+    if (e.deltaY < 0) {
+        console.log('scrolling up');
+        direction = 'up';
+    }
+
+    if (e.deltaY > 0) {
+        console.log('scrolling down');
+        direction = 'down';
+    }
+
+    goToSection(e, direction);
+
+}
+
+// In order to avoid multiple events firing on scroll or repeated key presses, utilized the _.throttle function through "lodash" Plugin
+// see: https://lodash.com/ for infomation and documentation
+// additional helpful resource: https://www.sitepoint.com/throttle-scroll-events/
+
+/* Listen to wheel event.  Does not use scrollTop because no scrolling actually occurs. Works for trackpads. */
+window.addEventListener('wheel', _.throttle(scrollUpDown, 1500, { leading: true, trailing: false}));
+
+// Prevents default scrolling action for wheel globally.  Prevents standard scrolling between intentional delays, caused by the "throttling" - see below
+function noScroll(e) {
+    e.preventDefault();
+}
+
+// Listen for mousewheel event
+window.addEventListener('wheel', noScroll, false);
+
+/* ------- Arrow key-press event handling -------- */
+
+// prevent default keydown event for up and down arrows
+// BUG:  command-r doesn't refresh page
+
+function disableDefaultKeyActn(e) {
+    e = e || window.event;
+
+    if (e.keyCode === '38' || '40') {
+        e.preventDefault();
+    }
+
+}
+
+// Listen for keydown event and disable default behaviour
+window.addEventListener('keydown', disableDefaultKeyActn, false);
+
+// determine if "up or down key has been pressed and pass result to goToSection function
+function keyUpDown(e) {
+    // console.log('throttle test');
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        direction = 'up';
+        // "goToSection" functions are in if statement to prevent execution if some other key is pressed
+        goToSection(e, direction);
+    } else if (e.keyCode == '40') {
+        direction = 'down';
+        goToSection(e, direction);
+    }
+}
+
+// Listen for key-down event
+window.addEventListener('keydown', _.throttle(keyUpDown, 1250, { leading: true, trailing: false}));
+

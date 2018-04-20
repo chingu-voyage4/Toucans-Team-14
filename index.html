@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset='utf-8'>
 	<title>IBM World Community Grid Clone</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
 
-<body>
+<body id='mainBody'>
+
+    <!-- lodash plugin only works properly when script tag is at top.
+    Used plugin's _.throttle function to reduce the number of events fired
+    with mousewheel or keypresses -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    
     <div class='menu'>
         <div class='logos'>
 					<a href="#"><img id= "WCG" src="assets/images/wcglogo2.png"></a>
@@ -420,6 +427,7 @@
 
 	<!-- down arrow icon attribution -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+ 
 </body>
 </html>
