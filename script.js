@@ -1,53 +1,80 @@
 /*
 ==================================================
 
-Carousel Styling
+Global objects
 
 ==================================================
 */
 
-var carousel = document.getElementById('carousel');         // Reference to carousel
+//array of hashes for all main sections
+//used in Carousel Styling and Smooth Auto-Scroll features
+const sectionHashes = [
+    '#section1',
+    '#introduction',
+    '#section3',
+    '#impact',
+    '#current-projects',
+    '#section6',
+    '#section7',
+    '#attribution'
+]
+//returns location of current hash in hash list
+function returnHashLocation(hash) {
+    return sectionHashes.indexOf(hash);
+}
 
-function changeCarouselColors(e) {
-    var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
-    var targetParent = e.target.parentNode;                 // Reference to parent of event target
-    var targetParentId = targetParent.id;                   // Reference to id of parent node
-    for (let i = 0; i < carButtons.length; i++) {
-        switch (targetParentId) {
+/*
+==================================================
 
-            // Assign white outline to the following sections
-            case 'section1Car':
-            case 'section3Car':
-            case 'impactCar':
-            case 'current-projectsCar':
+Carousel Styling (according to hash changes)
+
+==================================================
+*/
+
+var carousel = document.getElementById('carousel');     // Reference to carousel
+var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel buttons
+
+
+function changeCarouselColor(e) {
+    currentHash = location.hash;
+    hashListItem = returnHashLocation(currentHash);
+  //  console.log(currentHash);
+  //  console.log(carButtons.item(currentHash).id)
+ //   var hashLocation = carButtons.item(currentHash);
+  //  console.log('hash location:', hashLocation);
+    for (let i = 0; i < sectionHashes.length; i++) {
+
+        switch (currentHash) {
+
+            case '#section1':
+            case '#section3':
+            case '#impact': 
+            case '#current-projects':
                 carousel.className = 'carouselWhite';
-                if (carButtons[i].id == targetParentId) {
+                // assign white or transparent fill to carousel icon accordingly
+                if (currentHash == sectionHashes[i]) {
                     carButtons[i].style.backgroundColor = 'white';
                 } else {
                     carButtons[i].style.backgroundColor = 'transparent';
                 }
-                break;
-
+                    break;
+                
             // Assign black outline to the following sections
-            case 'section2Car':
-            case 'section6Car':
-            case 'section7Car':
-            case 'attributionCar':
+            case '#introduction':                     
+            case '#section6':
+            case '#section7':
+            case '#attribution':
                 carousel.className = 'carouselBlack';
-
-                // Assign black fill to target
-                if (carButtons[i].id == targetParentId) {                   // id belongs to parent <li>, as opposed to inner <a>
+                // assign black or transparent fill to carousel icon accordingly
+                if (currentHash == sectionHashes[i]) {
                     carButtons[i].style.backgroundColor = 'black';
                 } else {
-                    carButtons[i].style.backgroundColor = 'transparent';    // reset all other buttons to transparent
+                    carButtons[i].style.backgroundColor = 'transparent';
                 }
                 break;
-
-            // SF Removed default case because it leads to <li> elements triggering carousel color change
         }
     }
 }
-
 
 /*
 ==================================================
@@ -248,8 +275,8 @@ Event Listeners
 */
 
 function setEventListeners() {
-    carousel.addEventListener('click', function(e) {
-        changeCarouselColors(e);}, false);
+    // triggers carousel color change with hash change event
+    window.addEventListener("hashchange", changeCarouselColor, false);
     // section 4 replay button - listen for hash change
     replayButton.addEventListener('click', removeAddSection4, false);
     window.addEventListener("hashchange", checkSection4, false);
@@ -279,22 +306,6 @@ Smooth auto-scroll on mousewheel and keyboard up/down arrow events
 // https://lodash.com/ 
 // https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined
     
-
-//array of hashes for all main sections
-var sectionHashes = [
-    '#section1',
-    '#introduction',
-    '#section3',
-    '#impact',
-    '#current-projects',
-    '#section6',
-    '#section7',
-    '#attribution'
-]
-//returns location of current hash in hash list
-function returnHashLocation(hash) {
-    return sectionHashes.indexOf(hash);
-}
 
 /* -------------  Mousewheel event handling ------- */
 
