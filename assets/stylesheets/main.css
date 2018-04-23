@@ -907,6 +907,11 @@ a.joinNow:hover {
 
 /* --------------- Navigation bars --------------- */
 
+
+.sec5navbar {
+    height: 45px;   /* set in-addition to ".sec5navbar <ul>" in order that text is not displaced when element removed for animation of navbar */
+}
+
 .sec5navbar ul {
     display: flex;
     justify-content: space-between;
