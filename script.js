@@ -223,10 +223,17 @@ Section 4
 
 /* --- Event listener to listen for hash change ---  */
 
-function checkSection4() {
+function checkSection() {
     if (location.hash == '#impact') {
         removeAddSection4();
     }
+    if (location.hash !== "#current-projects") {
+        removeSec5Navbar();
+    }
+    if (location.hash == "#current-projects") {
+        reAddSec5Navbar();
+    }
+
 }
 
 
@@ -265,8 +272,10 @@ Section 5 Navbar
 ==================================================
 */
 
-const sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
 const sec5 = document.getElementById('current-projects');                 // reference to section 5 element node
+const sec5Nav = document.getElementById('section5-nav');                 // reference to navbar element node (ul, not div)
+const sec5Navbar = document.getElementById('s5navbar')
+
 
 function changeSec5Background(e) {
 
@@ -286,9 +295,14 @@ function changeSec5Background(e) {
   }
 }
 
-function removeAddSec5Navbar() {
-    var removed = sec5.removeChild(sec5Nav);
-    sec5.appendChild(removed);
+function removeSec5Navbar() {
+    console.log('remove section5 fxn');
+    sec5Navbar.removeChild(sec5Nav);
+}
+
+function reAddSec5Navbar() {
+    console.log('add section5 fxn');
+    sec5Navbar.appendChild(sec5Nav);
 }
 
 /*
@@ -345,7 +359,7 @@ function setEventListeners() {
     mainDownArrow.addEventListener('click', shiftDown, false);
     // section 4 replay button - listen for hash change
     replayButton.addEventListener('click', removeAddSection4, false);
-    window.addEventListener("hashchange", checkSection4, false);
+    window.addEventListener("hashchange", checkSection, false);
     // Navbar for sections 5 and 6
     sec5Nav.addEventListener('click', function(e) {
         changeSec5Background(e);}, false);
