@@ -938,6 +938,18 @@ a.joinNow:hover {
   background-color: #2e75cf;
 }
 
+/* --------------- Section 5 media queries --------------- */
+
+@media (max-width: 750px) {
+    .sec5navbar span {
+        display: none;
+    }
+    .sec5navbar img {
+        padding-right: 0;
+    }
+}
+
+
 
 
 /*
