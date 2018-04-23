@@ -265,10 +265,11 @@ Section 5 Navbar
 ==================================================
 */
 
-var sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
+const sec5Nav = document.getElementById('section5-nav');        // reference to navbar element node
+const sec5 = document.getElementById('current-projects');                 // reference to section 5 element node
 
 function changeSec5Background(e) {
-  var sec5 = document.getElementById('current-projects');                 // reference to section 5 element node
+
   var sec5NavTabs = sec5Nav.getElementsByTagName('li');           // NodeList for section 5 navbar tabs
   var sec5SubSections = sec5.getElementsByTagName('section');     // NodeList for section 5 subsections
   var target = e.target;
@@ -285,6 +286,10 @@ function changeSec5Background(e) {
   }
 }
 
+function removeAddSec5Navbar() {
+    var removed = sec5.removeChild(sec5Nav);
+    sec5.appendChild(removed);
+}
 
 /*
 ==================================================
