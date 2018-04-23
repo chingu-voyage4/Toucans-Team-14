@@ -141,8 +141,13 @@ a:hover#join {
     white-space: nowrap;
 }
 
-#WCG {
+#WCGa,
+#WCGb {
     height: 36px;
+}
+
+#WCGb {
+    display: none;
 }
 
 #IBM {
@@ -150,7 +155,7 @@ a:hover#join {
 }
 
 #logoSeparator {
-    border-right: 1px solid #E8E8E8;
+    border-right: 1px solid rgb(200,209,209);
     height: 36px;
     padding-left: 10px;
     margin-right: 10px;
@@ -160,6 +165,19 @@ a:hover#join {
     height: 15px;
     padding-left: 10px;
 }
+
+/* Media queries for WCG header */
+
+@media (max-width: 750px) {
+    #WCGa  {
+        display: none;
+    }
+    #WCGb {
+        display: inline-block;
+    }
+
+}
+
 
 /*
     =================================================
