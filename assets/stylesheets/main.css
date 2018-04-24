@@ -141,8 +141,13 @@ a:hover#join {
     white-space: nowrap;
 }
 
-#WCG {
+#WCGa,
+#WCGb {
     height: 36px;
+}
+
+#WCGb {
+    display: none;
 }
 
 #IBM {
@@ -150,7 +155,7 @@ a:hover#join {
 }
 
 #logoSeparator {
-    border-right: 1px solid #E8E8E8;
+    border-right: 1px solid rgb(200,209,209);
     height: 36px;
     padding-left: 10px;
     margin-right: 10px;
@@ -160,6 +165,19 @@ a:hover#join {
     height: 15px;
     padding-left: 10px;
 }
+
+/* Media queries for WCG header */
+
+@media (max-width: 750px) {
+    #WCGa  {
+        display: none;
+    }
+    #WCGb {
+        display: inline-block;
+    }
+
+}
+
 
 /*
     =================================================
@@ -801,6 +819,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 .section5ContentContainer {
     color: white;
+    width: 50vw;
+    height: 75%; 
 }
 
 .sec5FlexBox {
@@ -859,17 +879,18 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #zika img,
 #tb img,
 #aids img {
-    max-width: 10%;
+    width: 15vmin;
+    height: auto;
 }
 
 .joinNow {
-    font: 24px Arial, sans-serif;
+    font: 3.25vh Arial, sans-serif;
     background-color: tomato;
     color: white;
     box-shadow: inherit;
     text-decoration: none;
-    padding: 5px 8px;
-    margin-top: 20px;
+    padding: 0.75vh 1.25vh;
+    margin-top: 5vh;
 }
 
 a.joinNow:hover {
@@ -881,21 +902,21 @@ a.joinNow:hover {
 
 .infotext,
 .maintext {
-    padding-bottom: 24px;
+    padding-bottom: 3vh;
 }
 
 .infotext {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 400px;
+    font-size: 3.5vmin;
+    line-height: 3.75vmin;
+    font-weight: 200;
     font-style: normal;
 }
 
 .maintext {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 5vmin;
+    line-height: 5.25vmin;
     font-style: normal;
-    padding-top: 20px;
+    padding-top: 3vh;
 }
 
 /* -------------- Image positioning -------------- */
@@ -994,6 +1015,18 @@ a.joinNow:hover {
         margin-bottom: 0;
     }
 }
+
+/* --------------- Section 5 media queries --------------- */
+
+@media (max-width: 750px) {
+    .sec5navbar span {
+        display: none;
+    }
+    .sec5navbar img {
+        padding-right: 0;
+    }
+}
+
 
 
 
