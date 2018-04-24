@@ -166,6 +166,60 @@ a:hover#join {
     padding-left: 10px;
 }
 
+/* #cloneBadge {
+    position: absolute;
+    background-color: red;
+    height: 3vh;
+    min-height: 25px;
+    width: 50vw;
+    transform: rotate(-45deg);
+    margin-left: -30vh;
+}
+
+#cloned {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 25px;
+    width: 100%;
+} */
+
+#clonedMessage {
+    align-self: left;
+    color: tomato;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3vmin;
+    margin-left: 5px;
+    font-weight: 600;
+    align-self: center;
+    opacity: 0;
+    animation: cloneFade 5s linear 1s infinite forwards;
+}
+
+#clonedMessage a:visited {
+    color: tomato;
+}
+
+#cloneText2 {
+    display: none;
+    color: salmon;
+}
+
+@keyframes cloneFade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Media queries for WCG header */
 
 @media (max-width: 750px) {
@@ -174,6 +228,12 @@ a:hover#join {
     }
     #WCGb {
         display: inline-block;
+    }
+    #cloneText1 {
+        display: none;
+    }
+    #cloneText2 {
+        display: inline;
     }
 
 }
