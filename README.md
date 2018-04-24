@@ -10,15 +10,15 @@ Voyage-4
 
 ## Goal -
 
-  Clone the [World Community Grid Website](https://www.worldcommunitygrid.org/) website.
+  Clone the [World Community Grid](https://www.worldcommunitygrid.org/) website.
 
 ## Site link -
   https://chingu-voyage4.github.io/Toucans-Team-14/
 
-## Contributers-
+## Contributers -
 
 * [@LaurenG](https://github.com/lgainsbrook)
 * [@laurend](https://github.com/LaurenDoughty)
 * [@stufinn](https://github.com/stufinn)
 
-####Readme format courtesy of Chingu Voyage 4 team [Toucans 4](https://github.com/chingu-voyage4/Toucans-Team-4)
+*Readme format courtesy of Chingu Voyage 4 team [Toucans 4](https://github.com/chingu-voyage4/Toucans-Team-4)
