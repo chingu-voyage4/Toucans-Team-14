@@ -21,4 +21,4 @@ Voyage-4
 * [@laurend](https://github.com/LaurenDoughty)
 * [@stufinn](https://github.com/stufinn)
 
-*Readme format courtesy of Chingu Voyage 4 team [Toucans 4](https://github.com/chingu-voyage4/Toucans-Team-4)
+*ReadMe format courtesy of Chingu Voyage 4 team [Toucans Team 4](https://github.com/chingu-voyage4/Toucans-Team-4)
