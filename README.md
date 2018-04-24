@@ -22,3 +22,5 @@ Voyage-4
 * [@stufinn](https://github.com/stufinn)
 
 *ReadMe format courtesy of Chingu Voyage 4 team [Toucans Team 4](https://github.com/chingu-voyage4/Toucans-Team-4)
+
+This cloned website was created as an educational exercise as part of Chingu. Chingu "connects motivated learners with shared goals to learn, help and build together". Visit https://chingu.io/ for more information.
