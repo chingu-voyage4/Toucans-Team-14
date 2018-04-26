@@ -1,3 +1,5 @@
+_This cloned website was created as an educational exercise as part of Chingu, Voyage 4. Chingu "connects motivated learners with shared goals to learn, help and build together". Visit https://chingu.io/ for more information._
+
 # Toucans-Team-14
 Voyage-4
 
@@ -20,5 +22,3 @@ Voyage-4
 * [@LaurenG](https://github.com/lgainsbrook)
 * [@laurend](https://github.com/LaurenDoughty)
 * [@stufinn](https://github.com/stufinn)
-
-_This cloned website was created as an educational exercise as part of Chingu, Voyage 4. Chingu "connects motivated learners with shared goals to learn, help and build together". Visit https://chingu.io/ for more information._
