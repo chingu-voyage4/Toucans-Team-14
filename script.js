@@ -61,7 +61,7 @@ function changeCarouselColor(e) {
                     carButtons[i].style.backgroundColor = 'transparent';
                 }
                 // change color of main arrow
-                if (currentHash != '#section3') {
+                if (currentHash != '#section3temp') {  // temporarily changed from #section3 to #section3temp, to enable arrow while sec3 subsections are hidden and incomplete.
                     mainDownArrow.src = "assets/images/circular-down-arrow-button_white.png"
                     mainDownArrow.style.display = 'block';
                 } else {
