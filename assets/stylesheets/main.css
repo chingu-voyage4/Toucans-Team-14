@@ -1308,7 +1308,6 @@ font-size:1em;
 
     #carousel {
         position: fixed;
-        /* margin: 29vh 0 0 1vw; */
         align-self: center;
         margin-left: 1vw;
         z-index: 20;
@@ -1329,10 +1328,6 @@ font-size:1em;
     .carouselBlack li {
         border: 2px solid black;
     }
-
-/*    .carousel ul:first-child {
-        margin-top: 0;
-    } */
 
     ul#carousel li {
         padding: 0;
@@ -1368,9 +1363,7 @@ font-size:1em;
             position: fixed;
             margin-bottom: 1vh;
             align-self: center;
-            /* margin-top: 92vh; */
             z-index: 20;
-            /* margin-left: 48%; */
             cursor: pointer;
 
         }
