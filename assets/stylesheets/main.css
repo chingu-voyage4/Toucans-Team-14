@@ -1348,6 +1348,17 @@ font-size:1em;
     /*  =================================================
         Main Down Arrow
         ================================================= */
+        
+        /* flexbox div to position main down-arrow on page */
+        #arrowFlexBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 20;
+        }
 
         #downArrowIcon {
             height: 7vh;
@@ -1355,9 +1366,11 @@ font-size:1em;
             min-height: 20px;
             display: block;
             position: fixed;
-            margin-top: 92vh;
+            margin-bottom: 1vh;
+            align-self: center;
+            /* margin-top: 92vh; */
             z-index: 20;
-            margin-left: 48%;
+            /* margin-left: 48%; */
             cursor: pointer;
 
         }
