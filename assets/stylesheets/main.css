@@ -1293,16 +1293,6 @@ font-size:1em;
     Carousel
     ================================================= */
 
-    /* flexbox div to position carousel on page
-    #carouselFlexBox {
-        display: flex;
-        flex-direction: row;
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        z-index: 20;
-    } */
-
     #section1Car {
         background-color: white;
     }
