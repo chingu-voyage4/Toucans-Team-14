@@ -10,7 +10,7 @@ Voyage-4
 
 ## Goal -
 
-  Clone the [World Community Grid](https://www.worldcommunitygrid.org/) website.
+  Clone the official World Community Grid website, https://www.worldcommunitygrid.org/
 
 ## Site link -
   https://chingu-voyage4.github.io/Toucans-Team-14/
