@@ -1292,12 +1292,14 @@ font-size:1em;
     Carousel
     ================================================= */
 
-    /* flexbox div to position carousel and nav arrow on page */
-    #navFlexBox {
+    /* flexbox div to position carousel on page */
+    #carouselFlexBox {
+        display: flex;
+        flex-direction: row;
         height: 100vh;
         width: 100vw;
         position: fixed;
-        z-index:20;
+        z-index: 20;
     }
 
     #section1Car {
@@ -1306,7 +1308,9 @@ font-size:1em;
 
     #carousel {
         position: fixed;
-        margin: 29vh 0 0 1vw;
+        /* margin: 29vh 0 0 1vw; */
+        align-self: center;
+        margin-left: 1vw;
         z-index: 20;
     }
 
