@@ -1338,7 +1338,9 @@ font-size:1em;
         ================================================= */
 
         #downArrowIcon {
-            height: 50px;
+            height: 7vh;
+            max-height: 50px;
+            min-height: 20px;
             display: block;
             position: fixed;
             margin-top: 92vh;
