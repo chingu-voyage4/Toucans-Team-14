@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<!-- This site clone was created as an educational excercise during Chingu Voyage 4, in 2018.  
+    For more information, please refer to the README file at https://github.com/chingu-voyage4/Toucans-Team-14/blob/development/README.md 
+
+    To learn about about World Community Grid, please visit WCG's official site at https://www.worldcommunitygrid.org/ -->
+
 <html>
 <head>
     <meta charset='utf-8'>
@@ -28,26 +34,37 @@
         </div>
     </div> <!-- /.menu -->
 
-<!-- Carousel Start -->
+    <!-- flexbox div to position carousel on page -->
+    <div id="carouselFlexBox">
 
-<ul class="carouselWhite" id="carousel">
-    <li id="section1Car"><a href="#section1"></a></li>
-    <li id="section2Car"><a href="#introduction"></a></li>
-    <li id="section3Car"><a href="#section3"></a></li>
-    <li id="impactCar"><a href="#impact"></a></li>
-    <li id="current-projectsCar"><a href="#current-projects"></a></li>
-    <li id="section6Car"><a href="#section6"></a></li>
-    <li id="section7Car"><a href="#section7"></a></li>
-    <li id="attributionCar"><a href="#attribution"></a></li>
-</ul>
+        <!-- Carousel Start -->
 
-<!-- Carousel End -->
+        <ul class="carouselWhite" id="carousel">
+            <li id="section1Car"><a href="#section1"></a></li>
+            <li id="section2Car"><a href="#introduction"></a></li>
+            <li id="section3Car"><a href="#section3"></a></li>
+            <li id="impactCar"><a href="#impact"></a></li>
+            <li id="current-projectsCar"><a href="#current-projects"></a></li>
+            <li id="section6Car"><a href="#section6"></a></li>
+            <li id="section7Car"><a href="#section7"></a></li>
+            <li id="attributionCar"><a href="#attribution"></a></li>
+        </ul>
 
-<!-- Main Arrow Start -->
+        <!-- Carousel End -->
+    </div>
 
-<img src="assets/images/circular-down-arrow-button_white.png" id="downArrowIcon">
+    <!-- flexbox div to position main down-arrow on page -->
+    <div id="arrowFlexBox">
 
-<!-- Main Arrow End -->
+        <!-- Main Arrow Start -->
+
+        <img src="assets/images/circular-down-arrow-button_white.png" id="downArrowIcon">
+
+        <!-- Main Arrow End -->
+    
+    </div>
+
+    
 
 	<!-- Section 1 - Blue -->
 	<section class="bgSec1" id="section1">  <!-- SF changed class to .bgSec1 b/c sec1 needs custom height -->
@@ -135,6 +152,8 @@
 
 
         </subsection>
+
+        <!-- Section 3 subsections disabled until animations can be added to make it function like the original WCG site -->
 
  <!--       <subsection class="bgSec3 setSectionPosition" id="section3b">
 

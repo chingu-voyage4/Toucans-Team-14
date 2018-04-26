@@ -1292,13 +1292,24 @@ font-size:1em;
     Carousel
     ================================================= */
 
+    /* flexbox div to position carousel on page */
+    #carouselFlexBox {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 20;
+    }
+
     #section1Car {
         background-color: white;
     }
 
     #carousel {
         position: fixed;
-        margin: 29vh 0 0 1vw;
+        align-self: center;
+        margin-left: 1vw;
         z-index: 20;
     }
 
@@ -1318,10 +1329,6 @@ font-size:1em;
         border: 2px solid black;
     }
 
-/*    .carousel ul:first-child {
-        margin-top: 0;
-    } */
-
     ul#carousel li {
         padding: 0;
     }
@@ -1336,14 +1343,27 @@ font-size:1em;
     /*  =================================================
         Main Down Arrow
         ================================================= */
+        
+        /* flexbox div to position main down-arrow on page */
+        #arrowFlexBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 20;
+        }
 
         #downArrowIcon {
-            height: 50px;
+            height: 7vh;
+            max-height: 50px;
+            min-height: 20px;
             display: block;
             position: fixed;
-            margin-top: 92vh;
+            margin-bottom: 1vh;
+            align-self: center;
             z-index: 20;
-            margin-left: 48%;
             cursor: pointer;
 
         }
