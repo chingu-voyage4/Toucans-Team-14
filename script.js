@@ -1,3 +1,5 @@
+window.location.hash = '#section1';
+
 /*
 ==================================================
 
@@ -42,8 +44,8 @@ var carButtons = carousel.getElementsByTagName('li');   // NodeList for carousel
 
 
 function changeCarouselColor(e) {
-    currentHash = location.hash;
-    hashListItem = returnHashLocation(currentHash);
+    let currentHash = location.hash;
+    let hashListItem = returnHashLocation(currentHash);
   //  console.log(currentHash);
   //  console.log(carButtons.item(currentHash).id)
  //   var hashLocation = carButtons.item(currentHash);
