@@ -12,6 +12,9 @@ const sectionHashes = [
     '#section1',
     '#introduction',
     '#section3',
+    '#section3a',
+    '#section3b',
+    '#section3c',
     '#impact',
     '#current-projects',
     '#section6',
@@ -51,7 +54,7 @@ function changeCarouselColor(e) {
 
             case '#section1':
             case '#section3':
-            case '#impact': 
+            case '#impact':
             case '#current-projects':
                 carousel.className = 'carouselWhite';
                 // assign white or transparent fill to carousel icon accordingly
@@ -68,9 +71,9 @@ function changeCarouselColor(e) {
                     mainDownArrow.style.display = 'none';
                 }
                     break;
-                
+
             // Assign black outline to the following sections
-            case '#introduction':                     
+            case '#introduction':
             case '#section6':
             case '#section7':
             case '#attribution':
@@ -88,7 +91,7 @@ function changeCarouselColor(e) {
                 } else {
                     mainDownArrow.style.display = 'none';
                 }
-                
+
                 break;
         }
     }
@@ -100,7 +103,7 @@ function changeCarouselColor(e) {
 Main Arrow Function (according to hash changes)^
 
 ==================================================
-*/ 
+*/
 
 //^arrow styling is included in code logic for carousel, above
 
@@ -373,19 +376,19 @@ setEventListeners();
 
 ==================================================
 
-Smooth auto-scroll on mousewheel and keyboard up/down arrow events 
+Smooth auto-scroll on mousewheel and keyboard up/down arrow events
 
 ==================================================
 
 */
-// Resources used: 
+// Resources used:
 // https://stackoverflow.com/questions/31223341/detecting-scroll-direction
 // https://stackoverflow.com/questions/24217087/how-to-determine-scroll-direction-without-actually-scrolling
-// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript  
+// https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
 // https://www.sitepoint.com/throttle-scroll-events/
-// https://lodash.com/ 
+// https://lodash.com/
 // https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined
-    
+
 
 /* -------------  Mousewheel event handling ------- */
 
@@ -429,7 +432,7 @@ function goToSection(e, direction) {
         $('html, body').animate({
             scrollTop: $(hash).offset().top
           }, 800, function(){
-    
+
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           });

@@ -405,6 +405,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       url('../images/OAI3050_bw.jpg');
   background-size: cover;
   z-index: 15;
+  /* height: 92vh; */
 }
 
 #section3c {
@@ -518,8 +519,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround1 {
     position: absolute;
-    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/happyChild_bw.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)),
+                url('../images/happyChild_bw.jpg');
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -542,8 +543,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround2 {
     position: absolute;
-    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/water_bw.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)),
+                url('../images/water_bw.jpg');
     background-size: cover;
     opacity: 0;
     height: 100%;
@@ -572,8 +573,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 
 #sec4BackGround3 {
     position: absolute;
-    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)), 
-                url('../images/solarArray_bw2.jpg'); 
+    background: linear-gradient(rgba(24.7,24.7,24.7,0.45), rgba(24.7,24.7,24.7,0.45)),
+                url('../images/solarArray_bw2.jpg');
     background-size: cover;
     opacity: 0;
     height: 100%;
@@ -620,7 +621,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 #newDrugs {
     /*position: absolute; */
     color: rgb(214,169,254);
-    animation: 
+    animation:
         slideTextUp1 0.5s linear 1.5s forwards,
         firstFadeOut 15s linear 1.5s forwards;
     opacity: 0;
@@ -712,26 +713,26 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
     margin: 30px 0 30px 0;
     animation: lineFadeIn 0.5s linear 1.75s forwards;
     opacity: 0;
-  } 
+  }
 
   @keyframes lineFadeIn {
     100% {
         opacity: 1;
     }
 }
-  
+
   #multiColorLine {
     background-color: rgb(214,169,254);
     width: 0.5%;
     height: 2px;
-    animation: 
+    animation:
       grow 15s linear 1.5s forwards,
-      colorChange 15s linear 1.5s forwards; 
+      colorChange 15s linear 1.5s forwards;
     transform-origin:left;
-    
+
   }
-  
-  
+
+
   @keyframes grow {
     0% {
       transform: scaleX(0)
@@ -740,7 +741,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
       transform: scaleX(200)
     }
   }
-  
+
   @keyframes colorChange {
     30% {
       background: rgb(214,169,254);
@@ -755,8 +756,8 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
      background: rgb(252,212,0);
     }
     100% {
-      background: rgb(252,212,0); 
-    } 
+      background: rgb(252,212,0);
+    }
   }
 
 
@@ -820,7 +821,7 @@ is from https://css-tricks.com/hash-tag-links-padding/ */
 .section5ContentContainer {
     color: white;
     width: 50vw;
-    height: 75%; 
+    height: 75%;
 }
 
 .sec5FlexBox {
@@ -950,7 +951,7 @@ a.joinNow:hover {
     height: 100%;
     cursor: pointer;
     margin-bottom: 100px;
-    
+
     /*background-color: #2e75cf; */
 }
 
@@ -1335,12 +1336,12 @@ font-size:1em;
     /*  =================================================
         Main Down Arrow
         ================================================= */
-    
+
         #downArrowIcon {
             height: 50px;
             display: block;
             position: fixed;
-            margin-top: 92vh; 
+            margin-top: 92vh;
             z-index: 20;
             margin-left: 48%;
             cursor: pointer;
